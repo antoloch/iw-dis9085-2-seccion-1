@@ -175,8 +175,8 @@ ul {
     margin-bottom: 2rem;       /* Separa el título del primer día */
 }
 
-/* Cada bloque de un día (fecha + 3 escenarios) */
-.lineup-container {
+/* Cada día (fecha + 3 escenarios) */
+.lineup article {
     display: flex;             /* Activa flexbox */
     flex-wrap: wrap;           /* Permite que la fecha ocupe una fila y los escenarios otra */
     justify-content: space-between; /* Separa los 3 escenarios entre sí */
@@ -185,15 +185,15 @@ ul {
 }
 
 /* La caja de la fecha */
-.dia {
+.lineup article > header {
     display: flex;             /* Activa flexbox */
     justify-content: center;   /* Centra la barra de fecha */
     width: 100%;               /* Ocupa toda una fila para que los escenarios queden debajo */
 }
 
 /* La barra con el texto "07 de noviembre" */
-.dia h3 {
-    width: 40%;                /* La barra mide el 40% del ancho, como en Figma */
+.lineup header h3 {
+    width: 40%;                /* La barra mide el 40% del ancho */
     padding: 0.6rem 1rem;      /* Espacio dentro de la barra */
     font-size: 1.4rem;         /* Tamaño de texto */
     font-weight: normal;       /* Sin negrita */
@@ -202,34 +202,35 @@ ul {
     background: linear-gradient(180deg, #1576BB 0%, #450B69 100%); /* Degradado de tu azul a tu morado */
 }
 
-/* Las tres columnas de escenarios (comparten el mismo estilo) */
-.main-stage,
-.stage-2,
-.warehouse {
-    display: flex;             /* Activa flexbox */
-    flex-direction: column;    /* Apila los nombres uno debajo del otro */
+/* Las tres columnas de escenarios */
+.lineup article section {
     flex: 1;                   /* Las tres columnas se reparten el ancho por igual */
     min-width: 0;              /* Evita que una columna se ensanche por un texto largo */
-    gap: 0.2rem;               /* Pequeño espacio entre artistas */
 }
 
-/* Los nombres de los artistas */
-.main-stage p,
-.stage-2 p,
-.warehouse p {
-    font-size: 1.3rem;         /* Tamaño de los artistas */
-    text-transform: uppercase; /* Mayúsculas */
-}
-
-/* El primer párrafo de cada columna: el nombre del escenario */
-.main-stage p:first-child,
-.stage-2 p:first-child,
-.warehouse p:first-child {
+/* El nombre del escenario: MAIN STAGE, STAGE 2, WAREHOUSE */
+.lineup h4 {
     font-size: 1.9rem;                   /* Más grande que los artistas */
+    font-weight: normal;                 /* Los títulos vienen en negrita, aquí no */
+    text-transform: uppercase;           /* Mayúsculas */
     padding-bottom: 0.4rem;              /* Espacio entre el texto y la línea */
     margin-bottom: 0.8rem;               /* Espacio entre la línea y el primer artista */
     border-bottom: 0.2rem solid #FFFFFF; /* Línea blanca debajo del título del escenario */
 }
+
+/* La lista de artistas */
+.lineup ul {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los nombres uno debajo del otro */
+    gap: 0.2rem;               /* Pequeño espacio entre artistas */
+}
+
+/* Cada artista */
+.lineup li {
+    font-size: 1.3rem;         /* Tamaño de los artistas */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
 
 /* ---------- 5. BOLETERÍA ---------- */
 
@@ -249,18 +250,23 @@ ul {
     text-transform: uppercase; /* Mayúsculas */
 }
 
-.fila {
-    display: flex;                   /* Activa flexbox */
-    flex-wrap: wrap;                 /* En pantallas angostas, el segundo elemento baja */
-    justify-content: space-between;  /* Uno pegado a cada lado; si hay uno solo, queda a la izquierda */
-    align-items: center;             /* Centra ticket y botón verticalmente */
-    gap: 1.5rem;                     /* Espacio mínimo entre ellos */
+/* La fila con los tres tickets */
+.tickets {
+    display: flex;             /* Activa flexbox */
+    flex-wrap: wrap;           /* En pantallas angostas, los tickets bajan */
+    gap: 1.5rem;               /* Espacio entre un cuadro y otro */
+}
+
+/* La fila con los dos botones */
+.botones {
+    display: flex;             /* Activa flexbox */
+    flex-wrap: wrap;           /* En pantallas angostas, el segundo botón baja */
+    gap: 1.5rem;               /* Espacio entre botones */
 }
 
 /* Cada entrada (parece un ticket) */
 .ticket {
-    flex: 0 1 50%;             /* Cada ticket mide la mitad del ancho */
-    min-width: 16rem;          /* Pero nunca se achica más de 16rem */    
+    flex: 1 1 16rem;           /* Los tres se reparten el ancho por igual y bajan si no caben */    
     padding: 0.8rem 1rem 1rem; /* Espacio dentro del ticket */
     border: 0.1rem solid #000000; /* Borde negro fino */
     background-color: #FFFFFF; /* Fondo blanco */
@@ -287,8 +293,7 @@ ul {
 /* La caja de cada botón (el degradado va aquí) */
 .button-box {
     display: flex;             /* Activa flexbox */
-    width: 36%;                /* Cada botón ocupa un tercio del ancho */
-    min-width: 14rem;          /* Pero no se achica más de 14rem */
+    flex: 1 1 14rem;           /* Los dos botones se reparten el ancho por igual */
     border-radius: 0.6rem;     /* Esquinas redondeadas */
     background: linear-gradient(135deg, #1576BB 0%, #450B69 100%); /* Degradado de tu azul a tu morado */
 }
@@ -440,4 +445,36 @@ footer {
 a:focus-visible {
     outline: 0.15rem solid #1576BB; /* Dibuja un contorno azul para ver dónde estás */
     outline-offset: 0.2rem;         /* Lo separa un poco del elemento */
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    /* Los escenarios pasan de columnas a apilarse hacia abajo */
+    .lineup article {
+        flex-direction: column;   /* Fecha y escenarios en una sola columna */
+        gap: 1.5rem;              /* Espacio entre la fecha y cada escenario */
+        margin-bottom: 3rem;      /* Un poco menos de espacio entre días */
+    }
+
+    /* Cada escenario ocupa todo el ancho */
+    .lineup article section {
+        flex: none;               /* Quita el "repartir ancho por igual" del escritorio */
+        width: 100%;              /* Cada escenario usa todo el ancho */
+    }
+
+    /* La barra de la fecha más ancha para que se vea bien en pantallas chicas */
+    .lineup header h3 {
+        width: 80%;
+    }
+
+    /* Títulos un poco más chicos para que no se vean gigantes */
+    .lineup h2 {
+        font-size: 2.5rem;
+    }
+
+    .lineup h4 {
+        font-size: 1.6rem;
+    }
 }
