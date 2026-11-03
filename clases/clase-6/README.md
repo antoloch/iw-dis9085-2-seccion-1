@@ -4,10 +4,8 @@
 
 Hoy veremos JavaScript cómo funciona y cuándo aplicarlo. Al finalizar veremos qué es un sitio web y cómo funciona en el mundo real, conectando con el proyecto final.
 
-**Presentación** 
+[**Presentación** ](https://drive.google.com/drive/folders/1dznUZ86MTyJjXWg50YtRwRtJQjx7wMNt)
 
-**Material complementario:**
-* 
 
 ## Comenzamos a preparar el examen final (23 noviembre):
 
@@ -42,5 +40,5 @@ Hay que traer:
 * La bitácora iniciada, con la descripción del proyecto.
 * Bitácora: 3 sitios web de referencia, con el link y qué toma de cada uno (estructura, tipografía, navegación, etc.).
 * Bitácora: Link al Figma.
-* Figma: Boceto y wireframes de las páginas del sitio.
+* Figma: Boceto y wireframes de baja de las páginas del sitio.
 * UI kit del sitio en Figma: colores, tipografías, botones y otros componentes base.
