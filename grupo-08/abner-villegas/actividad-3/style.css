@@ -1,0 +1,220 @@
+/* =========================================================
+   DEMO FLEXBOX · COMPONENTES PARA UN SINGLE PAGE
+   ========================================================= */
+
+/* ---------- 1. VARIABLES PARA TAMAÑOS ---------- */
+:root {
+  /* Fuentes */
+  --tamano-logo: 1.5rem;
+  --tamano-menu: 1rem;
+  --tamano-h2: 2.2rem;
+  --tamano-tarjeta-h3: 1.3rem;
+  --tamano-cuerpo: 1rem;
+
+  /* Medidas de elementos */
+  --ancho-maximo-sitio: 1100px;
+  --ancho-maximo-imagen: 450px;
+  --padding-boton: 0.8rem 1.6rem;
+}
+
+/* ---------- 2. BASE ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
+  line-height: 1.6;
+  font-size: var(--tamano-cuerpo);
+  background-color: #faf9f6;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: var(--tamano-h2);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedor centralizado para limitar el ancho en pantallas grandes */
+.contenedor {
+  max-width: var(--ancho-maximo-sitio);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ---------- 3. COMPONENTE 1: NAVBAR ---------- */
+.encabezado {
+  padding: 1.2rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #d9d2c5;
+}
+
+.navbar-contenido {
+  display: flex;
+  justify-content: space-between; /* Logo a la izq, Menú a la der */
+  align-items: center;            /* Centrados a la misma altura */
+}
+
+.logo {
+  margin: 0;
+  font-size: var(--tamano-logo);
+  font-weight: bold;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;                       /* Espacio horizontal entre links */
+  align-items: center;
+}
+
+.menu a {
+  color: #1f2933;
+  font-size: var(--tamano-menu);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------- 4. BOTONES ---------- */
+.boton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: var(--padding-boton);
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.boton-tarjeta {
+  display: inline-block;
+  margin-top: auto;                /* Se pega al fondo de la tarjeta */
+  padding: 0.6rem 1.2rem;
+  background: #1f2933;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* ---------- 5. COMPONENTE 2: DOS COLUMNAS ---------- */
+.dos-columnas {
+  padding: 4rem 2rem;
+  background: #ede6da;
+}
+
+.bloque-columnas {
+  display: flex;
+  align-items: center;            /* Alinea verticalmente texto e imagen */
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.texto-columna {
+  flex: 1;
+}
+
+.imagen-columna {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;      /* Alinea la foto a la derecha */
+}
+
+.imagen-columna img {
+  max-width: var(--ancho-maximo-imagen);
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------- 6. COMPONENTE 3: GRILLA DE TARJETAS ---------- */
+.seccion {
+  padding: 4rem 2rem;
+}
+
+.grilla {
+  display: flex;
+  gap: 1.8rem;
+  align-items: stretch;           /* Obliga a todas las tarjetas a tener la MISMA ALTURA */
+  margin-top: 2rem;
+}
+
+.tarjeta {
+  flex: 1;                        /* Todas las tarjetas ocupan el mismo ancho */
+  display: flex;
+  flex-direction: column;         /* Apila su contenido en columna para controlar la altura interna */
+  padding: 1.8rem;
+  background: #ffffff;
+  border: 1px solid #d9d2c5;
+  border-radius: 6px;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.8rem;
+  font-size: var(--tamano-tarjeta-h3);
+}
+
+.tarjeta p {
+  margin: 0 0 1.5rem;
+  color: #52606d;
+}
+
+/* ---------- 7. COMPONENTE 4: FOOTER ---------- */
+.pie {
+  padding: 3rem 2rem;
+  background: #1f2933;
+  color: #ffffff;
+}
+
+.pie-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.columna-footer h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.pie a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.creditos {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+/* ---------- 8. RESPONSIVE EN CELULARES ---------- */
+@media (max-width: 768px) {
+  .navbar-contenido,
+  .bloque-columnas,
+  .grilla {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .imagen-columna {
+    justify-content: center;
+  }
+}
