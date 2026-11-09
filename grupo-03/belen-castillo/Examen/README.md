@@ -1,4 +1,4 @@
-##1 Proyecto
+## 1 Proyecto
 Portafolio web personal enfocado en mostrar mi trabajo integral como diseñadora. El sitio se divide en dos áreas principales: los mejores proyectos desarrollados en la carrera y una sección dedicada a mis proyectos personales de ilustración y dibujo digital. 
 
 
