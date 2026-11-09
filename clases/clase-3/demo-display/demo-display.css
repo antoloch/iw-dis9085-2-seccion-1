@@ -1,0 +1,61 @@
+
+* {
+  box-sizing: border-box;
+  outline: 2px dashed #f96167; /* líneas punteadas para entender tamaños de cajas */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  padding: 5rem 2rem;
+  background: #ede6da;
+}
+
+/* inline-block: fluye en línea, pero acepta padding completo */
+.etiqueta {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #2f3c7e;
+  color: #2f3c7e;
+  font-size: 0.875rem;
+}
+
+.portada h1 {
+  max-width: 40rem;
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.bajada {
+  max-width: 36rem;
+  margin: 0 0 2rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.bajada a {
+  color: #2f3c7e;
+}
+
+/* inline-block: un enlace con aspecto de botón */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #2f3c7e;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.portada-imagen {
+  max-width: 100%;    /* solo achica: nunca agranda una imagen chica */
+  margin: 3rem auto;
+  display: block;
+}

@@ -68,7 +68,10 @@ Ejemplo de cómo registrar una consulta a la IA siguiendo estas normas:
 
 ### CSS asistido con IA
 
-Para la solemne puedes crear los estilos CSS en IA y luego ajustarlos. Importante pedirle que use flexbox y que no use grid, position ni frameworks, ya que no lo vimos en clases. 
+Para la solemne puedes crear los estilos CSS en IA y luego ajustarlos. Importante pedirle que use flexbox y que no use **grid***, position ni frameworks, ya que no lo vimos en clases. 
+
+***ACOTACIÓN:** Los grupos que diseñaron un layout modular (tipo "bento grid" o "masonry grid") para esos casos sí necesitan usar grid en lugar de flexbox.
+
 
 Sugerencia de prompt para crear guía de estilos en CSS:
 

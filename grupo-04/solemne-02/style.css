@@ -1,0 +1,480 @@
+/* =========================================================
+   between ends — style.css
+   Solo flexbox, unidades rem y %. Sin grid.
+   (position solo se usa en las portadas, para el encuadre)
+   Base de cálculo: 1rem = 16px (diseño de escritorio 1440px = 90rem)
+
+   PALETA DEL GRUPO
+   Azul:   #1576BB
+   Morado: #450B69
+   Blanco: #FFFFFF
+   Negro:  #000000
+   ========================================================= */
+
+/* Carga la tipografía ProggyClean desde el archivo de la carpeta */
+@font-face {
+    font-family: "ProggyClean";            /* El nombre con el que la vas a usar en el resto del CSS */
+    src: url("ProggyClean.ttf") format("truetype"); /* Dónde está el archivo y de qué tipo es */
+    font-weight: normal;                   /* Esta fuente solo existe en peso normal */
+    font-style: normal;                    /* Y sin cursiva */
+    font-display: swap;                    /* Muestra texto con otra letra mientras carga la fuente */
+}
+
+/* ---------- 0. BASE ---------- */
+
+/* Aplica a TODOS los elementos */
+* {
+    box-sizing: border-box; /* El padding y el borde se cuentan dentro del ancho, así nada se desborda */
+    margin: 0;              /* Quita los márgenes que el navegador pone por defecto */
+    padding: 0;             /* Quita los espacios internos por defecto */
+}
+
+/* Controla el tamaño base del texto */
+html {
+    font-size: 100%; /* Respeta el tamaño de letra del navegador (normalmente 16px = 1rem) */
+}
+
+/* El cuerpo de toda la página */
+body {
+    font-family: "ProggyClean", "Courier New", Courier, monospace; /* Usa ProggyClean; si falla, usa Courier */
+    font-size: 1rem;           /* Tamaño de texto normal */
+    line-height: 1.5;          /* Espacio entre líneas, para que se lea cómodo */
+    color: #1576BB;            /* Azul de la paleta para el texto de la parte blanca */
+    background-color: #FFFFFF; /* Fondo blanco */
+}
+
+/* Todas las imágenes */
+img {
+    max-width: 100%; /* Nunca se pasan del ancho de su contenedor */
+    height: auto;    /* Mantienen su proporción al achicarse */
+    display: block;  /* Evita el huequito que deja una imagen al estar "en línea" */
+}
+
+/* Todos los enlaces */
+a {
+    color: inherit;          /* Usan el mismo color del texto que los rodea */
+    text-decoration: none;   /* Sin subrayado */
+}
+
+/* Todas las listas */
+ul {
+    list-style: none; /* Quita las viñetas */
+}
+
+/* ---------- 1. BARRA DE NAVEGACIÓN ---------- */
+
+/* La franja de arriba que contiene el menú */
+.navbar {
+    padding: 2rem 0 1rem; /* Espacio arriba y abajo del menú, nada a los lados */
+}
+
+/* La lista de enlaces (Line up, Boletería, Playlist) */
+.nav-links {
+    display: flex;                   /* Pone los enlaces en fila */
+    justify-content: space-around;   /* Reparte los 3 enlaces con espacio parejo, como en el diseño */
+    align-items: center;             /* Los alinea al centro vertical */
+    font-size: 1.3rem;               /* Tamaño del texto del menú */
+}
+
+/* ---------- 2. BANNER ---------- */
+
+/* La sección grande con el logo y el texto */
+.banner {
+    display: flex;                   /* Activa flexbox para ordenar logo y texto */
+    flex-direction: column;          /* Los apila uno debajo del otro */
+    align-items: center;             /* Los centra horizontalmente */
+    padding: 3rem 5% 2rem;           /* Aire arriba, a los lados y abajo */
+}
+
+/* La caja que envuelve al logo */
+.logo {
+    width: 60%;       /* El logo ocupa un poco más de la mitad del ancho, como en Figma */
+    max-width: 50rem; /* Pero no crece más de 50rem en pantallas enormes */
+}
+
+/* El título h1 que contiene la imagen del logo */
+.logo h1 {
+    font-size: 1rem;  /* Tamaño neutro: el h1 solo sirve de envoltorio de la imagen */
+    line-height: 0;   /* Quita el espacio extra de texto alrededor de la imagen */
+}
+
+/* La imagen del logo */
+.logo img {
+    width: 100%; /* Se estira hasta llenar la caja .logo */
+}
+
+/* La caja con la fecha y la frase */
+.banner-text {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los dos párrafos */
+    align-items: center;       /* Los centra */
+    text-align: center;        /* Centra el texto si pasa a dos líneas */
+    width: 100%;               /* Usa todo el ancho disponible */
+}
+
+/* Cada párrafo del banner */
+.banner-text p {
+    max-width: 30rem; /* Limita el ancho para que la frase se corte en dos líneas como en el diseño */
+}
+
+/* El primer párrafo: la fecha y la ciudad */
+.banner-text p:first-child {
+    font-size: 1.3rem;      /* Tamaño de la fecha */
+    margin: 1rem 0 5rem;    /* Separa la fecha del logo (arriba) y de la frase (abajo) */
+}
+
+/* El segundo párrafo: "Tres días, tres escenarios..." */
+.banner-text p:last-child {
+    font-size: 1.6rem; /* Un poco más grande que la fecha */
+    background-image: linear-gradient(180deg, #450B69 0%, #1576BB 100%); /* Morado arriba, azul abajo */
+}
+
+/* Texto con degradado (menú y textos del banner) */
+.nav-links a,
+.banner-text p {
+    background: linear-gradient(180deg, #1576BB 0%, #450B69 100%); /* El degradado de la paleta */
+    background-clip: text;                /* El fondo solo se ve dentro de las letras */
+    -webkit-background-clip: text;        /* Lo mismo, para Safari y navegadores más antiguos */
+    -webkit-text-fill-color: transparent; /* Letras transparentes para que se vea el degradado */
+}
+
+/* ---------- 3. PORTADAS ---------- */
+
+/* El cuadro donde viven y rebotan las portadas */
+.covers {
+    position: relative;  /* Marca este cuadro como referencia: las portadas se ubican dentro de él */
+    width: 100%;         /* Ocupa todo el ancho de la página */
+    height: 75rem;       /* Alto fijo: es el "encuadre" donde las portadas pueden moverse */
+    overflow: hidden;    /* Lo que se salga del cuadro se corta, nunca invade el Line Up */
+}
+
+/* Cada portada */
+.covers img {
+    position: absolute;  /* Se ubica dentro del cuadro con los left/top que ya tiene tu HTML */
+    width: 8rem;         /* Tamaño de cada portada (unos 128px) */
+    aspect-ratio: 1 / 1; /* Las hace cuadradas */
+    object-fit: cover;   /* Rellena el cuadrado sin deformar la imagen */
+}
+
+/* ---------- 4. LINE UP ---------- */
+
+/* Toda la sección Line Up, con el fondo degradado azul a morado */
+.lineup {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila el título y los 3 días */
+    padding: 3rem 6% 4rem;     /* Aire alrededor: 6% a los lados, como en Figma */
+    color: #FFFFFF;            /* Todo el texto en blanco */
+    background: conic-gradient(from 0deg at 32% 38%, #1576BB 0%, #2F4A9F 25%, #450B69 60%, #2F4A9F 80%, #1576BB 100%); /* Degradado angular sin corte */ 
+}
+
+/* El título "Line Up" */
+.lineup h2 {
+    font-size: 3.5rem;         /* Título grande */
+    font-weight: normal;       /* Sin negrita, como en el diseño */
+    text-transform: uppercase; /* Lo muestra en mayúsculas */
+    margin-bottom: 2rem;       /* Separa el título del primer día */
+}
+
+/* Cada día (fecha + 3 escenarios) */
+.lineup article {
+    display: flex;             /* Activa flexbox */
+    flex-wrap: wrap;           /* Permite que la fecha ocupe una fila y los escenarios otra */
+    justify-content: space-between; /* Separa los 3 escenarios entre sí */
+    gap: 1.5rem 3%;            /* Espacio entre la fecha y los escenarios, y entre escenarios */
+    margin-bottom: 4rem;       /* Espacio entre un día y el siguiente */
+}
+
+/* La caja de la fecha */
+.lineup article > header {
+    display: flex;             /* Activa flexbox */
+    justify-content: center;   /* Centra la barra de fecha */
+    width: 100%;               /* Ocupa toda una fila para que los escenarios queden debajo */
+}
+
+/* La barra con el texto "07 de noviembre" */
+.lineup header h3 {
+    width: 40%;                /* La barra mide el 40% del ancho */
+    padding: 0.6rem 1rem;      /* Espacio dentro de la barra */
+    font-size: 1.4rem;         /* Tamaño de texto */
+    font-weight: normal;       /* Sin negrita */
+    text-align: center;        /* Texto centrado */
+    text-transform: uppercase; /* Mayúsculas */
+    background: linear-gradient(180deg, #1576BB 0%, #450B69 100%); /* Degradado de tu azul a tu morado */
+}
+
+/* Las tres columnas de escenarios */
+.lineup article section {
+    flex: 1;                   /* Las tres columnas se reparten el ancho por igual */
+    min-width: 0;              /* Evita que una columna se ensanche por un texto largo */
+}
+
+/* El nombre del escenario: MAIN STAGE, STAGE 2, WAREHOUSE */
+.lineup h4 {
+    font-size: 1.9rem;                   /* Más grande que los artistas */
+    font-weight: normal;                 /* Los títulos vienen en negrita, aquí no */
+    text-transform: uppercase;           /* Mayúsculas */
+    padding-bottom: 0.4rem;              /* Espacio entre el texto y la línea */
+    margin-bottom: 0.8rem;               /* Espacio entre la línea y el primer artista */
+    border-bottom: 0.2rem solid #FFFFFF; /* Línea blanca debajo del título del escenario */
+}
+
+/* La lista de artistas */
+.lineup ul {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los nombres uno debajo del otro */
+    gap: 0.2rem;               /* Pequeño espacio entre artistas */
+}
+
+/* Cada artista */
+.lineup li {
+    font-size: 1.3rem;         /* Tamaño de los artistas */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+
+/* ---------- 5. BOLETERÍA ---------- */
+
+/* Toda la sección de entradas */
+.boleteria {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    
+    padding: 3rem 6% 5rem;
+    gap: 1.5rem;               /* Espacio entre cada entrada */
+    color: #000000;            /* Texto negro */
+}
+
+/* El título "Boletería" */
+.boleteria h2 {
+    font-size: 2.2rem;         /* Tamaño del título */
+    font-weight: normal;       /* Sin negrita */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* La fila con los tres tickets */
+.tickets {
+    display: flex;             /* Activa flexbox */
+    flex-wrap: wrap;           /* En pantallas angostas, los tickets bajan */
+    gap: 1.5rem;               /* Espacio entre un cuadro y otro */
+}
+
+/* La fila con los dos botones */
+.botones {
+    display: flex;             /* Activa flexbox */
+    flex-wrap: wrap;           /* En pantallas angostas, el segundo botón baja */
+    gap: 1.5rem;               /* Espacio entre botones */
+}
+
+/* Cada entrada (parece un ticket) */
+.ticket {
+    flex: 1 1 16rem;           /* Los tres se reparten el ancho por igual y bajan si no caben */    
+    padding: 0.8rem 1rem 1rem; /* Espacio dentro del ticket */
+    border: 0.1rem solid #000000; /* Borde negro fino */
+    background-color: #FFFFFF; /* Fondo blanco */
+}
+
+/* El título de cada entrada: "x 1 día" */
+.ticket h3 {
+    font-size: 2.4rem;                   /* Texto grande */
+    font-weight: normal;                 /* Sin negrita */
+    text-align: center;                  /* Centrado */
+    padding-bottom: 0.5rem;              /* Espacio antes de la línea */
+    margin-bottom: 0.8rem;               /* Espacio después de la línea */
+    border-bottom: 0.1rem solid #000000; /* Línea negra debajo del título */
+}
+
+/* Las líneas de precio */
+.ticket p {
+    font-size: 1.2rem;         /* Tamaño del texto de precios */
+}
+
+
+/* ---------- 6. BOTONES DE COMPRA ---------- */
+
+/* La caja de cada botón (el degradado va aquí) */
+.button-box {
+    display: flex;             /* Activa flexbox */
+    flex: 1 1 14rem;           /* Los dos botones se reparten el ancho por igual */
+    border-radius: 0.6rem;     /* Esquinas redondeadas */
+    background: linear-gradient(135deg, #1576BB 0%, #450B69 100%); /* Degradado de tu azul a tu morado */
+}
+
+/* El enlace dentro del botón */
+.button-box a {
+    display: flex;             /* Activa flexbox para centrar el texto */
+    justify-content: center;   /* Centra el texto horizontalmente */
+    align-items: center;       /* Centra el texto verticalmente */
+    width: 100%;               /* Todo el botón es clicable */
+    padding: 1.2rem 1rem;      /* Tamaño cómodo del botón */
+    font-size: 1.9rem;         /* Texto grande */
+    text-align: center;        /* Centra si el texto pasa a dos líneas */
+    color: #FFFFFF;            /* Texto blanco */
+}
+
+/* ---------- 7. PLAYLIST ---------- */
+
+/* La sección de la playlist */
+.playlist {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila título y reproductor */
+    gap: 1rem;                 /* Espacio entre título y reproductor */
+    padding: 2rem 6% 5rem;     /* Aire alrededor */
+    color: #000000;            /* Texto negro */
+}
+
+/* El título "Playlist" */
+.playlist h2 {
+    font-size: 2.2rem;         /* Tamaño del título */
+    font-weight: normal;       /* Sin negrita */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* El reproductor de Spotify */
+.playlist iframe {
+    width: 100%;               /* Ocupa todo el ancho */
+    border: 0;                 /* Sin borde */
+    border-radius: 0.75rem;    /* Esquinas redondeadas (equivale a 12px) */
+}
+
+/* ---------- 8. FOOTER ---------- */
+
+/* Todo el pie de página, con fondo negro */
+footer {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila las 3 partes: arriba, centro y legal */
+    padding: 2rem 6% 1.5rem;   /* Aire alrededor */
+    color: #FFFFFF;            /* Texto blanco */
+    background-color: #000000; /* Fondo negro */
+    font-size: 1.1rem;         /* Tamaño del texto del footer */
+}
+
+/* La franja de arriba: "¿Listos para los tres días?" + botón */
+.footer-top {
+    display: flex;                   /* Activa flexbox */
+    justify-content: space-between;  /* Texto a la izquierda, botón a la derecha */
+    align-items: center;             /* Alineados verticalmente */
+    gap: 1rem;                       /* Espacio mínimo entre ellos */
+    margin-bottom: 4rem;             /* Separa esta franja del resto */
+}
+
+/* El botón "Comprar entradas" del footer */
+.footer-cta {
+    padding: 0.5rem 1.5rem;          /* Espacio dentro del botón */
+    border-radius: 0.3rem;           /* Esquinas redondeadas pequeñas */
+    background: linear-gradient(135deg, #1576BB 0%, #450B69 100%); /* Mismo degradado de los otros botones */
+    color: #FFFFFF;                  /* Texto blanco */
+}
+
+/* La parte central: logo + columnas de enlaces */
+.footer-main {
+    display: flex;                   /* Activa flexbox */
+    flex-wrap: wrap;                 /* En pantallas angostas las columnas bajan */
+    justify-content: space-between;  /* Reparte las columnas a lo ancho */
+    gap: 2rem 3%;                    /* Espacio entre columnas */
+}
+
+/* La columna del logo y los datos del evento */
+.footer-info {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila logo, fecha y lugar */
+    gap: 1.2rem;               /* Espacio entre cada elemento */
+    width: 25%;                /* Ocupa un cuarto del ancho */
+    min-width: 12rem;          /* Pero no menos de 12rem */
+}
+
+/* El logo pequeño del footer */
+.footer-info img {
+    width: 40%;                /* Más pequeño que en el banner */
+    min-width: 6rem;           /* Pero siempre legible */
+}
+
+/* Cada columna de enlaces (Menú, Redes, Contacto) */
+.footer-col {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los elementos */
+    gap: 0.8rem;               /* Espacio entre elementos */
+    min-width: 8rem;           /* Ancho mínimo para que no se aplasten */
+}
+
+/* Los títulos de columna: MENÚ, REDES, CONTACTO, AUSPICIA */
+.footer-col h4 {
+    font-size: 0.85rem;        /* Tamaño pequeño */
+    font-weight: normal;       /* Sin negrita */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* Las listas de enlaces del footer */
+.footer-col ul {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los enlaces */
+    gap: 1.5rem;               /* Espacio generoso entre enlaces, como en el diseño */
+}
+
+/* Los enlaces del footer */
+.footer-col a {
+    color: #FFFFFF;            /* Blanco de la paleta */
+}
+
+/* Al pasar el mouse sobre un enlace del footer */
+.footer-col a:hover {
+    text-decoration: underline; /* Se subraya para que se note que es un enlace */
+}
+
+/* La caja con los logos de auspiciadores */
+.sponsors {
+    display: flex;             /* Activa flexbox */
+    flex-direction: column;    /* Apila los logos */
+    gap: 1rem;                 /* Espacio entre logos */
+}
+
+/* Cada logo de auspiciador */
+.sponsors img {
+    width: 7rem;                        /* Todos con el mismo ancho */
+    filter: brightness(0) invert(1);    /* Primero pone el logo en negro puro y luego lo invierte a blanco */
+}
+
+/* El texto legal del final */
+.footer-legal {
+    margin-top: 3rem;          /* Separa el texto legal de las columnas */
+    font-size: 1rem;           /* Tamaño del texto legal */
+    color: #FFFFFF;            /* Blanco de la paleta */
+}
+
+/* ---------- 9. ACCESIBILIDAD ---------- */
+
+/* Cuando alguien navega con teclado y un enlace queda seleccionado */
+a:focus-visible {
+    outline: 0.15rem solid #1576BB; /* Dibuja un contorno azul para ver dónde estás */
+    outline-offset: 0.2rem;         /* Lo separa un poco del elemento */
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    /* Los escenarios pasan de columnas a apilarse hacia abajo */
+    .lineup article {
+        flex-direction: column;   /* Fecha y escenarios en una sola columna */
+        gap: 1.5rem;              /* Espacio entre la fecha y cada escenario */
+        margin-bottom: 3rem;      /* Un poco menos de espacio entre días */
+    }
+
+    /* Cada escenario ocupa todo el ancho */
+    .lineup article section {
+        flex: none;               /* Quita el "repartir ancho por igual" del escritorio */
+        width: 100%;              /* Cada escenario usa todo el ancho */
+    }
+
+    /* La barra de la fecha más ancha para que se vea bien en pantallas chicas */
+    .lineup header h3 {
+        width: 80%;
+    }
+
+    /* Títulos un poco más chicos para que no se vean gigantes */
+    .lineup h2 {
+        font-size: 2.5rem;
+    }
+
+    .lineup h4 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,424 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 2rem 2rem;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  line-height: 1.6;
+}
+/* NAV BAR */
+.menu {
+    position: absolute;
+    top: 0;
+    right: 4rem;
+    padding: 2rem 3rem;
+}
+
+.menu nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+/* BOTONES NAV BAR HOVER */
+
+.menu a:hover {
+    text-decoration: underline;
+    opacity: 50%;
+}
+
+/* BOTONES NAV BAR ACTIVE */
+
+.menu a:active,
+.menu a:hover:active {
+    font-weight: 700;
+    text-decoration: none; 
+    opacity: 100%;
+}
+
+/* TITULO PRINCIPAL */
+
+.titulo-principal {
+    position: absolute;
+    right: 3%;
+    bottom: 12%;
+    color: black;
+}
+
+.titulo-principal h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 0.5rem 0;
+}
+
+.titulo-principal h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* GALERIA DE MINIATURAS */
+
+#galeria {
+    width: 53vw;
+    margin-bottom: 10rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(5, auto);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+}
+
+.miniatura {
+    margin: 0;
+    width: 95%;
+    aspect-ratio: 1 / 1;
+}
+
+.miniatura a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.miniatura img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BOTON TEXTO PREDETERMINADO MINIATURAS */
+
+.miniatura-texto {
+ position: absolute;
+ inset: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ opacity: 0;
+ transition: 0.5s;
+}
+
+/* BOTON HOVER MINIATURAS */
+
+.miniatura a:hover .miniatura-texto{
+    opacity: 1;
+    background:rgba(255, 255, 255, 0.65);
+    color: black;
+}
+
+/* BOTON ACTIVE MINIATURAS */
+
+.miniatura a:active .miniatura-texto {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+/* LOOKS */
+
+.looks-total {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem; /* Espacio vertical entre cada look */
+    margin: 0 auto;
+}
+
+/* ALINEACIÓN LOOK IZQ O DER */
+.looks-conjunto-izq {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.looks-conjunto-der {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* ESTRUCTURA PRINCIPAL DE CADA LOOK */
+.look-individual {
+    display: flex;
+    align-items: flex-start; /* Alinea la parte superior del título con la foto grande */
+    gap: 1.5rem; /* Espacio estrecho entre la foto grande y el grupo de fotos pequeñas */
+    padding-top: 1.25rem;
+}
+
+/* IMAGEN GRANDE */
+.look-imagen-grande {
+    width: 30rem; /* Tamaño controlado de la imagen grande */
+    flex-shrink: 0;
+    animation: look-imagen-grande both;
+    animation-timeline: view(100% 10%);
+}
+
+.look-grande {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* COLUMNA DE TITULO + DOS IMAGENES */
+.look-dos-imagenes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: auto; /* Se elimina el width de 52.5rem que creaba el espacio enorme */
+}
+
+.look-dos-imagenes h2 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: look-dos-imagenes both;
+    animation-timeline: view(70% 10%);
+}
+
+/* CONTENEDOR DE LAS DOS IMAGENES PEQUEÑAS */
+.dos-imagenes {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* IMAGENES PEQUEÑAS */
+.look-pequeno {
+    width: 20rem;
+    aspect-ratio: 2 / 3;
+    display: block;
+    object-fit: cover;
+    animation: look-pequeno both;
+    animation-timeline: view(70% 10%);
+}
+
+/* RUNWAY */
+
+#runway.runway-section {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
+    width: 100%; 
+    max-width: 91rem; 
+    margin: 8rem auto 0; 
+    box-sizing: border-box; 
+    padding-top: 1.25rem;
+}
+
+#runway.runway-section h2 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding-right: 8rem;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.4rem; 
+    font-style: normal;
+    font-weight: 500; 
+    line-height: normal;
+}
+
+#runway.runway-section video {
+    width: 70%;
+    height: auto; 
+    display: block;
+}
+
+
+/* SECCIÓN ABOUT - CONTENEDOR PRINCIPAL  */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 91.0625rem;
+    margin: 8rem auto 0; 
+    box-sizing: border-box;
+    gap: 2rem; 
+    padding-top: 1.25rem;
+}
+
+/* TITULO LATERAL ABOUT */
+.about-section h2 {
+    margin: 0;
+    width: 8.5rem;
+    height: 1.875rem;
+    flex-shrink: 0;
+    color: #000;
+    text-align: left;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.375rem;  
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* IMAGEN ROBERT WUN*/
+.about-section .about-image {
+    width: 40%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.about-section .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BLOQUE DE TEXTO */
+.about-section .about-content {
+    width: 32rem; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITULO "ROBERT WUN"  */
+.about-section .about-content h3 {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 3rem; 
+    font-weight: 300;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    position: relative;
+    color: transparent;
+}
+
+/* TITULO "ROBERT" EN COLOR BLANCO SOBRE IMAGEN */
+.about-section .about-content h3::before {
+    content: "ROBERT";
+    color: #fff;
+    position: absolute;
+    right: 100%;
+    margin-right: 3rem; 
+}
+
+/* TITULO "WUN" EN COLOR NEGRO */
+.about-section .about-content h3::after {
+    content: "WUN";
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* PARRAFOS INDEPENDIENTES */
+.about-section .about-content p {
+    color: #000;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875rem;   
+    line-height: 1.6;
+    margin: 0 0 1.25rem 0;
+}
+
+/* FOOTER - SECCION CONTACT */
+
+#contact {
+    color: black;
+    margin-top: 8rem;
+}
+
+/* TITULO "CONTACT" */
+#contact h2 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* DISTRIBUCION DE LOS BLOQUES DE INFORMACION */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3.2rem;
+}
+
+/* CADA BLOQUE DE INFORMACION */
+.contact-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: fit-content;
+    padding: 0 2.5rem;
+}
+
+/* TITULOS EN NEGRITA */
+.contact-label {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* CORREO Y DIRECCIONES */
+.contact-group p:not(.contact-label) {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+
+
+@keyframes look-imagen-grande {
+    from {
+        filter: saturate(0) contrast(4);
+        opacity: 0;
+        translate: 0 1rem;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes look-pequeno {
+    from {
+        filter: saturate(0) contrast(4);
+        opacity: 0;
+        translate: 0 6rem;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes look-dos-imagenes {
+    from {
+        opacity: 0.5;
+        translate: 0 1rem;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}

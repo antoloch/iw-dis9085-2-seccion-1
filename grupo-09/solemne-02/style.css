@@ -1,0 +1,910 @@
+/* ======================================================
+   CONFIGURACIÓN GENERAL
+====================================================== */
+
+/* Aplicar estas reglas a todos los elementos de la página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cargar la tipografía Intel One Mono desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&display=swap');
+
+/* Configuración general de toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Definir la tipografía y el ancho de la página */
+body {
+    font-family: 'Intel One Mono', monospace;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 1rem;
+}
+
+/* Quitar el subrayado de los enlaces y mantener el color del texto */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Quitar las viñetas de las listas */
+ul {
+    list-style: none;
+}
+
+/* ======================================================
+   COMPONENTE 1: ENCABEZADO Y MENÚ
+====================================================== */
+
+/* Contenedor principal del menú superior */
+.encabezado {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1.5rem 5%;
+}
+
+/* Organizar los elementos del menú */
+.encabezado nav {
+    display: flex;
+    width: 100%;
+}
+
+/* Alinear los enlaces del menú */
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Dar espacio y definir el tamaño de los enlaces */
+.menu li {
+    margin-left: 3rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Mantener el enlace de inicio a la izquierda */
+.menu li:first-child {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* ======================================================
+   COMPONENTE 2: INICIO / PORTADA
+====================================================== */
+
+/* Contenedor general de la portada */
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Caja roja que contiene el logo principal */
+.logo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ff0000;
+    padding: 7rem 5%;
+}
+
+/* Ajustar el tamaño y centrar el logo RUIDO/0 */
+.logo-principal img {
+    display: block;
+    width: 65%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Caja gris con la descripción del proyecto */
+.descripcion {
+    display: flex;
+    justify-content: center;
+    background-color: #a3a3a3;
+    padding: 2.5rem 20%;
+}
+
+/* Dar formato al texto de la descripción */
+.descripcion p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+}
+
+/* ======================================================
+   COMPONENTE 3: LINEUP
+====================================================== */
+
+/* Contenedor principal de la cartelera de artistas */
+.seccion-lineup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 0;
+    background-color: #ffffff;
+    --tamano-estrella: 8.75rem; /* Tamaño único de todas las estrellas (el mismo para las 7, como en el prototipo) */
+}
+
+/* ESTRELLAS CLARAS (opacidad 10%): una capa transparente que dibuja 5 estrellas */
+.seccion-lineup::before {
+    content: ""; /* Necesario para que la capa exista */
+    width: 100%; /* Cubre todo el ancho de la sección */
+    height: 48rem; /* Alto suficiente para que quepa la estrella más baja */
+    margin-bottom: -48rem; /* Anula su altura para que no mueva el resto del contenido */
+    align-self: flex-start; /* La alinea al borde izquierdo de la sección */
+    background-image: url('assets/star500.svg'), url('assets/star500.svg'), url('assets/star500.svg'), url('assets/star500.svg'), url('assets/star500.svg'); /* Una imagen por cada estrella */
+    background-repeat: no-repeat; /* Evita que las estrellas se repitan como mosaico */
+    background-size: var(--tamano-estrella) var(--tamano-estrella); /* Todas del mismo tamaño */
+    background-position: 14.4% 0.3rem, 80.6% 2.7rem, 18.8% 25.7rem, 71.5% 32.6rem, 97.1% 38.8rem; /* Posición de cada estrella: horizontal en % y vertical en rem */
+    opacity: 0.1; /* Estrellas muy suaves, casi transparentes */
+    pointer-events: none; /* Las estrellas no bloquean clics ni selección de texto */
+}
+
+/* ESTRELLAS MÁS OSCURAS (opacidad 30%): otra capa transparente que dibuja 2 estrellas */
+.seccion-lineup::after {
+    content: ""; /* Necesario para que la capa exista */
+    width: 100%; /* Cubre todo el ancho de la sección */
+    height: 24.5rem; /* Mismo alto que la lista de artistas, para empezar justo donde parte la primera fila */
+    margin-top: -24.5rem; /* Sube la capa hasta la primera fila sin ocupar espacio */
+    align-self: flex-start; /* La alinea al borde izquierdo de la sección */
+    background-image: url('assets/star500.svg'), url('assets/star500.svg'); /* Una imagen por cada estrella (nombre de archivo corregido) */
+    background-repeat: no-repeat; /* Evita que las estrellas se repitan como mosaico */
+    background-size: var(--tamano-estrella) var(--tamano-estrella); /* Todas del mismo tamaño */
+    background-position: 0.8% 0.4rem, 94.7% 4rem; /* Posición de cada estrella: horizontal en % y vertical en rem */
+    opacity: 0.3; /* Estrellas un poco más visibles que las otras */
+    pointer-events: none; /* Las estrellas no bloquean clics ni selección de texto */
+}
+/* Dar formato al título de la cartelera */
+.seccion-lineup h2 {
+    letter-spacing: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+/* Organizar los nombres de los artistas */
+.lineup-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+
+/* Dar formato general a cada nombre de artista (letras rojas, en negrita y mayúsculas) */
+.artist-name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.15rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* ---------- FILA 1: FOLAMOUR + MALL GRAB ---------- */
+
+.artist-name:nth-child(1),
+.artist-name:nth-child(2) {
+    font-size: 3rem;
+    margin-bottom: 2.7rem;
+}
+
+.artist-name:nth-child(1) {
+    width: 48.4%;
+    justify-content: flex-end;
+    padding-right: 1.75rem;
+}
+
+.artist-name:nth-child(2) {
+    width: 51.5%;
+    justify-content: flex-start;
+    padding-left: 1.75rem;
+}
+
+/* ---------- FILA 2: OVERMONO + JAYDA G ---------- */
+
+.artist-name:nth-child(3),
+.artist-name:nth-child(4) {
+    font-size: 2.75rem;
+    margin-bottom: 2.8rem;
+}
+
+.artist-name:nth-child(3) {
+    width: 51.4%;
+    justify-content: flex-end;
+    padding-right: 3.3rem;
+}
+
+.artist-name:nth-child(4) {
+    width: 48.5%;
+    justify-content: flex-start;
+    padding-left: 3.3rem;
+}
+
+/* ---------- FILA 3: SALUTE + TSHA + HAAI ---------- */
+
+.artist-name:nth-child(5),
+.artist-name:nth-child(6),
+.artist-name:nth-child(7) {
+    font-size: 2.5rem;
+    margin-bottom: 2.1rem;
+}
+
+.artist-name:nth-child(5) {
+    width: 36.5%;
+    justify-content: flex-end;
+    padding-right: 4rem;
+}
+
+.artist-name:nth-child(6) {
+    width: auto;
+    justify-content: center;
+}
+
+.artist-name:nth-child(7) {
+    width: 31.5%;
+    justify-content: flex-start;
+    padding-left: 4rem;
+}
+
+/* ---------- FILA 4: JOJO LORENZO + TINZO ---------- */
+
+.artist-name:nth-child(8),
+.artist-name:nth-child(9) {
+    font-size: 2.25rem;
+    margin-bottom: 2.4rem;
+}
+
+.artist-name:nth-child(8) {
+    width: 57.7%;
+    justify-content: flex-end;
+    padding-right: 1.6rem;
+}
+
+.artist-name:nth-child(9) {
+    width: 42.2%;
+    justify-content: flex-start;
+    padding-left: 1.6rem;
+}
+
+/* ---------- FILA 5: VTSS + CC:DISCO ---------- */
+
+.artist-name:nth-child(10),
+.artist-name:nth-child(11) {
+    font-size: 2rem;
+}
+
+.artist-name:nth-child(10) {
+    width: 46%;
+    justify-content: flex-end;
+    padding-right: 1.1rem;
+}
+
+.artist-name:nth-child(11) {
+    width: 53.9%;
+    justify-content: flex-start;
+    padding-left: 1.1rem;
+}
+
+/* ======================================================
+   COMPONENTE 4: SESIONES / CARRUSEL
+====================================================== */
+
+.sesiones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.sesiones h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.flecha img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.flecha:hover {
+    opacity: 0.65;
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.tarjeta-sesion {
+    display: flex;
+    flex: 0 0 30%;
+    min-width: 0;
+}
+
+.tarjeta-sesion img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ======================================================
+   COMPONENTE 5: FECHAS
+====================================================== */
+
+.fechas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 6rem 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.fechas h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.fechas h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+.grilla-fechas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem 0;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.fecha-dia {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 1rem;
+}
+
+.fecha-dia h4 {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.genero {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+}
+
+.horarios li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #eeeeee;
+    letter-spacing: 0.05rem;
+}
+
+.grilla-fechas > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.grilla-fechas > img {
+    display: block;
+    width: 160px;
+    max-width: 60%;
+    height: auto;
+    object-fit: contain;
+    margin: 1rem auto 0;
+}
+
+/* ======================================================
+   COMPONENTE 6: ESCUCHAR
+====================================================== */
+
+.escuchar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9d9d9;
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.escuchar h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.escuchar-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 1000px;
+}
+
+.tarjeta-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tarjeta-track > img:first-child {
+    display: block;
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+}
+
+.info-track {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding-left: 1rem;
+}
+
+.info-track h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-track p {
+    font-size: 0.9rem;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/* Ocultar el checkbox nativo */
+.play-checkbox {
+    display: none;
+}
+
+/* Definir el tamaño y la posición del botón de reproducción (Label) */
+.play-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 42px;
+    width: 42px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.play-boton img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estado inicial: mostrar Play, ocultar Pausa */
+.play-boton .img-pausa {
+    display: none;
+}
+
+.play-boton .img-play {
+    display: block;
+}
+
+/* Al estar marcado el checkbox: ocultar Play y mostrar Pausa */
+.play-checkbox:checked + .play-boton .img-play {
+    display: none;
+}
+
+.play-checkbox:checked + .play-boton .img-pausa {
+    display: block;
+}
+
+/* ======================================================
+   COMPONENTE 7: PIE DE PÁGINA
+====================================================== */
+
+.pie-de-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.footer-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    margin-bottom: 3rem;
+}
+
+.volver-inicio,
+.instagram-link {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+.instagram-link img {
+    display: block;
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.5rem;
+    object-fit: contain;
+}
+
+.footer-auspiciadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.footer-auspiciadores img {
+    display: block;
+    width: auto;
+    max-width: 180px;
+    max-height: 65px;
+    height: auto;
+    object-fit: contain;
+}
+
+.creditos {
+    font-size: 0.7rem;
+    color: #999999;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* ======================================================
+   AJUSTES PARA PANTALLAS MEDIANAS
+====================================================== */
+
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 1.2rem 5%;
+    }
+
+    .menu li {
+        margin-left: 1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .logo-principal {
+        padding: 5rem 5%;
+    }
+
+    .logo-principal img {
+        width: 85%;
+    }
+
+    .descripcion {
+        padding: 2rem 8%;
+    }
+
+    .lineup-container {
+        width: 90%;
+    }
+
+    .artist-name:nth-child(1),
+    .artist-name:nth-child(2) { font-size: 2.25rem; }
+    .artist-name:nth-child(3),
+    .artist-name:nth-child(4) { font-size: 2rem; }
+    .artist-name:nth-child(5),
+    .artist-name:nth-child(6),
+    .artist-name:nth-child(7) { font-size: 1.85rem; }
+    .artist-name:nth-child(8),
+    .artist-name:nth-child(9) { font-size: 1.65rem; }
+    .artist-name:nth-child(10),
+    .artist-name:nth-child(11) { font-size: 1.5rem; }
+
+    .carrusel-contenedor {
+        width: 96%;
+        gap: 0.5rem;
+    }
+
+    .flecha {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+    }
+
+    .tarjeta-sesion {
+        flex-basis: 45%;
+    }
+
+    .grilla-fechas {
+        width: 88%;
+    }
+
+    .escuchar-container {
+        width: 85%;
+    }
+
+    .footer-auspiciadores {
+        gap: 1.5rem;
+    }
+
+    .footer-auspiciadores img {
+        max-width: 140px;
+        max-height: 50px;
+    }
+}
+
+/* ======================================================
+   AJUSTES PARA CELULARES
+====================================================== */
+
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 1rem 4%;
+    }
+
+    .menu li {
+        margin-left: 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    .logo-principal {
+        padding: 4rem 4%;
+    }
+
+    .logo-principal img {
+        width: 95%;
+    }
+
+    .descripcion {
+        padding: 1.5rem 6%;
+    }
+
+    .descripcion p {
+        font-size: 0.9rem;
+    }
+
+    .seccion-lineup {
+        padding: 3.5rem 0;
+    }
+
+    .seccion-lineup h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    .lineup-container {
+        width: 94%;
+    }
+
+    .artist-name:nth-child(1),
+    .artist-name:nth-child(2) { font-size: 1.3rem; }
+    .artist-name:nth-child(3),
+    .artist-name:nth-child(4) { font-size: 1.2rem; }
+    .artist-name:nth-child(5),
+    .artist-name:nth-child(6),
+    .artist-name:nth-child(7) { font-size: 1.1rem; }
+    .artist-name:nth-child(8),
+    .artist-name:nth-child(9) { font-size: 1rem; }
+    .artist-name:nth-child(10),
+    .artist-name:nth-child(11) { font-size: 0.9rem; }
+
+    .artist-name:nth-child(1) { padding-right: 0.75rem; }
+    .artist-name:nth-child(2) { padding-left: 0.75rem; }
+    .artist-name:nth-child(3) { padding-right: 0.75rem; }
+    .artist-name:nth-child(4) { padding-left: 0.75rem; }
+    .artist-name:nth-child(5) { padding-right: 1.2rem; }
+    .artist-name:nth-child(7) { padding-left: 1.2rem; }
+    .artist-name:nth-child(8) { padding-right: 0.5rem; }
+    .artist-name:nth-child(9) { padding-left: 0.5rem; }
+    .artist-name:nth-child(10) { padding-right: 0.4rem; }
+    .artist-name:nth-child(11) { padding-left: 0.4rem; }
+
+    .sesiones h2 {
+        font-size: 1rem;
+    }
+
+    .carrusel-contenedor {
+        width: 100%;
+        gap: 0.25rem;
+    }
+
+    .flecha {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    .carrusel {
+        gap: 0.5rem;
+    }
+
+    .tarjeta-sesion {
+        flex-basis: 80%;
+    }
+
+    .fechas {
+        padding: 4rem 0;
+    }
+
+    .fechas h2 {
+        font-size: 1.2rem;
+    }
+
+    .fechas h3 {
+        font-size: 0.9rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .grilla-fechas {
+        width: 88%;
+        gap: 1rem;
+    }
+
+    .fecha-dia {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .grilla-fechas > p {
+        line-height: 1.6;
+    }
+
+    .grilla-fechas > img {
+        width: 130px;
+    }
+
+    .escuchar {
+        padding: 3.5rem 0;
+    }
+
+    .escuchar h2 {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .escuchar-container {
+        width: 90%;
+    }
+
+    .tarjeta-track {
+        gap: 0.5rem;
+    }
+
+    .tarjeta-track > img:first-child {
+        width: 22%;
+    }
+
+    .info-track {
+        padding-left: 0.5rem;
+    }
+
+    .info-track h3 {
+        font-size: 0.85rem;
+    }
+
+    .info-track p {
+        font-size: 0.75rem;
+    }
+
+    .play-boton {
+        flex-basis: 32px;
+        width: 32px;
+    }
+
+    .footer-enlaces {
+        width: 90%;
+        font-size: 0.75rem;
+    }
+
+    .volver-inicio,
+    .instagram-link {
+        font-size: 0.7rem;
+        letter-spacing: 0;
+    }
+
+    .footer-auspiciadores {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .footer-auspiciadores img {
+        max-width: 110px;
+        max-height: 40px;
+    }
+
+    .creditos {
+        font-size: 0.6rem;
+        line-height: 1.6;
+    }
+}

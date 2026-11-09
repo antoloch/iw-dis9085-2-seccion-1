@@ -1,0 +1,586 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 7.5rem;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    color: #421405;
+}
+
+h2 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+    color: #421405;
+}
+
+.cremah2 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+    color: #FEF6E9;
+}
+
+h3 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    color: #421405;
+}
+
+.cremah3 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    color: #FEF6E9;
+}
+
+h4 {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: #FEF6E9;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    color: #421405; 
+}
+
+.cremap {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    color: #FEF6E9;
+}
+
+.p-footer {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: #FEF6E9; 
+}
+
+body {
+    margin: 0;
+    background-color: #FEF6E9;
+}
+
+hr {
+    height: 3px;
+    background-color: #421405;
+    margin: 3rem 0;
+}
+
+/*Componente 1: Navbar*/
+
+.encabezado {
+    height: 100%;
+    padding: 1rem 3rem;
+    background: #421405;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+  width: 15%;
+  padding: 0.5rem;
+}
+
+.secciones-contenedor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.secciones {
+    height: 100%;
+    padding: 1.5rem 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: #FEF6E9;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.secciones:hover {
+    background-color: #FEF6E9;
+    color: #421405;
+}
+
+.secciones:active {
+    background-color:#421405 ;
+    color: #FEF6E9;
+}
+
+#sidebar {
+    display: none;
+}
+
+.open-sidebar, .closed-sidebar {
+    display: none;
+}
+
+/* ---------- Portada ---------- */
+.venus {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.obra-des {
+    padding-left: 12rem;
+    padding-right: 14rem;
+    padding-bottom: 5rem;
+}
+
+/*Componente 2: columnas - objetos*/
+
+#coleccion {
+    background-color: #421405;
+}
+
+.dos-columnas {
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.columna {
+  flex: 1;
+}
+
+.camasillas {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.objeto {
+width: 0 auto; 
+height: 0 auto; 
+margin: 20px;
+border-radius: 10px; 
+flex-direction: column; 
+align-items: center;
+display: flex;
+padding-bottom: 0.5rem;
+padding-top: 0.5rem;
+transition: all 0.5s;
+}
+
+.objeto:hover {
+  transform: scale(1.05);
+  color: #421405;
+}
+/*Componente 3: materiales*/
+
+.materiales {
+width: 0 auto;
+height: 0 auto;
+gap: 1rem;
+margin: 20px;
+padding: 0;
+padding-left: 3rem;
+padding-right: 4rem;
+display: inline-flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items:center;
+transition: all 0.5s;
+}
+
+.materiales:hover {
+  transform: scale(1.05);
+}
+
+/*Componente 4: footer*/
+footer{
+    margin: auto;
+    padding: 3rem 3rem;
+    background-color: #421405;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-bloques {
+  margin: 0;
+  border: 0;
+  padding: 2rem 2rem;
+  display: flex;
+  gap: 8rem;
+}
+
+.logo-footer {
+    display: flex;
+}
+
+.lista-creditos {
+    list-style: none;
+    color: #FEF6E9;
+}
+
+.externallink {
+    font-family: 'Ubuntu', sans-serif;
+    color: #FEF6E9;
+    line-height: 3;
+    text-decoration: none;
+}
+
+.copyright {
+    color: #FEF6E9;
+}
+
+.lista-licencias {
+    list-style: none;
+    color: #FEF6E9; 
+}
+
+.ontop{
+    right: 0;
+    left: 95%;
+    top: 90%;
+    width: 3.5rem;
+    animation-name: appear;
+    animation-timeline: scroll();
+}
+
+@keyframes appear {
+    30% {
+        opacity: 0;
+        display: none;
+        position: fixed;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+        position: fixed;
+    }
+}
+
+.objeto img {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 0.7rem;
+}
+
+.materiales img {
+    width: 14rem;
+    height: 14rem;
+}
+
+/* Imagen de portada y fila de materiales */
+.portada {
+    width: 100%;
+}
+
+.grilla-materiales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.material-nombre {
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.creadores-foto {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* El título de cada sección ocupa todo el ancho */
+.dos-columnas {
+    flex-wrap: wrap;
+}
+
+.dos-columnas h2 {
+    width: 100%;
+}
+
+.ontop img {
+    width: 3.5rem;
+}
+
+@media (max-width: 48rem) {
+
+
+    /* ---------- Textos generales ---------- */
+
+    h1 {
+        font-family: 'Cormorant', serif;
+        padding-top: 1.rem;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0 1.5rem 1.25rem;
+        padding: 2rem 0 0.75rem;
+    }
+
+    h2 {
+        font-family: 'Cormorant', serif;
+        padding-top: 1.25rem;
+        font-weight: 700;
+        font-size: 2.3rem;
+        text-align: center;
+        margin: 0 1.5rem 1.25rem;
+        padding: 2rem 0 0.75rem;
+   }
+
+.cremah2 {
+        font-family: 'Cormorant', serif;
+        padding-top: 1.25rem;
+        font-weight: 700;
+        font-size: 2.3rem;
+        text-align: center;
+        margin: 0 1.5rem 1.25rem;
+        padding: 2rem 0 0.75rem;
+}
+
+    h3 {
+        font-family: 'Cormorant', serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .cremah3 {
+        font-family: 'Cormorant', serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 0.9rem;
+        margin-left: 3rem;
+        margin-right: 4rem;
+        margin-top: 0.6rem;
+    }
+
+    .cremap {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 0.9rem;
+        margin-left: 3rem;
+        margin-right: 4rem;
+        margin-top: 0.6rem;
+    }
+
+    /* ---------- Navbar ---------- */
+    .encabezado {
+    width: 100%;
+    padding: 1rem 3rem;
+    }
+
+    .logo {
+        width: 50%;
+        flex-wrap: wrap;
+        top: 0;
+        left: 0;
+        padding: 0.2rem;
+    }
+
+    .secciones-contenedor {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        z-index: 10;
+        background-color: #421405;
+        transition: 0.3 ease-out;
+    }
+
+    .secciones {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 2rem 2.5rem;
+        background-color: #421405;
+        text-align: center;
+    }
+
+    .open-sidebar, .closed-sidebar {
+        display: block;
+        padding: 1.2rem;
+        cursor: pointer;
+    }
+
+    #sidebar:checked ~ .secciones-contenedor {
+        right: 0;
+    }
+
+    #sidebar:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    /* ---------- Portada ---------- */
+    .venus {
+        display: block;
+        width: 100%;
+        margin: 1.5rem auto 0;
+    }
+
+    .obra-des {
+    padding-left: 1rem;
+    padding-right: 0;
+    padding-bottom: 3rem;
+}
+
+    /* ---------- Columnas: una debajo de otra ---------- */
+    .dos-columnas {
+        padding: 0;
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* En La Colección, las tarjetas van antes que los textos */
+    .objetos {
+        order: 1;
+    }
+
+    .textos {
+        order: 2;
+    }
+
+    .camasillas {
+        display: none;
+    }
+
+    /* ---------- La Colección: tarjetas verdes en dos columnas ---------- */
+    .objetos img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .objeto {
+        display: flex;
+        overflow-y: auto;
+    }
+
+    /* ---------- Materiales: grilla de 2 x 2 ---------- */
+    .grilla-materiales {
+        padding: 0 1.5rem 1rem;
+    }
+
+    .materiales {
+        width: 50%;
+        margin: 0 0 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .materiales img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .material-nombre {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .creadores-foto {
+        width: 50%;
+        margin-left: 6rem;
+        margin-bottom: 3rem;
+        align-items: center;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .columna-creditos {
+        order: 1;
+        border: auto;
+        padding-bottom: 3rem;
+    }
+
+    .columna-derechos {
+        order: 2;
+        height: auto;
+    }
+
+    .footer-bloques {
+        margin: auto;
+        height: auto;
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .creditos,
+    .copyright {
+        font-size: 0.8125rem;
+        margin: 1rem 0;
+        text-align: left;
+    }
+
+    .ontop {
+        display: none;
+    }
+
+}

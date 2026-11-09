@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+  font-family: open-sans, sans-serif;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+img{
+  max-width: 100%;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  position: sticky;
+  top:0;
+}
+
+.logo1 {
+  max-width: 50%;
+  height: 4.2rem;
+
+}
+
+.navegacion {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+}
+
+.navegacion a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navegacion a:hover, .navegacion a:focus {
+  color: #F36EBF;
+}
+
+.burger{
+  display: none;
+  max-width: 3rem;
+}
+
+.burger:hover{
+  opacity: 50%;
+}
+
+
+.banner {
+ background: url(assets/patron.png);
+  background-size: 20%;
+  background-attachment:fixed;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.columna {
+  margin-top: 3rem;
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+  }
+
+.logo2 {
+  max-width: 80%;
+  min-width: 70%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  margin: 0;
+  font-family:"bungee";
+}
+
+.entrada{
+padding: 1rem 2.5rem;
+    margin: 1rem 2rem;
+     text-align: center;
+     background-color: #FFDF75;
+}
+
+.horario{
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.grilla_horario{
+    display: flex; 
+    gap: 6rem;
+    margin-bottom: 1rem;
+}
+
+.grilla_horario p{
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  background-color: #FFDF75;
+  padding: 0 0.5rem;
+}
+
+.metro{
+  display:flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.como_llegar {
+  padding: 4rem 5rem;
+  background: #FAF0D5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  margin: 0 0 2rem;
+  font-family:"bungee";
+}
+
+.boton{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: #F36EBF;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 3rem;
+}
+
+.boton:hover {
+  background: #FFDF75;
+}
+
+.h2_framed {
+  padding: 1.5rem 3rem;
+  background: #FFDF75;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.expositores {
+  padding: 4rem 0;
+  background-image: url(assets/patron.png);
+  background-size: 20%;
+  background-attachment:fixed;
+}
+
+.expositores .boton{
+  margin-left: 2rem;
+}
+
+
+.grilla_expositores {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.expositor{
+    padding: 1rem;
+    background: #FAF0D5;
+}
+
+.afiche{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.postulaciones{
+    background: #FAF0D5;
+     padding: 1rem 10rem 4rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    
+}
+
+.lado-derecho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lado-derecho .boton{
+    margin-top: 1rem;
+}
+
+.boton_bases{
+    display: inline-block;
+  padding: 1rem 2.45rem;
+  background: #F36EBF;
+  margin-top: 1rem;
+}
+
+.boton_bases:hover{
+  background: #FFDF75;
+}
+
+footer{
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 10rem;
+    gap: 14rem;
+}
+
+.footer-izquierda{
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+}
+
+.contacto{
+    display:inline-block;
+    background:#FFDF75;
+    padding:1rem 2rem;
+    margin-bottom:2rem;
+}
+
+.fila-contacto{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:1.5rem;
+     color:black;
+    text-decoration:none;
+}
+
+.icono{
+    max-width: 3rem;
+}
+
+.fila-contacto:hover{
+  opacity: 50%;
+}
+
+
+
+.creditos{
+    background:#F36EBF;
+    text-align:center;
+    padding:1rem;
+    margin:0 0 2rem 0;
+}
+
+
+a{
+  text-decoration: none;
+  color:#000000;
+}
+
+.menu{
+  margin-top: 1rem;
+}
+
+ul{
+  padding: 0 1rem;
+}
+
+ul :hover{
+  color:#F36EBF;
+}
+
+
+@media (max-width: 890px) {
+  nav{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+  }
+
+  .banner{
+    flex-direction: column-reverse; 
+    align-items: center;
+  }
+
+  .como_llegar {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .grilla_expositores{
+    flex-direction: column;
+  }
+
+  .horario{
+    margin-bottom: 0;
+  }
+
+  .postulaciones{
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 2rem 4rem 2rem;
+  }
+  .lado-derecho{
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  footer{
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+  }
+
+  h3{
+    font-size: 1.4rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  body{
+    font-size: 1.15rem;
+  }
+}
+

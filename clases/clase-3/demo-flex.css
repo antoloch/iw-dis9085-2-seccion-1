@@ -27,6 +27,9 @@ img {
   padding: 1rem 2rem;
   background: #ffffff;
   border-bottom: 1px solid #d9d2c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   margin: 0;
@@ -37,6 +40,8 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;           /* quita las viñetas */
+  display: flex;
+  gap: 1.5rem;
 }
 .menu a {
   color: #1f2933;
@@ -54,10 +59,23 @@ img {
   text-decoration: none;
 }
 
+.boton:hover {
+  background: #ffffff;
+  color: #2f3c7e;
+}
+
 /* ---------- Componente 2: Dos columnas ---------- */
 .dos-columnas {
   padding: 4rem 2rem;
   background: #ede6da;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+}
+
+.columna {
+ flex: 1;
 }
 
 /* ---------- Componente 3: Grilla de tarjetas ---------- */
@@ -68,6 +86,7 @@ img {
   padding: 1.5rem;
   background: #ffffff;
   border: 1px solid #d9d2c5;
+  flex: 1;
 }
 .tarjeta h3 {
   margin: 0 0 0.5rem;
@@ -77,15 +96,26 @@ img {
   margin: 0;
 }
 
+.grilla {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
 /* ---------- Componente 4: Footer ---------- */
 .pie {
   padding: 3rem 2rem;
   background: #1f2933;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .pie h2 {
   font-size: 1.25rem;
 }
 .pie a {
   color: #ffffff;
 }
+

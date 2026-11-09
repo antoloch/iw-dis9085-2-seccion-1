@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #f6f3ee;
+  color: #222222;
+  line-height: 1.5;
+}
+
+/* HEADER Y NAVEGACION */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+}
+.logo img {
+  height: 4.5rem;
+  width: auto;
+}
+nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.boton-verde {
+  background-color: #35b38c;
+  color: #ffffff;
+  padding: 0.6rem 2rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+.boton-verde:hover {
+  background-color: #2b9574;
+}
+
+/* INICIO / PORTADA */
+.seccion-inicio {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 5rem;
+}
+.banner-verde {
+  background-color: #35b38c;
+  color: #ffffff;
+  padding: 3rem 2.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner-verde h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.banner-verde p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* COLLAGE */
+.collage {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 8rem);
+  gap: 0.8rem;
+}
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foto1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.foto2 { grid-column: 2 / 3; grid-row: 1 / 3; }
+.foto3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.foto4 { grid-column: 1 / 2; grid-row: 3 / 4; }
+.foto5 { grid-column: 2 / 3; grid-row: 3 / 4; }
+
+
+/* GENERALES */
+.seccion {
+  padding: 3rem 5rem;
+}
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.titulo-seccion .subtitulo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.titulo-seccion h2 {
+  color: #35b38c;
+  font-size: 2.2rem;
+  margin: 0.3rem 0;
+}
+.titulo-seccion .bajada {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+
+/* TARJETAS */
+.grid-mascotas {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.tarjeta-mascota {
+  background-color: #faf8f5;
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarjeta-mascota img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.tarjeta-mascota h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.datos-mascota {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.descripcion-mascota {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.boton-beige {
+  background-color: #d8c2a7;
+  color: #ffffff;
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+}
+.boton-beige-grande {
+  background-color: #d8c2a7;
+  color: #ffffff;
+  padding: 0.8rem 2.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+.contenedor-boton {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+
+
+/* COMO ADOPTAR */
+.seccion-pasos {
+  padding: 3rem 5rem;
+  text-align: center;
+}
+.seccion-pasos h2 {
+  color: #35b38c;
+  font-size: 2.2rem;
+}
+.subtitulo-pasos {
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.grid-pasos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.paso {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numero {
+  border: 0.08rem solid #000000;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.icono {
+  font-weight: bold;
+  color: #35b38c;
+  margin-bottom: 0.5rem;
+}
+.paso h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.paso p {
+  font-size: 0.85rem;
+  max-width: 12rem;
+}
+.flecha-paso {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* DUDAS */
+.banner-dudas {
+  background-color: #e5d5c3;
+  margin: 3rem 5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.imagen-dudas img {
+  width: 22rem;
+  height: 14rem;
+  object-fit: cover;
+}
+.texto-dudas h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.texto-dudas p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* QUIENES SOMOS */
+.seccion-nosotros {
+  padding: 2rem 5rem;
+  text-align: center;
+}
+.seccion-nosotros h2 {
+  color: #35b38c;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.contenido-nosotros {
+  background-color: #e5d5c3;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+}
+.texto-nosotros {
+  flex: 1;
+  font-size: 1.1rem;
+}
+.imagen-nosotros img {
+  width: 22rem;
+  height: 14rem;
+  object-fit: cover;
+}
+
+
+/* PQ ES IMPORTANTE ADOPTAR */
+.seccion-importante {
+  padding: 3rem 5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.bloque-importante {
+  flex: 1;
+}
+.bloque-importante h2 {
+  color: #35b38c;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.caja-texto {
+  background-color: #eae1d7;
+  padding: 2rem;
+}
+.imagen-importante flex {
+  flex: 1;
+}
+.imagen-importante img {
+  width: 24rem;
+  height: 15rem;
+  object-fit: cover;
+}
+
+
+/* HISTORIAS FELICES */
+.seccion-historias {
+  padding: 3rem 5rem;
+  text-align: center;
+}
+.seccion-historias h2 {
+  color: #35b38c;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.carrusel-historias {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.flecha-carrusel {
+  background-color: #35b38c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.tarjeta-historia {
+  background-color: #d8c2a7;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  max-width: 55rem;
+}
+.texto-historia {
+  flex: 1;
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.1rem;
+}
+.fotos-historia {
+  display: flex;
+  gap: 1rem;
+}
+.foto-antes-despues {
+  position: relative;
+}
+.foto-antes-despues img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+}
+.etiqueta {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+
+/* FOOTER */
+footer {
+  padding: 3rem 5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.logo-footer img {
+  height: 8rem;
+  width: auto;
+}
+.banner-footer {
+  background-color: #35b38c;
+  color: white;
+  flex: 1;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.columna-footer h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.columna-footer p, .columna-footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}

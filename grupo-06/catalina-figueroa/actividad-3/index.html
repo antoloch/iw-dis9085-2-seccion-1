@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo flexbox · Componentes para un single page</title>
+  <link rel="stylesheet" href="demo-flex.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       COMPONENTE 1: NAVBAR
+       Logo a la izquierda, menú a la derecha.
+       ====================================================== -->
+  <header class="encabezado">
+    <p class="logo">Estudio</p>
+    <nav>
+      <ul class="menu">
+        <li><a href="#estudio">Estudio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         COMPONENTE 2: SECCIÓN EN DOS COLUMNAS
+         Texto a un lado, imagen al otro.
+         ====================================================== -->
+    <section id="estudio" class="dos-columnas">
+      <div class="columna">
+        <h2>El estudio</h2>
+        <p>Trabajamos entre la gráfica, el textil y el objeto. Cada proyecto
+           parte en el taller, probando materiales con las manos.</p>
+        <a href="#proyectos" class="boton">Ver proyectos</a>
+      </div>
+      <div class="columna">
+        <img src="img/estudio.jpg" alt="Tela de lino verde con pliegues sobre una mesa de taller">
+      </div>
+    </section>
+
+    <!-- ======================================================
+         COMPONENTE 3: GRILLA DE TARJETAS
+         ====================================================== -->
+    <section id="proyectos" class="seccion">
+      <h2>Proyectos</h2>
+      <!-- div: agrupa las tarjetas solo para darles un layout -->
+      <div class="grilla">
+        <article class="tarjeta">
+          <h3>Afiche</h3>
+          <p>Serie gráfica para un festival de música.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Textil</h3>
+          <p>Colección de estampados con fibras locales.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Lámpara</h3>
+          <p>Objeto de madera y papel para interior.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       COMPONENTE 4: FOOTER EN COLUMNAS
+       ====================================================== -->
+  <footer id="contacto" class="pie">
+    <div>
+      <h2>Contacto</h2>
+      <p><a href="mailto:hola@estudio.cl">hola@estudio.cl</a></p>
+    </div>
+    <div>
+      <h2>Redes</h2>
+      <p><a href="https://www.instagram.com/">Instagram</a></p>
+    </div>
+    <p class="creditos">© 2026 Estudio · Foto: Volha Flaxeco en Unsplash</p>
+  </footer>
+
+</body>
+</html>

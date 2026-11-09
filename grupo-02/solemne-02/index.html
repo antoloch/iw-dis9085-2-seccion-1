@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creamfields 2027</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-inicio">
+
+  <!-- encabezado: logo y menú -->
+  <header class="barra-superior">
+    <div class="contenedor barra-superior__contenido">
+      <a href="index.html" class="logo">
+        <img class="logo__imagen" src="assets/img/logo-creamfields.png" alt="Creamfields">
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a class="menu__enlace menu__enlace--lineup" href="#lineup">Line up</a>
+        <a class="menu__enlace menu__enlace--entradas" href="entradas.html">Entradas</a>
+        <a class="menu__enlace menu__enlace--noticias" href="#noticias">Noticias</a>
+        <a class="menu__enlace" href="#app">Descargar App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- portada -->
+    <section class="portada">
+      <div class="portada__vidrio">
+        <div class="contenedor hero">
+          <h1 class="hero__titulo">
+            <img class="hero__titulo-imagen" src="assets/img/titulo-creamfields-2027.png" alt="Creamfields 2027">
+          </h1>
+
+          <p class="hero__bajada">El festival de música electrónica más grande del planeta. Prepárate<br>para dos días de pura energía, escenarios imponentes y los<br>mejores DJs del mundo. Vive la experiencia Creamfields, el punto<br>de encuentro de la cultura dance global te espera.</p>
+
+          <div class="cuenta" aria-label="Cuenta regresiva para Creamfields 2027">
+            <div class="cuenta__etiquetas">
+              <span class="cuenta__etiqueta cuenta__etiqueta--dias">Días</span>
+              <span class="cuenta__etiqueta cuenta__etiqueta--horas">Horas</span>
+              <span class="cuenta__etiqueta cuenta__etiqueta--minutos">Minutos</span>
+              <span class="cuenta__etiqueta">Segundos</span>
+            </div>
+            <p class="cuenta__numeros" id="cuenta">319 : 22  : 12  :  03</p>
+          </div>
+
+          <div class="hero__fechas">
+            <div class="hero__columna hero__columna--izquierda">
+              <p class="hero__dato"><time datetime="2027-08-26">Jueves 26</time> * <time datetime="2027-08-29">Domingo 29 de agosto</time></p>
+              <p class="hero__dato"><time datetime="2027">2027</time></p>
+              <p class="hero__dato">Santiago, Chile</p>
+            </div>
+            <div class="hero__columna">
+              <p class="hero__dato">Feriado</p>
+              <p class="hero__dato">Fin de semana</p>
+            </div>
+          </div>
+
+          <a href="entradas.html" class="boton-entradas">Entradas</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="contenedor contenido">
+
+      <!-- carrusel -->
+      <section class="carrusel">
+        <h2 class="solo-lectores">Fotos del festival</h2>
+        <div class="carrusel__pista" id="pista">
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-01.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-02.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-03.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-04.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-05.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-06.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-07.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-08.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-09.jpg" alt=""></figure>
+          <figure class="carrusel__item"><img class="carrusel__foto" src="assets/img/carrusel-10.jpg" alt=""></figure>
+        </div>
+      </section>
+
+      <!-- line up -->
+      <section class="lineup" id="lineup">
+        <h2 class="titulo-seccion titulo-seccion--lineup">LINE UP</h2>
+        <p class="lineup__intro">En 2027 celebramos 30 años de Creamfields. Prepárense para los nombres más importantes de la música electrónica, producciones de vanguardia y momentos inolvidables. Aquí encontrarán nuestros anuncios hasta la fecha para la próxima edición de Creamfields. Asegúrense de descargar nuestra aplicación oficial y sígannos en redes sociales para ser los primeros en enterarse de cualquier anuncio importante del evento.</p>
+
+        <ul class="lineup__artistas">
+          <li class="artista">
+            <a class="artista__enlace" href="https://www.instagram.com/theprodigyofficial/" target="_blank" rel="noopener">
+              <figure class="artista__figura">
+                <img class="artista__foto" src="assets/img/lineup-el-prodigio.jpg" alt="">
+                <figcaption class="artista__nombre">El Prodigio</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="artista">
+            <a class="artista__enlace" href="https://www.instagram.com/frankyrizardo/" target="_blank" rel="noopener">
+              <figure class="artista__figura">
+                <img class="artista__foto" src="assets/img/lineup-franky-rizardo.jpg" alt="">
+                <figcaption class="artista__nombre">Franky Rizardo</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="artista">
+            <a class="artista__enlace" href="https://www.instagram.com/marcocarola/" target="_blank" rel="noopener">
+              <figure class="artista__figura">
+                <img class="artista__foto" src="assets/img/lineup-marco-carola.jpg" alt="">
+                <figcaption class="artista__nombre">Marco Carola</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="artista">
+            <a class="artista__enlace" href="https://www.instagram.com/hannahlaingdj/" target="_blank" rel="noopener">
+              <figure class="artista__figura">
+                <img class="artista__foto" src="assets/img/lineup-hannah-laing.jpg" alt="">
+                <figcaption class="artista__nombre">Hannah Laing</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="artista">
+            <a class="artista__enlace" href="https://www.instagram.com/jamiejonesmusic/" target="_blank" rel="noopener">
+              <figure class="artista__figura">
+                <img class="artista__foto" src="assets/img/lineup-jamie-jones.jpg" alt="">
+                <figcaption class="artista__nombre">Jamie Jones</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Noticias -->
+      <section class="noticias" id="noticias">
+        <h2 class="titulo-seccion titulo-seccion--noticias">NOTICIAS</h2>
+
+        <article class="noticia noticia--1">
+          <figure class="noticia__figura">
+            <img class="noticia__foto" src="assets/img/noticia-1.jpg" alt="">
+          </figure>
+          <header class="noticia__encabezado">
+            <time class="noticia__fecha" datetime="2026-10-02">02 / 10 / 2026</time>
+            <h3 class="noticia__titulo noticia__titulo--1">Todas las plazas para acampar<br>durante 2 días y para<br>Dreamfields están AGOTADAS.</h3>
+          </header>
+        </article>
+        <article class="noticia noticia--2">
+          <figure class="noticia__figura">
+            <img class="noticia__foto" src="assets/img/noticia-2.jpg" alt="">
+          </figure>
+          <header class="noticia__encabezado">
+            <time class="noticia__fecha" datetime="2026-09-27">27 / 09 / 2026</time>
+            <h3 class="noticia__titulo noticia__titulo--2">Hannah Laing regresa en 2027<br>para una actuación exclusiva<br>en un festival inglés.</h3>
+          </header>
+        </article>
+        <article class="noticia noticia--3">
+          <figure class="noticia__figura">
+            <img class="noticia__foto" src="assets/img/noticia-3.jpg" alt="">
+          </figure>
+          <header class="noticia__encabezado">
+            <time class="noticia__fecha" datetime="2026-09-24">24 / 09 / 2026</time>
+            <h3 class="noticia__titulo noticia__titulo--3">ANUNCIO IMPORTANTE.<br>Marco Carola, Steel Yard,<br>sábado 28 de agosto.</h3>
+          </header>
+        </article>
+      </section>
+
+      <!-- descargar app -->
+      <section class="app" id="app">
+        <h2 class="titulo-seccion titulo-seccion--app">DESCARGAR APP</h2>
+
+        <a class="boton-app boton-app--apple" href="https://apps.apple.com/us/app/creamfields/id1578659813" target="_blank" rel="noopener">
+          <span class="boton-app__texto boton-app__texto--apple">Descarga para Apple ¡OS (App Store)</span>
+        </a>
+        <a class="boton-app boton-app--android" href="https://play.google.com/store/apps/details?id=com.greencopper.creamfields" target="_blank" rel="noopener">
+          <span class="boton-app__texto boton-app__texto--android">Descarga para Android (Play Store)</span>
+        </a>
+
+        <div class="app__lista">
+          <p class="app__incluye">Incluye:</p>
+          <ul class="app__items">
+            <li>Horarios de las actuaciones.</li>
+            <li>Información Artistas, escenarios y recinto.</li>
+            <li>Localiza mi coche / Localiza mi tienda de campaña.</li>
+            <li>Planifica tus conciertos.</li>
+            <li>Mapa GPS completo del recinto.</li>
+            <li>Listas de reproducción y álbumes oficiales de Creamfields.</li>
+            <li>Noticias y actualizaciones de las redes sociales oficiales de Creamfields.</li>
+            <li>Preguntas frecuentes.</li>
+            <li>Notificaciones push; permiten que cualquier actualización o información se envíe directamente a tu teléfono.</li>
+            <li>Funcionamiento sin conexión.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- partners -->
+  <aside class="contenedor partners">
+    <h2 class="partners__titulo">Partners</h2>
+    <img class="partners__fila partners__fila--1" src="assets/img/partners-fila1.png" alt="Budweiser, Co-op, Smirnoff">
+    <img class="partners__fila partners__fila--2" src="assets/img/partners-fila2.png" alt="Captain Morgan, Johnnie Walker, Casamigos">
+    <img class="partners__fila partners__fila--3" src="assets/img/partners-fila3.png" alt="Gordon's, PayPal, Beatbox">
+    <img class="partners__fila partners__fila--4" src="assets/img/partners-fila4.png" alt="Big Green Coach, Nordic Spirit">
+    <h2 class="partners__titulo partners__titulo--media">Media Partners</h2>
+    <img class="partners__fila partners__fila--media" src="assets/img/media-partner-capital.png" alt="Capital Dance">
+  </aside>
+
+  <!-- pie de página -->
+  <footer class="pie">
+    <div class="contenedor pie__contenido">
+      <div class="pie__marca">
+        <a href="index.html"><img class="pie__logo" src="assets/img/logo-creamfields.png" alt="Creamfields, volver al inicio"></a>
+        <p class="pie__creditos">Diseño y Desarrollo: Camila Canales · Catalina Ibarra<br>Renata Moraga · Juan Ignacio Muñoz · 2026</p>
+      </div>
+      <nav class="redes" aria-label="Redes sociales">
+        <ul class="redes__lista">
+          <li class="red">
+            <a class="red__enlace" href="https://www.facebook.com/OfficialCreamfields" target="_blank" rel="noopener" aria-label="Facebook">
+              <img class="red__icono red__icono--facebook" src="assets/img/icono-facebook.png" alt=""></a>
+          </li>
+          <li class="red red--instagram">
+            <a class="red__enlace" href="https://www.instagram.com/creamfieldsofficial" target="_blank" rel="noopener" aria-label="Instagram">
+              <img class="red__icono red__icono--instagram" src="assets/img/icono-instagram.png" alt=""></a>
+          </li>
+          <li class="red red--youtube">
+            <a class="red__enlace" href="https://www.youtube.com/channel/UC7RZ3YtxzlR61_3kfjdolAA" target="_blank" rel="noopener" aria-label="YouTube">
+              <img class="red__icono red__icono--youtube" src="assets/img/icono-youtube.png" alt=""></a>
+          </li>
+          <li class="red red--tiktok">
+            <a class="red__enlace" href="https://www.tiktok.com/@creamfieldsofficial?lang=en" target="_blank" rel="noopener" aria-label="TikTok">
+              <img class="red__icono red__icono--tiktok" src="assets/img/icono-tiktok.png" alt=""></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

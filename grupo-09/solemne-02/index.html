@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUIDO/0 SESSIONS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tipografía Intel Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Aplicar Intel Mono al texto y a los botones */
+        body,
+        button,
+        input,
+        textarea,
+        select {
+            font-family: "Intel One Mono", monospace;
+        }
+
+        /* El carrusel se desplaza horizontalmente */
+        .carrusel {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        .carrusel::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Las tarjetas se mantienen una al lado de la otra */
+        .carrusel .tarjeta-sesion {
+            flex-shrink: 0;
+        }
+
+        /* Las flechas funcionan como botones */
+        .flecha {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <nav>
+            <ul class="menu">
+                <li><a href="#INICIO">INICIO</a></li>
+                <li><a href="#LINEUP">LINEUP</a></li>
+                <li><a href="#FECHAS">FECHAS</a></li>
+                <li><a href="#ESCUCHAR">ESCUCHAR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Componente 1: Inicio / Portada -->
+        <section id="INICIO" class="hero">
+            <h1 class="logo-principal">
+                <img src="assets/RUIDO0.png" alt="RUIDO/0 sessions">
+            </h1>
+
+            <div class="descripcion">
+                <p>
+                    SOMOS EL EVENTO QUE REUNE MUSICA, ESPACIOS Y NUEVAS
+                    FORMAS DE ENCONTRARSE ALREDEDOR DE LA ESCENA ELECTRÓNICA
+                </p>
+            </div>
+        </section>
+
+        <!-- Componente 2: Lineup -->
+        <section id="LINEUP" class="seccion-lineup">
+            <h2>LINEUP</h2>
+
+            <ul class="lineup-container">
+                <li class="artist-name">FOLAMOUR</li>
+                <li class="artist-name">MALL GRAB</li>
+
+                <li class="artist-name">OVERMONO</li>
+                <li class="artist-name">JAYDA G</li>
+
+                <li class="artist-name">SALUTE</li>
+                <li class="artist-name">TSHA</li>
+                <li class="artist-name">HAAI</li>
+
+                <li class="artist-name">JOJO LORENZO</li>
+                <li class="artist-name">TINZO</li>
+
+                <li class="artist-name">VTSS</li>
+                <li class="artist-name">CC:DISCO</li>
+            </ul>
+        </section>
+
+        <!-- Componente 3: Sesiones -->
+        <section id="DESCUBRE-SESIONES" class="sesiones">
+            <h2>Descubre las sesiones</h2>
+
+            <div class="carrusel-contenedor">
+
+                <!-- Botón para volver a la tarjeta anterior -->
+                <button
+                    class="flecha flecha-izq"
+                    type="button"
+                    aria-label="Ver sesión anterior">
+                    <img src="assets/flecha-izquierda.png" alt="">
+                </button>
+
+                <div class="carrusel">
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=IMijKmhuA7E&list=RDIMijKmhuA7E&start_radio=1">
+                            <img src="assets/folamour.jpg" alt="Sesión de Folamour">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=ddeAyYF_uwg&list=RDddeAyYF_uwg&start_radio=1">
+                            <img src="assets/mall-grab.jpg" alt="Sesión de Mall Grab">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=BpA2n8bvpOk&list=RDBpA2n8bvpOk&start_radio=1">
+                            <img src="assets/overmono.jpg" alt="Sesión de Overmono">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=tk1RHzS3kgM&list=RDtk1RHzS3kgM&start_radio=1">
+                            <img src="assets/jayda-g.jpg" alt="Sesión de Jayda G">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=ulhdSOiTzx8&list=RDulhdSOiTzx8&start_radio=1">
+                            <img src="assets/salute.jpg" alt="Sesión de Salute">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=VG7ePskDBFM&list=RDVG7ePskDBFM&start_radio=1">
+                            <img src="assets/tsha.jpg" alt="Sesión de TSHA">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=1PcjSKvZiew&list=RD1PcjSKvZiew&start_radio=1">
+                            <img src="assets/haai.jpg" alt="Sesión de HAAi">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=m9U8rppygmU&list=RDm9U8rppygmU&start_radio=1">
+                            <img src="assets/jojo-lorenzo.jpg" alt="Sesión de Jojo Lorenzo">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=M0Q152GFVkM&list=RDM0Q152GFVkM&start_radio=1">
+                            <img src="assets/tinzo.jpg" alt="Sesión de Tinzo">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=9piX0eeBjZo&list=RD9piX0eeBjZo&start_radio=1">
+                            <img src="assets/vtss.jpg" alt="Sesión de VTSS">
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sesion">
+                        <a href="https://www.youtube.com/watch?v=pme0_g_0aPs&list=RDpme0_g_0aPs&start_radio=1">
+                            <img src="assets/cc-disco.jpg" alt="Sesión de CC:DISCO">
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- Botón para avanzar a la siguiente tarjeta -->
+                <button
+                    class="flecha flecha-der"
+                    type="button"
+                    aria-label="Ver sesión siguiente">
+                    <img src="assets/flecha-derecha.png" alt="">
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Componente 4: Fechas -->
+        <section id="FECHAS" class="fechas">
+            <h2>FECHAS</h2>
+            <h3>NOVIEMBRE 2026 <br> ESPACIO RIESCO, SANTIAGO</h3>
+
+            <div class="grilla-fechas">
+
+                <article class="fecha-dia">
+                    <h4>14 NOV | SÁBADO</h4>
+                    <p class="genero">HOUSE / DISCO</p>
+                    <ul class="horarios">
+                        <li>22:00 — JAYDA G</li>
+                        <li>00:00 — FOLAMOUR</li>
+                        <li>01:30 — CC:DISCO</li>
+                    </ul>
+                </article>
+
+                <article class="fecha-dia">
+                    <h4>15 NOV | DOMINGO</h4>
+                    <p class="genero">DANCE / HOUSE</p>
+                    <ul class="horarios">
+                        <li>21:30 — TSHA</li>
+                        <li>23:00 — SALUTE</li>
+                        <li>01:00 — DJ SEINFELD</li>
+                    </ul>
+                </article>
+
+                <article class="fecha-dia">
+                    <h4>16 NOV | LUNES</h4>
+                    <p class="genero">BOOK CLUB NIGHT</p>
+                    <ul class="horarios">
+                        <li>21:00 — TINZO</li>
+                        <li>23:00 — JOJO LORENZO</li>
+                        <li>01:00 — MALL GRAB</li>
+                    </ul>
+                </article>
+
+                <article class="fecha-dia">
+                    <h4>23 NOV | LUNES</h4>
+                    <p class="genero">CLUB TECHNO & EXPERIMENTAL</p>
+                    <ul class="horarios">
+                        <li>21:00 — HAAI</li>
+                        <li>22:30 — OVERMONO</li>
+                        <li>00:30 — VTSS</li>
+                    </ul>
+                </article>
+
+                <p>PRÓXIMAMENTE VENTA DE ENTRADAS VÍA</p>
+                <img src="assets/punto-ticket.png" alt="Punto Ticket">
+
+            </div>
+        </section>
+
+        <!-- Componente 5: Escuchar -->
+        <section id="ESCUCHAR" class="escuchar">
+            <h2>ESCUCHAR</h2>
+
+            <div class="escuchar-container">
+
+                <article class="tarjeta-track">
+                    <img src="assets/normal-friends.jpe" alt="Portada track Normal Friends">
+
+                    <div class="info-track">
+                        <h3>NORMAL FRIENDS</h3>
+                        <p>TINZO + JOJO</p>
+                    </div>
+
+                    <input type="checkbox" id="track-1" class="play-checkbox">
+                    <label for="track-1" class="play-boton" aria-label="Reproducir o pausar Normal Friends">
+                        <img src="assets/play-boton.png" alt="Play" class="img-play">
+                        <img src="assets/pausa-boton.png" alt="Pausa" class="img-pausa">
+                    </label>
+                </article>
+
+                <article class="tarjeta-track">
+                    <img src="assets/both-of-us.webp" alt="Portada track Both of Us">
+
+                    <div class="info-track">
+                        <h3>BOTH OF US</h3>
+                        <p>JAYDA G</p>
+                    </div>
+
+                    <input type="checkbox" id="track-2" class="play-checkbox">
+                    <label for="track-2" class="play-boton" aria-label="Reproducir o pausar Both of Us">
+                        <img src="assets/play-boton.png" alt="Play" class="img-play">
+                        <img src="assets/pausa-boton.png" alt="Pausa" class="img-pausa">
+                    </label>
+                </article>
+
+                <article class="tarjeta-track">
+                    <img src="assets/these-are-just-places-to-me-now.jpg" alt="Portada track These Are Just Places to Me Now">
+
+                    <div class="info-track">
+                        <h3>THESE ARE JUST PLACES TO ME NOW</h3>
+                        <p>FOLAMOUR</p>
+                    </div>
+
+                    <input type="checkbox" id="track-3" class="play-checkbox">
+                    <label for="track-3" class="play-boton" aria-label="Reproducir o pausar These Are Just Places to Me Now">
+                        <img src="assets/play-boton.png" alt="Play" class="img-play">
+                        <img src="assets/pausa-boton.png" alt="Pausa" class="img-pausa">
+                    </label>
+                </article>
+
+                <article class="tarjeta-track">
+                    <img src="assets/trisha.jpg" alt="Portada track Trisha">
+
+                    <div class="info-track">
+                        <h3>TRISHA</h3>
+                        <p>VTSS</p>
+                    </div>
+
+                    <input type="checkbox" id="track-4" class="play-checkbox">
+                    <label for="track-4" class="play-boton" aria-label="Reproducir o pausar Trisha">
+                        <img src="assets/play-boton.png" alt="Play" class="img-play">
+                        <img src="assets/pausa-boton.png" alt="Pausa" class="img-pausa">
+                    </label>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Componente 6: Footer -->
+    <footer class="pie-de-pagina">
+
+        <div class="footer-enlaces">
+            <a href="#INICIO" class="volver-inicio">VOLVER AL INICIO</a>
+
+            <a href="https://www.instagram.com/" class="instagram-link">
+                <img src="assets/instagram.png" alt="">
+                INSTAGRAM
+            </a>
+        </div>
+
+        <div class="footer-auspiciadores">
+            <img src="assets/budweiser.webp" alt="Budweiser">
+            <img src="assets/pioneer-dj.webp" alt="Pioneer DJ">
+        </div>
+
+        <p class="creditos">
+            © 2026 RUIDO/0 SESSIONS. TODOS LOS DERECHOS RESERVADOS.
+        </p>
+
+    </footer>
+
+    <!-- Funcionalidad de las flechas del carrusel -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carrusel = document.querySelector(".carrusel");
+            const botonAnterior = document.querySelector(".flecha-izq");
+            const botonSiguiente = document.querySelector(".flecha-der");
+
+            if (!carrusel || !botonAnterior || !botonSiguiente) {
+                return;
+            }
+
+            function calcularDesplazamiento() {
+                const tarjeta = carrusel.querySelector(".tarjeta-sesion");
+
+                if (!tarjeta) {
+                    return carrusel.clientWidth;
+                }
+
+                const estilos = window.getComputedStyle(carrusel);
+                const espacio = parseFloat(estilos.columnGap || estilos.gap) || 0;
+
+                return tarjeta.getBoundingClientRect().width + espacio;
+            }
+
+            botonAnterior.addEventListener("click", () => {
+                carrusel.scrollBy({
+                    left: -calcularDesplazamiento(),
+                    behavior: "smooth"
+                });
+            });
+
+            botonSiguiente.addEventListener("click", () => {
+                carrusel.scrollBy({
+                    left: calcularDesplazamiento(),
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

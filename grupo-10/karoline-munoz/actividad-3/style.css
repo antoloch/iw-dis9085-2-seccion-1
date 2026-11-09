@@ -1,0 +1,122 @@
+/* =========================================================
+   DEMO FLEXBOX · COMPONENTES PARA UN SINGLE PAGE
+   Navbar, sección en dos columnas, grilla de tarjetas y footer.
+   ========================================================= */
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
+  line-height: 1.6;
+}
+h2 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+img {
+  max-width: 100%;
+}
+
+/* ---------- Componente 1: Navbar ---------- */
+.encabezado {
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #d9d2c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;   
+  display: flex;
+  gap: 1.5rem;       /* quita las viñetas */
+}
+.menu a {
+  color: #1f2933;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+/* ---------- Botón (se usa en varios componentes) ---------- */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #2f3c7e;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.boton :hover {
+  background-color: white;
+  color: blue
+}
+/* ---------- Componente 2: Dos columnas ---------- */
+.dos-columnas {
+  padding: 4rem 2rem;
+  background: #ede6da;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.columna{ 
+  flex: 1;
+}
+
+/* ---------- Componente 3: Grilla de tarjetas ---------- */
+.seccion {
+  padding: 4rem 2rem;
+}
+.tarjeta {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d9d2c5;
+  flex: 1;
+}
+.tarjeta h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+.tarjeta p {
+  margin: 0;
+}
+
+.grilla {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between
+};
+/* ---------- Componente 4: Footer ---------- */
+.pie {
+  padding: 3rem 2rem;
+  background: #1f2933;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   }
+
+.pie div{
+    flex: 1;
+  }
+
+.pie h2 {
+  font-size: 1.25rem;
+}
+.pie a {
+  color: #ffffff;
+}

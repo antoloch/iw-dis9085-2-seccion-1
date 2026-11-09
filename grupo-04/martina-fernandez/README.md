@@ -59,3 +59,7 @@ En css:
 No utilice las de html porque prefería tener las cosas relacionadas a la apariencia en el css, y no probé la opción de css porque creí que era más sencillo
 usar la opción de porcentaje.
 
+
+
+
+

@@ -1,0 +1,132 @@
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  line-height: 1.6;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Componente 1: Navbar */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #76ce70;
+  border-bottom: 1px solid #427140;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* quita las viñetas */
+}
+
+.menu a {
+  color: #115127;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Botón (se usa en varios componentes) */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #267e1e;
+  color: #0c0c0c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Componente 2: Dos columnas */
+.dos-columnas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: #97d098;
+}
+
+.dos-columnas > div {
+  flex: 1;
+}
+
+.dos-columnas img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Componente 3: Grilla de tarjetas */
+.seccion {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion > div,
+.seccion .grilla-tarjetas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  flex: 1;
+  min-width: 12rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d9d2c5;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tarjeta p {
+  margin: 0;
+}
+
+/* Componente 4: Footer */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: #080808;
+  color: #ffffff;
+}
+
+.pie h2 {
+  font-size: 1.25rem;
+}
+
+.pie a {
+  color: #7abd69;
+}

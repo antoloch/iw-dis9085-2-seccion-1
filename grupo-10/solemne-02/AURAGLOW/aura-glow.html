@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Glow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado con menú, logo y búsqueda -->
+  <header class="encabezado">
+    <img class="icono-barra" src="imagenes/menu.svg" alt="Menú">
+    <span class="logo">aura glow</span>
+    <img class="icono-barra" src="imagenes/lupa.svg" alt="Buscar">
+  </header>
+
+  <!-- Portada principal -->
+  <section class="portada">
+    <p>Descubre lo nuevo de</p>
+    <h1>Lip Glow</h1>
+    <p>en Aura Glow</p>
+  </section>
+
+  <!-- Puntos del carrusel -->
+<div class="puntos">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <!-- Marcas favoritas -->
+  <h2 class="titulo-seccion">Tus marcas favoritas</h2>
+  <section class="marcas">
+    <a class="marca" href="#">
+      <img class="foto" src="imagenes/rhode.jpg" alt="Productos de Rhode">
+      <span class="etiqueta">Rhode</span>
+    </a>
+
+    <a class="marca" href="#">
+      <img class="foto" src="imagenes/rarebeauty.jpg" alt="Productos de Rare Beauty">
+      <span class="etiqueta">Rare Beauty</span>
+    </a>
+
+    <a class="marca" href="#">
+      <img class="foto" src="imagenes/glossier.jpg" alt="Productos de Glossier">
+      <span class="etiqueta">Glossier</span>
+    </a>
+  </section>
+  
+  <!-- Banner de skincare -->
+  <section class="banner-skincare">
+    <img src="imagenes/skincare.jpg" alt="Productos de skincare">
+    <h2>Crea tu propia rutina de skincare</h2>
+  </section>
+
+
+<!-- Carrusel de productos -->
+<section class="carrusel">
+
+  <!-- Flecha anterior -->
+  <button class="flecha" type="button" aria-label="Anterior">‹</button>
+
+  <div class="tarjetas">
+
+    <!-- Producto 1 -->
+    <article class="tarjeta">
+      <div class="foto">
+        <img src="imagenes/rhode-glazing-milk.jpg" alt="Rhode Glazing Milk">
+      </div>
+
+      <div class="tarjeta-info">
+        <strong>Rhode – Glazing Milk</strong>
+        <span>Esencia facial con ceramidas (129 ml)</span>
+
+        <div class="tarjeta-iconos">
+          <button type="button" aria-label="Agregar al carrito">
+            <img src="imagenes/bolsa.svg" alt="">
+          </button>
+
+          <button type="button" aria-label="Agregar a favoritos">
+            <img src="imagenes/corazon.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Producto 2 -->
+    <article class="tarjeta">
+      <div class="foto">
+        <img src="imagenes/glossier-super-bounce.jpg" alt="Glossier Super Bounce">
+      </div>
+
+      <div class="tarjeta-info">
+        <strong>Glossier – Super Bounce</strong>
+        <span>Sérum de ácido hialurónico + vitamina B5</span>
+
+        <div class="tarjeta-iconos">
+          <button type="button" aria-label="Agregar al carrito">
+            <img src="imagenes/bolsa.svg" alt="">
+          </button>
+
+          <button type="button" aria-label="Agregar a favoritos">
+            <img src="imagenes/corazon.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Producto 3 -->
+    <article class="tarjeta">
+      <div class="foto">
+        <img src="imagenes/rhode-pineapple-refresh.jpg" alt="Rhode Pineapple Refresh">
+      </div>
+
+      <div class="tarjeta-info">
+        <strong>Rhode – Pineapple Refresh</strong>
+        <span>Limpiador facial de uso diario</span>
+
+        <div class="tarjeta-iconos">
+          <button type="button" aria-label="Agregar al carrito">
+            <img src="imagenes/bolsa.svg" alt="">
+          </button>
+
+          <button type="button" aria-label="Agregar a favoritos">
+            <img src="imagenes/corazon.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Flecha siguiente -->
+  <button class="flecha" type="button" aria-label="Siguiente">›</button>
+
+</section>
+
+<!-- Puntos del carrusel -->
+<div class="puntos">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <!-- Banner de esenciales -->
+<section class="banner-esenciales">
+  <img src="imagenes/esenciales.jpg" alt="Descubre tus esenciales">
+  <h3>Descubre tus esenciales</h3>
+</section>
+
+<!-- Bloques de texto + foto -->
+<section class="bloques">
+
+  <!-- Bloque 1 -->
+  <div class="bloque">
+    <div class="bloque-texto">
+      <h2>Perfect match</h2>
+      <p>productos faciales</p>
+      <a class="boton" href="#">descubre</a>
+    </div>
+
+    <div class="foto">
+      <img src="imagenes/perfect-match.jpg" alt="Productos faciales">
+    </div>
+  </div>
+
+  <!-- Bloque 2 -->
+  <div class="bloque invertido">
+    <div class="bloque-texto">
+      <h2>Deslumbra donde vayas</h2>
+      <p>productos para acompañarte</p>
+      <a class="boton" href="#">descubre</a>
+    </div>
+
+    <div class="foto">
+      <img src="imagenes/deslumbra.jpg" alt="Productos para acompañarte">
+    </div>
+  </div>
+
+  <!-- Bloque 3 -->
+  <div class="bloque">
+    <div class="bloque-texto">
+      <h2>Tu piel, tu rutina</h2>
+      <p>productos para cada necesidad</p>
+      <a class="boton" href="#">descubre</a>
+    </div>
+
+    <div class="foto">
+      <img src="imagenes/tu-rutina.jpg" alt="Rutina de cuidado facial">
+    </div>
+  </div>
+
+  <!-- Bloque 4 -->
+  <div class="bloque invertido">
+    <div class="bloque-texto frase">
+      <h2>Junt@s descubriremos el arte de resaltar lo que te hace auténtic@</h2>
+    </div>
+
+    <div class="foto">
+      <img src="imagenes/autenticidad.jpg" alt="Belleza y autenticidad">
+    </div>
+  </div>
+
+</section>
+  <!-- Pie de página -->
+   
+  <footer class="pie">
+    <div class="pie-col principal">
+      <span class="logo">Aura glow</span>
+      <p>Suscríbete a nuestro newsletter y sé parte de nuestra comunidad. Entérate de nuestras promociones, tips y mucho más.</p>
+      <form class="suscribir" onsubmit="return false">
+        <input type="email" placeholder="Ingresa tu correo electrónico" aria-label="Correo electrónico">
+        <button type="submit">SUSCRIBIR</button>
+      </form>
+    </div>
+    <div class="pie-col">
+  <h3>SOCIAL</h3>
+  <a class="red" href="https://www.instagram.com/">
+    <img src="imagenes/instagram.jpg" alt="">
+    Instagram
+  </a>
+  <a class="red" href="https://www.tiktok.com/">
+    <img src="imagenes/tiktok.jpg" alt="">
+    Tik Tok
+  </a>
+  <a class="red" href="https://www.youtube.com/">
+    <img src="imagenes/youtube.jpg" alt="">
+    Youtube
+  </a>
+  <a class="red" href="https://www.pinterest.com/">
+    <img src="imagenes/pinterest.jpg" alt="">
+    Pinterest
+  </a>
+</div>
+    <div class="pie-col">
+      <h3>INFORMACIÓN</h3>
+      <a href="#">Tiendas</a>
+      <a href="#">Despachos</a>
+      <a href="#">Términos y Condiciones</a>
+      <a href="#">Cambios y Devoluciones</a>
+      <a href="#">Preguntas frecuentes</a>
+      <a href="#">Contacto</a>
+    </div>
+  </footer>
+
+</body>
+</html>

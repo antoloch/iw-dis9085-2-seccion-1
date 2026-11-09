@@ -1,0 +1,86 @@
+/* Basico */
+*{
+    box-sizing: border-box; /*el ancho incly¡uye borde y padding*/
+}
+
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2b2b2b;
+    background-color: rgb(224, 196, 196);
+}
+
+img{
+    max-width: 100%;
+}
+
+/* header */
+/* los numero de padding funcionan como un reloj */
+
+header {
+    max-width:50rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    border-bottom: 4px solid rgb(10, 122, 44);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: rgb(207, 2, 2);
+}
+
+.autor{
+    font-size: 1.2rem;
+    color: rgb(9, 48, 121);
+}
+
+/* main content*/
+
+main {
+    max-width:50rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+div {
+    margin: 0 0 2rem;
+    padding: 1rem;
+    background: white;
+    border: 5px solid rgb(10, 122, 44);
+}
+
+section {
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    background: white;
+    border: 5px solid rgb(10, 122, 44);
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: rgb(175, 4, 4);
+}
+
+.destacado{
+    background-color: rgb(252, 196, 196);
+    padding: 1rem;
+}
+
+.button{
+    padding: 0.75rem 1.5rem;
+    background: rgb(252, 196, 196);
+    color: rgb(100, 5, 5);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+
+footer{
+    max-width:50rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-size: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(9, 48, 121);
+}

@@ -1,0 +1,636 @@
+/* =====================================================================
+   AURA GLOW – estilos.css
+   Diseño de escritorio de 1440 px.
+   Solo se usa flexbox y unidades rem y %. Nada de grid ni position.
+   (1rem = 16 px, así que 90 rem ≈ 1440 px)
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. COLORES Y BASE
+   --------------------------------------------------------------------- */
+
+/* Guardamos los colores en "variables" para cambiarlos en un solo lugar */
+:root {
+  --lila: #F5A7E7;          
+  --rosa: #F0CAE9;          
+  --blanco: #ffffff;        
+  --negro: #000000;         
+}
+
+/* Regla general: todos los elementos */
+* {
+  box-sizing: border-box;   /* el ancho incluye el relleno y el borde, así las medidas no se descuadran */
+}
+
+
+/* El cuerpo de la página */
+body {
+  margin: 0 auto;      /* antes: margin: 0; ahora se centra */
+  width: 100%;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: var(--negro);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Las imágenes */
+img {
+  display: block;           /* evita un huequito raro debajo de las imágenes */
+  max-width: 100%;          /* una imagen nunca es más ancha que su caja */
+}
+
+/* Los enlaces */
+a {
+  text-decoration: none;    /* quita el subrayado de los enlaces */
+  color: inherit;           /* usan el mismo color del texto que los rodea */
+}
+
+/* Los botones */
+button {
+  font-family: inherit;     /* usan la misma letra que el resto de la página */
+  cursor: pointer;          /* el cursor se vuelve manito al pasar por encima */
+}
+
+
+/* ---------------------------------------------------------------------
+   2. ENCABEZADO (menú, logo y lupa)
+   --------------------------------------------------------------------- */
+
+/* La barra lila redondeada de arriba */
+.encabezado {
+  display: flex;                    /* pone menú, logo y lupa en una fila */
+  justify-content: space-between;   /* menú a la izquierda, lupa a la derecha, logo en el medio */
+  align-items: center;              /* los centra de arriba a abajo */
+  background-color: var(--rosa);    /* fondo lila */
+  height: 6.8rem;                   /* alto de la barra */
+  margin: 3rem 2.75rem 3.75rem;     /* espacio: arriba, a los lados y abajo */
+  padding: 0 2.2rem;                /* espacio interno a los lados */
+  border-radius: 3.5rem;            /* esquinas muy redondas (forma de píldora) */
+}
+
+/* Los iconos de menú y lupa */
+.icono-barra {
+  width: 2.8rem;                    /* tamaño del icono */
+  height: 2.8rem;                   /* mismo alto para que sea cuadrado */
+}
+
+/* El nombre "aura glow" (se usa arriba y en el pie de página) */
+.logo {
+  font-size: 3.4rem;                /* tamaño grande de letra */
+  font-weight: 600;                 /* letra semi gruesa */
+  color: var(--blanco);             /* texto blanco */
+}
+
+
+/* ---------------------------------------------------------------------
+   3. PORTADA (imagen grande de arriba)
+   --------------------------------------------------------------------- */
+
+/* La franja de la portada */
+.portada {
+  display: flex;                        /* usamos flexbox para ordenar el texto */
+  flex-direction: column;               /* una línea debajo de otra */
+  justify-content: center;              /* centra el contenido de arriba a abajo */
+  align-items: center;                  /* centra el contenido a lo ancho */
+  height: 33.75rem;                     /* alto de la portada */
+  background-color: var(--rosa);        /* color de respaldo mientras carga la imagen */
+  background-image: url("imagenes/portada.jpg");  /* imagen de la portada (expórtala desde Figma) */
+  background-size: cover;               /* la imagen cubre toda la franja sin deformarse */
+  background-position: center;          /* la imagen se centra */
+  color: transparent;                   /* el texto del HTML se vuelve invisible: ya viene dentro de la imagen */
+}
+
+/* Los tres puntitos debajo del carrusel */
+.puntos {
+  display: flex;                    /* pone los puntos en fila */
+  justify-content: center;          /* los centra en la pantalla */
+  gap: 0.6rem;                      /* separación entre puntos */
+  margin-top: 2.2rem;               /* espacio sobre los puntos */
+}
+
+/* Cada puntito */
+.puntos span {
+  width: 1rem;                      /* ancho del punto */
+  height: 1rem;                     /* alto del punto */
+  background-color: var(--rosa-suave);  /* color rosa claro */
+  border-radius: 50%;               /* lo vuelve redondo */
+}
+
+.puntos span:first-child {
+  background-color: var(--lila);
+}
+
+/* Texto de la portada */
+.portada h1,
+.portada p {
+  margin: 0;                            /* sin espacios extra, no se ve de todos modos */
+}
+
+
+/* ---------------------------------------------------------------------
+   4. TUS MARCAS FAVORITAS
+   --------------------------------------------------------------------- */
+
+/* Título de la sección (también lo usan otros h2 con esta clase) */
+.titulo-seccion {
+  margin: 6.8rem 0 3.5rem;          /* espacio: arriba, a los lados y abajo */
+  text-align: center;               /* texto centrado */
+  font-size: 3rem;                  /* tamaño de letra */
+  font-weight: 500;                 /* letra de grosor medio */
+  color: var(--rosa);         /* color rosa claro */
+}
+
+/* La fila con las tres marcas */
+.marcas {
+  display: flex;                    /* pone las tres marcas una al lado de la otra */
+  gap: 1.2rem;                      /* separación entre ellas */
+  padding: 0 2.75rem;               /* margen a los lados de la pantalla */
+}
+
+/* Cada marca (foto + etiqueta) */
+.marca {
+  display: flex;                    /* flexbox para apilar foto y etiqueta */
+  flex-direction: column;           /* la etiqueta va debajo de la foto */
+  align-items: center;              /* la etiqueta queda centrada bajo la foto */
+  flex: 1;                          /* las tres marcas se reparten el ancho por igual (≈ 438 px cada una) */
+  min-width: 0;                     /* evita que una foto grande empuje y ensanche su columna */
+  gap: 1.1rem;                      /* espacio entre foto y etiqueta */
+}
+
+/* La foto de cada marca */
+.marca .foto {
+  width: 100%;                      /* ocupa todo el ancho de su columna (≈ 438 px, como en Figma) */
+  height: 34.375rem;                /* alto de la foto (550 px, como en Figma) */
+  object-fit: cover;                /* la foto llena el espacio sin deformarse */
+  border-radius: 2.5rem;            /* esquinas redondeadas (40 px) */
+  border: 0.1875rem solid var(--rosa)  /* borde rosa (3 px) */
+}
+
+/* La etiqueta con el nombre de la marca */
+.etiqueta {
+  display: flex;                    /* flexbox para centrar el texto dentro */
+  justify-content: center;          /* centra el texto a lo ancho */
+  align-items: center;              /* centra el texto de arriba a abajo */
+  width: 16.2rem;                   /* ancho de la píldora */
+  height: 3.2rem;                   /* alto de la píldora */
+  background-color: var(--rosa);    /* fondo lila */
+  color: var(--blanco);             /* texto blanco */
+  font-size: 1.5rem;                /* tamaño de letra */
+  font-weight: 600;                 /* letra semi gruesa */
+  border-radius: 2rem;              /* forma de píldora */
+}
+
+
+/* ---------------------------------------------------------------------
+   5. BANNER DE SKINCARE
+   --------------------------------------------------------------------- */
+
+/* Caja del banner: la imagen y el texto se montan uno sobre otro */
+.banner-skincare {
+  display: flex;                    /* flexbox para poner imagen y texto en la misma fila */
+  margin: 5.4rem 2.75rem 0;         /* espacio: arriba, a los lados y nada abajo */
+  border-radius: 1rem;              /* esquinas redondeadas */
+  overflow: hidden;                 /* recorta lo que se salga de las esquinas */
+}
+
+/* La imagen del banner */
+.banner-skincare img {
+  flex: 0 0 100%;                   /* ocupa el 100% del ancho y no se encoge */
+  height: 24.4rem;                  /* alto del banner */
+  object-fit: cover;                /* la imagen llena el espacio sin deformarse */
+}
+
+/* El texto sobre la imagen */
+.banner-skincare h2 {
+  flex: 0 0 100%;                   /* también mide el 100% del ancho */
+  margin: 0 0 0 -100%;              /* se corre a la izquierda su mismo ancho: así queda encima de la imagen */
+  padding: 0 22%;                   /* deja aire a los lados para que el texto se parta en dos líneas */
+  display: flex;                    /* flexbox para centrar el texto */
+  justify-content: center;          /* centra a lo ancho */
+  align-items: center;              /* centra de arriba a abajo */
+  text-align: center;               /* texto centrado */
+  font-size: 4rem;                  /* letra grande */
+  font-weight: 700;                 /* letra gruesa */
+  line-height: 1.1;                 /* líneas juntas */
+  color: var(--blanco);             /* texto blanco */
+}
+
+
+/* ---------------------------------------------------------------------
+   6. CARRUSEL DE PRODUCTOS
+   --------------------------------------------------------------------- */
+
+/* Caja del carrusel: flecha, tarjetas, flecha */
+.carrusel {
+  display: flex;                    /* pone flecha, tarjetas y flecha en una fila */
+  align-items: center;              /* centra las flechas a la altura de las tarjetas */
+  padding: 0 2.5rem;                /* margen a los lados (40 px) */
+  margin-top: 6rem;                 /* espacio sobre el carrusel */
+}
+
+/* Las flechas anterior y siguiente (círculo con borde fino) */
+.flecha {
+  display: flex;                    /* flexbox para centrar la flecha dibujada dentro */
+  justify-content: center;          /* centra a lo ancho */
+  align-items: center;              /* centra de arriba a abajo */
+  flex: 0 0 auto;                   /* mantienen su tamaño, no se estiran */
+  width: 3rem;                      /* ancho del círculo (48 px) */
+  height: 3rem;                     /* alto del círculo (48 px) */
+  padding: 0;                       /* sin relleno interno */
+  background-color: transparent;    /* el centro del círculo queda vacío */
+  border: 0.15rem solid var(--lila);    /* borde lila fino */
+  border-radius: 50%;               /* lo vuelve un círculo */
+  font-size: 0;                     /* esconde el símbolo › del HTML, porque dibujamos la flecha */
+}
+
+/* La flecha dibujada: un cuadradito con dos bordes, girado */
+.flecha::before {
+  content: "";                      /* crea un elemento vacío que podemos dibujar */
+  width: 0.9rem;                    /* ancho del cuadradito */
+  height: 0.9rem;                   /* alto del cuadradito */
+  border-top: 0.15rem solid var(--lila);    /* borde de arriba: un lado de la flecha */
+  border-right: 0.15rem solid var(--lila);  /* borde derecho: el otro lado */
+  transform: rotate(45deg);         /* lo gira para formar ">" */
+  margin-right: 0.3rem;             /* lo mueve un poco a la izquierda para verse centrado */
+}
+
+/* La flecha de "Anterior" apunta al otro lado */
+.flecha[aria-label="Anterior"]::before {
+  transform: rotate(-135deg);       /* la gira para formar "<" */
+  margin-right: 0;                  /* quita el ajuste de la flecha de siguiente */
+  margin-left: 0.3rem;              /* el ajuste va al lado contrario */
+}
+
+/* Contenedor de las tarjetas: las pone hacia el lado */
+.tarjetas {
+  display: flex;                    /* pone las tarjetas una al lado de la otra */
+  flex-direction: row;              /* en fila (horizontal) */
+  flex-wrap: nowrap;                /* nunca baja una tarjeta a la línea siguiente */
+  justify-content: center;          /* las centra entre las dos flechas */
+  flex: 1;                          /* ocupa todo el espacio que dejan las flechas */
+  gap: 4rem;                        /* separación entre tarjetas (64 px) */
+}
+
+/* Cada tarjeta de producto (medidas de Figma: 372 x 514 px) */
+.tarjeta {
+  display: flex;                    /* flexbox para apilar foto e información */
+  flex-direction: column;           /* la información va debajo de la foto */
+  flex: 0 1 23.25rem; 
+  min-width: 0; 
+  min-height: 32.125rem;            /* alto mínimo (514 px); crece solo si el texto necesita más espacio */
+  overflow: hidden;                 /* recorta lo que se salga de las esquinas */
+  border-radius: 1.875rem;          /* esquinas redondeadas (30 px) */
+  background: #F0CAE9;              /* fondo rosa de toda la tarjeta */
+}
+
+/* El recuadro de la foto del producto */
+.tarjeta .foto {
+  flex: 0 0 auto;                   /* mantiene su tamaño, no se encoge */
+  width: 23.25rem;                  /* ancho del recuadro (372 px) */
+  height: 23.25rem;                 /* alto del recuadro (372 px): solo la foto, no toda la tarjeta */
+  background: #F0CAE9;              /* fondo rosa */
+}
+
+/* La imagen del producto */
+.tarjeta .foto img {
+  width: 23.25rem;                  /* ancho de la imagen (372 px) */
+  height: 23.25rem;                 /* alto de la imagen, cuadrada (372 px) */
+  object-fit: cover;                /* llena el espacio sin deformarse */
+  border-radius: 1.875rem;          /* esquinas redondeadas (30 px) */
+  border: 0.3125rem solid #F0CAE9;  /* borde rosa (5 px) */
+}
+
+/* Zona de textos e iconos de la tarjeta */
+.tarjeta-info {
+  display: flex;                    /* flexbox para apilar textos e iconos */
+  flex-direction: column;           /* uno debajo de otro */
+  gap: 0.2rem;                      /* separación pequeña entre líneas */
+  padding: 0.5rem 1.2rem 0.6rem;    /* espacio interno, ajustado para que todo quepa en los 514 px */
+}
+
+/* Nombre del producto */
+.tarjeta-info strong {
+  color: #FFF;                      /* texto blanco */
+  font-family: "Open Sans", Arial, sans-serif;  /* tipo de letra (si no carga, usa Arial) */
+  font-size: 1.5rem;                /* tamaño de letra (24 px) */
+  font-style: normal;               /* letra sin cursiva */
+  font-weight: 700;                 /* letra gruesa */
+  line-height: 2rem;                /* alto de cada línea (32 px) */
+}
+
+/* Descripción del producto */
+.tarjeta-info span {
+  font-size: 0.875rem;              /* letra pequeña (14 px) para que no se parta en dos líneas */
+  color: var(--blanco);             /* texto blanco */
+}
+
+/* Fila de iconos (bolsa y corazón) */
+.tarjeta-iconos {
+  display: flex;                    /* pone los iconos uno al lado del otro */
+  gap: 0.6rem;                      /* separación entre ellos */
+  margin-top: 0.5rem;               /* espacio sobre los iconos */
+}
+
+/* Cada botón de icono */
+.tarjeta-iconos button {
+  display: flex;
+width: 3.4375rem;
+height: 3.4375rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+  padding: 0;                       /* sin relleno interno */
+  background-color: var(--lila);    /* fondo rosa */
+  border: 3rem;                    
+  border-radius: 3rem;              /* esquinas redondeadas */
+}
+
+/* El dibujo dentro del botón */
+.tarjeta-iconos img {
+  width: 1.7rem;                    /* tamaño del dibujo */
+  height: 1.7rem;                   /* mismo alto para que sea cuadrado */
+}
+
+/* Los tres puntitos debajo del carrusel */
+.puntos {
+  display: flex;                    /* pone los puntos en fila */
+  justify-content: center;          /* los centra en la pantalla */
+  gap: 0.6rem;                      /* separación entre puntos */
+  margin-top: 2.2rem;               /* espacio sobre los puntos */
+}
+
+/* Cada puntito */
+.puntos span {
+  width: 1rem;                      /* ancho del punto */
+  height: 1rem;                     /* alto del punto */
+  background-color: var(--rosa);  /* color rosa claro */
+  border-radius: 50%;               /* lo vuelve redondo */
+}
+
+
+/* ---------------------------------------------------------------------
+   7. BANNER DE ESENCIALES
+   --------------------------------------------------------------------- */
+
+/* Caja del banner (ocupa todo el ancho de la pantalla) */
+.banner-esenciales {
+  display: flex;                    /* flexbox para poner imagen y texto en la misma fila */
+  margin-top: 5.5rem;               /* espacio sobre el banner */
+}
+
+/* La imagen del banner */
+.banner-esenciales img {
+  flex: 0 0 100%;                   /* ocupa el 100% del ancho y no se encoge */
+  height: 43.3rem;                  /* alto del banner */
+  object-fit: cover;                /* la imagen llena el espacio sin deformarse */
+}
+
+/* El texto sobre la imagen */
+.banner-esenciales h3 {
+  flex: 0 0 100%;                   /* mide el 100% del ancho */
+  margin: 0 0 0 -100%;              /* se corre a la izquierda para quedar encima de la imagen */
+  padding-top: 8rem;                /* empuja el texto un poco hacia abajo del centro */
+  display: flex;                    /* flexbox para centrar el texto */
+  justify-content: center;          /* centra a lo ancho */
+  align-items: center;              /* centra de arriba a abajo */
+  text-align: center;               /* texto centrado */
+  font-size: 4rem;                  /* letra grande */
+  font-weight: 700;                 /* letra gruesa */
+  color: var(--blanco);             /* texto blanco */
+}
+
+
+/* ---------------------------------------------------------------------
+   8. BLOQUES DE TEXTO + FOTO
+   --------------------------------------------------------------------- */
+
+/* Caja que contiene los cuatro bloques */
+.bloques {
+  display: flex;                    /* flexbox para apilar los bloques */
+  flex-direction: column;           /* uno debajo de otro */
+  margin: 7rem 2.75rem 3rem;        /* espacio: arriba, a los lados y abajo */
+  border-radius: 1.6rem;            /* esquinas redondeadas del conjunto */
+  overflow: hidden;                 /* recorta las esquinas de los bloques de arriba y abajo */
+}
+
+/* Cada bloque (mitad texto, mitad foto) */
+.bloque {
+  display: flex;                    /* pone texto y foto lado a lado */
+  height: 33.75rem;                 /* alto base de cada bloque */
+}
+
+/* El bloque 2 y el 3 son más altos */
+.bloque:nth-child(2),
+.bloque:nth-child(3) {
+  height: 43.75rem;                 /* alto de estos dos bloques */
+}
+
+/* El bloque 4 es el más alto */
+.bloque:nth-child(4) {
+  height: 57.5rem;                  /* alto del último bloque */
+}
+
+/* Bloques con la foto a la izquierda */
+.invertido {
+  flex-direction: row-reverse;      /* invierte el orden: la foto pasa a la izquierda */
+}
+
+/* La mitad con texto */
+.bloque-texto {
+  display: flex;                    /* flexbox para centrar el contenido */
+  flex-direction: column;           /* título, texto y botón uno debajo de otro */
+  justify-content: center;          /* centra de arriba a abajo */
+  align-items: center;              /* centra a lo ancho */
+  flex: 0 0 50%;                    /* ocupa exactamente la mitad del bloque */
+  min-width: 0;                     /* evita que el contenido ensanche la mitad */
+  padding: 2rem 4rem;               /* espacio interno */
+  background-color: var(--rosa);    /* fondo lila */
+  text-align: center;               /* texto centrado */
+}
+
+/* Título de cada bloque */
+.bloque-texto h2 {
+  margin: 0 0 1rem;                 /* solo deja espacio debajo */
+  font-size: 3rem;                  /* letra grande */
+  font-weight: 700;                 /* letra gruesa */
+  line-height: 1.2;                 /* separación entre líneas */
+}
+
+/* Texto pequeño bajo el título */
+.bloque-texto p {
+  margin: 0 0 2rem;                 /* solo deja espacio debajo */
+  font-size: 2rem;                  /* tamaño de letra */
+  font-weight: 500;                 /* letra de grosor medio */
+}
+
+/* El botón "descubre" */
+.boton {
+  display: flex;                    /* flexbox para centrar el texto */
+  justify-content: center;          /* centra a lo ancho */
+  align-items: center;              /* centra de arriba a abajo */
+  min-width: 19.6rem;               /* ancho mínimo del botón */
+  height: 6rem;                     /* alto del botón */
+  padding: 0 3rem;                  /* aire a los lados del texto */
+  background-color: var(--lila);    /* fondo rosa */
+  border-radius: 3rem;              /* forma de píldora */
+  color: var(--blanco);             /* texto blanco */
+  font-size: 2.4rem;                /* tamaño de letra */
+  font-weight: 600;                 /* letra semi gruesa */
+}
+
+/* El bloque de la frase final: sin botón, solo texto grande */
+.frase {
+  padding: 2rem 3rem;               /* espacio interno */
+}
+
+/* La frase final */
+.frase h2 {
+  margin: 0;                        /* sin espacio extra */
+  color: var(--blanco );               /* texto rosa */
+  font-size: 3rem;                  /* letra grande */
+  line-height: 1.2;                 /* separación entre líneas */
+}
+
+/* La mitad con foto */
+.bloque .foto {
+  display: flex;                    /* flexbox para que la imagen estire a todo el alto */
+  flex: 0 0 50%;                    /* ocupa exactamente la otra mitad */
+  min-width: 0;                     /* evita que una foto grande ensanche la mitad */
+  min-height: 0;                    /* evita que la imagen agrande el bloque */
+}
+
+/* La foto del bloque */
+.bloque .foto img {
+  width: 100%;                      /* llena todo el ancho de su mitad */
+  max-width: none;                  /* quita el límite general de las imágenes */
+  object-fit: cover;                /* llena el espacio sin deformarse */
+}
+
+
+/* ---------------------------------------------------------------------
+   9. PIE DE PÁGINA
+   --------------------------------------------------------------------- */
+
+/* La caja del pie de página */
+.pie {
+  display: flex;                    /* pone las tres columnas en una fila */
+  align-items: flex-start;          /* alinea las columnas arriba */
+  padding: 5rem 2.75rem 2.5rem;     /* espacio interno: arriba, a los lados y abajo */
+  background-color: var(--rosa);    /* fondo lila */
+  border-radius: 2.5rem 2.5rem 0 0; /* redondea solo las esquinas de arriba */
+}
+
+/* Las columnas de SOCIAL e INFORMACIÓN */
+.pie-col {
+  display: flex;                    /* flexbox para apilar los elementos */
+  flex-direction: column;           /* uno debajo de otro */
+  flex: 1;                          /* se reparten el espacio que queda */
+}
+
+/* La primera columna (logo y suscripción) */
+.pie-col.principal {
+  flex: 0 0 42%;                    /* ocupa el 42% del ancho del pie */
+  margin-right: 10.5%;              /* espacio hasta la siguiente columna */
+}
+
+/* La columna SOCIAL es un poco más angosta */
+.pie-col:nth-child(2) {
+  flex: 0 0 27%;                    /* ocupa el 27% del ancho del pie */
+}
+
+/* Texto de invitación a suscribirse */
+.pie-col p {
+  margin: 1.4rem 0 0;               /* espacio solo arriba */
+  max-width: 100%;                  /* no se pasa de la columna */
+  color: var(--blanco);               /* texto rosa */
+  font-size: 1.2rem;                /* letra pequeña */
+  line-height: 1.5;                 /* separación entre líneas */
+}
+
+/* Títulos SOCIAL e INFORMACIÓN */
+.pie-col h3 {
+  margin: 0 0 1.8rem;               /* espacio solo abajo */
+  color: var(--blanco);             /* texto blanco */
+  font-size: 2rem;                  /* tamaño de letra */
+  font-weight: 600;                 /* letra semi gruesa */
+}
+
+/* Enlaces de la columna INFORMACIÓN */
+.pie-col a {
+  margin-bottom: 1.6rem;            /* espacio entre enlaces */
+  color: var(--blanco);               /* texto rosa */
+  font-size: 1.4rem;                /* tamaño de letra */
+}
+
+/* Enlaces de redes sociales (botones tipo píldora) */
+.pie-col a.red {
+  align-self: flex-start;           /* el botón mide solo lo que necesita, no todo el ancho */
+  padding: 0.9rem 2.2rem;           /* espacio interno */
+  background-color: var(--lila);    /* fondo rosa */
+  border-radius: 2rem;              /* forma de píldora */
+  color: var(--blanco);             /* texto blanco */
+  font-size: 1.5rem;                /* tamaño de letra */
+  font-weight: 500;                 /* grosor medio */
+}
+
+.pie-col a.red {
+  display: flex;                    /* pone icono y texto en la misma fila */
+  align-items: center;              /* los centra verticalmente */
+  gap: 0.8rem;                      /* espacio entre icono y texto */
+  align-self: flex-start;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--lila);
+  border-radius: 2rem;
+  color: var(--blanco);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.pie-col a.red img {
+  width: 1.8rem;                    /* tamaño del icono */
+  height: 1.8rem;
+}
+
+/* Formulario de suscripción */
+.suscribir {
+  display: flex;                    /* pone el campo y el botón en una fila */
+  align-items: center;              /* los centra de arriba a abajo */
+  margin-top: 2rem;                 /* espacio sobre el formulario */
+  height: 3.8rem;                   /* alto del formulario */
+  padding: 0.2rem;                  /* espacio entre el borde y lo de adentro */
+  border: 0.15rem solid var(--blanco);    /* borde rosa */
+  border-radius: 2rem;              /* forma de píldora */
+}
+
+/* Campo para escribir el correo */
+.suscribir input {
+  flex: 1;                          /* ocupa todo el espacio que deja el botón */
+  min-width: 0;                     /* permite que se encoja si hace falta */
+  height: 100%;                     /* ocupa todo el alto del formulario */
+  padding: 0 1.4rem;                /* espacio a los lados del texto */
+  background-color: transparent;    /* sin fondo */
+  border: 0;                        /* sin borde */
+  outline: none;                    /* quita el contorno al hacer clic */
+  color: var(--blanco);             /* texto que escribe la persona en blanco */
+  font-family: inherit;             /* misma letra que la página */
+  font-size: 1.1rem;                /* letra pequeña */
+}
+
+/* Texto de ayuda dentro del campo */
+.suscribir input::placeholder {
+  color: var(--blanco);               /* el texto de ayuda se ve rosa */
+}
+
+/* Botón SUSCRIBIR */
+.suscribir button {
+  flex: 0 0 auto;                   /* mide solo lo que necesita */
+  height: 100%;                     /* ocupa todo el alto del formulario */
+  padding: 0 2.2rem;                /* espacio a los lados del texto */
+  background-color: transparent;    /* sin fondo */
+  border: 0.1rem solid var(--blanco); /* borde rosa fino */
+  border-radius: 2rem;              /* forma de píldora */
+  color: var(--blanco);               /* texto rosa */
+  font-size: 1.2rem;                /* letra pequeña */
+  font-weight: 500;                 /* grosor medio */
+}
