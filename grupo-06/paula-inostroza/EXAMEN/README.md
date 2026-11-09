@@ -7,11 +7,21 @@
 Diseñaré mi portafolio personal con proyectos de la universidad. Adicionalmente, haré una versión simplificada de one single page para presentarlo como portafolio para postulación de intercambio semestral, el cual será más simple, con una estética más limpia y de fácil navegación.
 
 Contenido: 
-Home con 7 proyectos en display
-Página principal: 4 proyectos personales y 3 grupales
-Sobre mí (sección dentro de la página principal)
-Galería de fotos de cada proyecto (página extra)
-Contacto (sección dentro de la página principal)
+1.Home con 7 proyectos en display:
+*Navbar estática a lo largo de la página y con fondo semitransparente para que los elementos se sigan viendo por debajo.
+*Título central (PIO), al pasar el cursor sobre cada letra aparece el nombre y las letras se sacuden.
+*Las miniaturas se mueven ligeramente de manera automática.
+*Al pasar el cursor sobre cada miniatura, estas se vuelven ligeramente más grandes y el cursor dice "mírame!".
+
+2.Página principal: 4 proyectos personales y 3 grupales:
+*A la derecha de cada proyecto hay un carrousel o slideshow que se desliza automáticamente, este no cumple función de botón.
+
+3.Sobre mí (sección dentro de la página principal):
+*Abajo de la sección hay un carrousel o slideshow que se desliza automáticamente, este no cumple función de botón.
+*Contiene el Contacto
+
+4.Galería de fotos de cada proyecto (página extra):
+*Página a la que redirige luego de hacer click en "Galería" del navbar, esta no cumple función de botón, pero se puede deslizar infinitamente, es decir que no tiene un comienzo ni un término y puede moverse libremente al hacer click sobre ella.
 
 **Link Figma**
 
