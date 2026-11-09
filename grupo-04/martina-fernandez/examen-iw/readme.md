@@ -10,24 +10,24 @@ Probaré haciendo un poco de ambas.
 
 ## Pensamientos mientras organizo que poner
 
-## Secciones para la página
+ **Secciones para la página**
 
 > Sobre mi
 
-  // Debería colocar aquí mi contacto? puedo?
+Debería colocar aquí mi contacto? puedo?
 
-// Debería crearme un logo? algo sencillo? una calabaza? y si uso a mi pequeña pumpkin?
+Debería crearme un logo? algo sencillo? una calabaza? y si uso a mi pequeña pumpkin?
 
 > Portafolio (segunda página)
 
- // ¿Qué trabajos podría colocar?
+ ¿Qué trabajos podría colocar?
 
   -Golondrina para Parque MET
   -Exposición un siglo de voces juveniles
   -Silla de máquinas y procesos
   -Si alcanzo, lampara de cerámica
 
-// ¿Qué colores usaría?
+¿Qué colores usaría?
 
   -Tonos azules, naranjos, verdes, morados
 
@@ -36,11 +36,11 @@ Probaré haciendo un poco de ambas.
   -Buscar las más bacanes
   -Ver como agregar videos igual
 
-// Agregar texto / pensamientos / letras de canciones ???
+Agregar texto / pensamientos / letras de canciones ???
 
-// Agregar playlist?? debería colocar alguna, la música es algo importante para mi
+Agregar playlist?? debería colocar alguna, la música es algo importante para mi
 
-// ¿Qué tan difícil sería colocar una versión web del proyecto 2 de taller? (jueguito tipo flappy bird)
+¿Qué tan difícil sería colocar una versión web del proyecto 2 de taller? (jueguito tipo flappy bird)
 
 ## Referentes
 
