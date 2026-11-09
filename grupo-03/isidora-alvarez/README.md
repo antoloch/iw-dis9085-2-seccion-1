@@ -55,7 +55,7 @@ Figma: https://www.figma.com/design/ADbrbFWVOeJkBakvKcFPj6/Portafolio?node-id=13
 
 # **Tipografias**
 
-Instrument Serif: [fonts.google.com/specimen/Instrument+Serif](https://fonts.google.com/specimen/Instrument+Serif?preview.script=Latn)
-DM Sans: [fonts.google.com/specimen/DM+Sans](https://fonts.google.com/specimen/DM+Sans?preview.script=Latn)
-DM Mono: [fonts.google.com/specimen/DM+Mono](https://fonts.google.com/specimen/DM+Mono?preview.script=Latn)
+> Instrument Serif: [fonts.google.com/specimen/Instrument+Serif](https://fonts.google.com/specimen/Instrument+Serif?preview.script=Latn)
+> DM Sans: [fonts.google.com/specimen/DM+Sans](https://fonts.google.com/specimen/DM+Sans?preview.script=Latn)
+> DM Mono: [fonts.google.com/specimen/DM+Mono](https://fonts.google.com/specimen/DM+Mono?preview.script=Latn)
 
