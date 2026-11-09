@@ -29,6 +29,8 @@ Y por último, encontré un portafolio que está super creativo.
 
 ## Figma
 
+[Ir al prototipo](https://www.figma.com/design/SvdCCedXN1f5jIqTT5qNZ4/Portafolio?node-id=0-1&t=pDz3LbQ6ww3e1dWU-1)
+
 En el inicio quiero tener mi nombre en un estilo pixeleado o logo como portada, igual no tengo ningún nombre artístico ni nada. Así que por ahora aún estoy viendo si hago que ocupe mucho espacio o poco.
 
 En la parte del "sobre mí" estoy redactando aún: soy diseñadora en 3er año de formación, trabajando en llevar a cabo la intersección entre el objeto, la fabricación digital y las interfaces de interacción.
