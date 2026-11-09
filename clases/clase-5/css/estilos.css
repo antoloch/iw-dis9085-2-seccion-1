@@ -1,0 +1,179 @@
+/* ------Tipografía descargada------ */
+
+@font-face {
+  font-family: "Monaspace Neon";
+  src: url("../fonts/MonaspaceNeon-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mismo font-family, otro archivo y otro font-weight.
+   Sin esta regla, el navegador "inventa" la negrita
+   engrosando la regular (se nota menos fina). */
+@font-face {
+  font-family: "Monaspace Neon";
+  src: url("../fonts/MonaspaceNeon-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ---------- Base ---------- */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* fuente de Google Fonts, con respaldo */
+body {
+  margin: 0;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1E2A5A;            
+  background-color: #F6F1E7; 
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Monaspace Neon", "Courier New", monospace;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1E2A5A; 
+}
+
+a {
+  color: #FF5A36;
+}
+
+
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1E2A5A;
+
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: "Monaspace Neon", "Courier New", monospace;
+  font-weight: 700;
+  font-size: 22px;
+  color: #F6F1E7;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  color: #F6F1E7;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #FF5A36;
+}
+
+
+/* ---------- Portada ---------- */
+
+.portada {
+  padding: 80px 40px;
+  max-width: 800px;
+}
+
+.portada h1 {
+  font-size: 56px;
+  margin: 0 0 16px;
+}
+
+
+button {
+  width: 260px;
+  margin-top: 40px;
+  padding: 14px 24px;
+  text-align: center;
+  background-color: #FF5A36;
+  color: #F6F1E7;
+  text-decoration: none;
+  border-radius: 999px;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #1E2A5A;
+}
+
+
+/* ---------- Secciones y tarjetas ---------- */
+
+.seccion {
+  padding: 60px 40px;
+  border-top: 2px solid #1E2A5A;
+
+
+  scroll-margin-top: 80px;
+}
+
+.seccion h2 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.destacado {
+  font-size: 24px;
+  color: #FF5A36;
+}
+
+.tarjeta p {
+  font-size: 16px;
+  color: gray;
+}
+
+.grilla {
+  display: flex;
+  gap: 24px;
+}
+
+
+.tarjeta {
+  flex: 1;
+  padding: 24px;
+  background-color: white;
+  border: 2px solid #1E2A5A;
+  border-radius: 12px;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+
+/* ---------- Contacto y pie ---------- */
+
+.lista-contacto {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-contacto li {
+  margin-bottom: 8px;
+}
+
+.pie {
+  padding: 24px 40px;
+  font-size: 14px;
+  color: #F6F1E7;
+  background-color: #1E2A5A;
+}
