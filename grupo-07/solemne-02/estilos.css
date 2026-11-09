@@ -1,0 +1,1177 @@
+html {
+  /* Escritorio: todo el diseño (en rem) escala proporcional al ancho de pantalla */
+  font-size: calc(100vw / 119);
+  /* al hacer clic en un enlace del menú, la sección no queda tapada por el header */
+  scroll-padding-top: 17rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f3ee;
+  color: #222222;
+  line-height: 1.2;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 400;
+}
+img {
+  display: block;
+}
+
+h1, h2, h3,
+nav a,
+.subtitulo,
+.bajada,
+.etiqueta {
+  font-family: 'Barlow', Arial, sans-serif;
+}
+
+.boton-verde,
+.boton-beige-grande {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.75rem;
+  padding: 0 3.4rem;
+  color: #ffffff;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3.1rem;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.boton-verde {
+  background-color: #35b08c;
+}
+.boton-verde:hover {
+  background-color: #2b9574;
+}
+.boton-beige-grande {
+  background-color: #dac4a6;
+}
+.boton-beige-grande:hover {
+  background-color: #cbb28f;
+}
+.boton-beige {
+  display: inline-flex;
+  align-items: center;
+  background-color: #dac4a6;
+  color: #ffffff;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  padding: 0.9rem 2.6rem;
+  text-decoration: none;
+}
+.boton-beige:hover {
+  background-color: #cbb28f;
+}
+.contenedor-boton {
+  text-align: center;
+}
+
+/* HEADER Y NAVEGACION */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.9rem 3.9rem 1rem 4.6rem;
+  /* menú fijo: se queda arriba mientras se hace scroll */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #f6f3ee;
+}
+.logo,
+.header-accion {
+  flex: 1 1 0;
+}
+.header-accion {
+  display: flex;
+  justify-content: flex-end;
+}
+.logo img {
+  height: 11.6rem;
+  width: auto;
+}
+nav {
+  display: flex;
+  gap: 6.5rem;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* INICIO / PORTADA */
+.seccion-inicio {
+  display: flex;
+  gap: 1.9rem;
+  padding: 2.3rem 3.9rem 0;
+}
+.banner-verde {
+  background-color: #35b08c;
+  color: #ffffff;
+  flex: 1;
+  height: 47.5rem;
+  padding: 1.9rem 6.6rem 2.7rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner-verde h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1.3;
+  max-width: 46rem;
+}
+.banner-verde p {
+  font-size: 2.55rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+/* COLLAGE */
+.collage {
+  position: relative;
+  flex: 0 0 41.9rem;
+  height: 47.5rem;
+}
+.collage img {
+  position: absolute;
+  object-fit: cover;
+}
+.foto1 { left: 0;      top: 0.3%;  width: 46%;   height: 31.8%; }
+.foto2 { left: 50.6%;  top: 0.3%;  width: 49.4%; height: 38.6%; }
+.foto3 { left: 0;      top: 35.3%; width: 35.4%; height: 34.1%; }
+.foto4 { left: 0.2%;   top: 72.8%; width: 34.5%; height: 27.2%; }
+.foto5 { left: 39.4%;  top: 42.5%; width: 60.6%; height: 57.5%; }
+.collage .logo-mini {
+  left: 39.4%;
+  top: 34.2%;
+  width: 7.2%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* GENERALES */
+.seccion {
+  padding: 5.5rem 5.75rem 4rem;
+}
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.titulo-seccion .subtitulo {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #000000;
+}
+.titulo-seccion h2 {
+  color: #35b08c;
+  font-weight: 800;
+  font-size: 5.35rem;
+  line-height: 1.05;
+}
+.titulo-seccion .bajada {
+  color: #000000;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* TARJETAS */
+.grid-mascotas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.1rem;
+  margin-bottom: 3rem;
+}
+.tarjeta-mascota {
+  flex: 1 1 calc((100% - 6.2rem) / 3);
+  min-width: 0;
+  background-color: #f8f8f8;
+  padding: 1.45rem 1.4rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarjeta-mascota img {
+  width: 23.5rem;
+  height: 23.5rem;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+}
+.tarjeta-mascota h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+.datos-mascota {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.datos-mascota span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.datos-mascota .material-icons {
+  color: #000000;
+  font-size: 2.2rem;
+}
+.datos-mascota span:first-child .material-icons {
+  font-size: 3.2rem;
+}
+.descripcion-mascota {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+/* COMO ADOPTAR */
+.seccion-pasos {
+  padding: 3rem 3.9rem 0;
+  text-align: center;
+}
+.seccion-pasos h2 {
+  color: #35b08c;
+  font-weight: 800;
+  font-size: 5.35rem;
+  line-height: 1.1;
+}
+.subtitulo-pasos {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+.grid-pasos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+.paso {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numero {
+  border: 0.1rem solid #000000;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Barlow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+.icono {
+  color: #35b08c;
+  margin-bottom: 0.5rem;
+}
+.icono .material-icons {
+  font-size: 5rem;
+}
+.paso h3 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 0.4rem;
+}
+.paso p {
+  font-size: 2.2rem;
+  max-width: 20rem;
+}
+.flecha-paso {
+  color: #000000;
+}
+.flecha-paso .material-icons {
+  font-size: 3rem;
+}
+
+/* DUDAS */
+.banner-dudas {
+  background-color: #e6d8c6;
+  margin: 5.6rem 3.9rem 0;
+  padding: 1.25rem 3.5rem 1.25rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 11.6rem;
+}
+.imagen-dudas img {
+  width: 42.4rem;
+  height: 23.7rem;
+  object-fit: cover;
+}
+.texto-dudas h2 {
+  font-weight: 700;
+  font-size: 3.1rem;
+  line-height: 1.3;
+  margin-bottom: 0.9rem;
+}
+.texto-dudas p {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.texto-dudas .boton-verde {
+  padding: 0 2.8rem;
+  height: 3.8rem;
+}
+
+/* QUIENES SOMOS */
+.seccion-nosotros {
+  padding: 4.5rem 0 0;
+  text-align: center;
+}
+.seccion-nosotros h2 {
+  color: #35b08c;
+  font-weight: 800;
+  font-size: 5.35rem;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+.contenido-nosotros {
+  background-color: #dfcbb0;
+  padding: 1.4rem 14.6rem 1.7rem 6.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+.texto-nosotros {
+  width: 34rem;
+  font-size: 1.85rem;
+  line-height: 1.2;
+}
+.imagen-nosotros img {
+  width: 42.4rem;
+  height: 22.6rem;
+  object-fit: cover;
+}
+.seccion-nosotros .contenedor-boton {
+  margin-top: 2.4rem;
+}
+
+/* PQ ES IMPORTANTE ADOPTAR */
+.seccion-importante {
+  padding: 7rem 11.2rem 0 8.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.bloque-importante {
+  width: 45.9rem;
+}
+.bloque-importante h2 {
+  color: #35b08c;
+  font-weight: 800;
+  font-size: 4.4rem;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+.caja-texto {
+  background-color: #ece2d6;
+  padding: 3.2rem 2.4rem 3.2rem 2.4rem;
+  font-size: 1.85rem;
+  line-height: 1.2;
+}
+.imagen-importante img {
+  width: 39rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+/* HISTORIAS FELICES */
+.seccion-historias {
+  padding: 7rem 3.9rem 0;
+  text-align: center;
+}
+.seccion-historias h2 {
+  color: #35b08c;
+  font-weight: 800;
+  font-size: 5.35rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+/* CARRUSEL */
+.carrusel-historias {
+  position: relative;
+  width: 100%;
+  height: 29rem;
+}
+.carrusel-historias::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3.6rem;
+  height: 21.3rem;
+  background-color: #c9b499;
+}
+.slide-historia {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: cambiar 9s infinite;
+  scroll-margin-top: 15rem;
+}
+#historia2 { animation-delay: 3s; }
+#historia3 { animation-delay: 6s; }
+
+/* si se hace clic en una flecha, se muestra esa historia */
+.slide-historia:target {
+  opacity: 1;
+  animation: none;
+  z-index: 1;
+}
+.carrusel-historias:hover .slide-historia {
+  animation-play-state: paused;
+}
+@keyframes cambiar {
+  0%   { opacity: 1; }
+  30%  { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.tarjeta-historia {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 9.9rem;
+  right: 9.9rem;
+  background-color: #dac5a7;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.6rem 2.6rem 3rem 3.4rem;
+  text-align: left;
+}
+.texto-historia {
+  flex: 1 1 0;
+  min-width: 0;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  padding-right: 1rem;
+}
+.foto-antes-despues {
+  position: relative;
+  flex: 0 0 32rem;
+}
+.foto-antes-despues img {
+  width: 100%;
+  height: 23.4rem;
+  object-fit: cover;
+}
+.etiqueta {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.6);
+}
+
+/* flechas */
+.flecha-carrusel {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin-top: -1.95rem;
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  background-color: #eee6dc;
+  color: #35b08c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.flecha-carrusel:hover {
+  background-color: #ffffff;
+}
+.flecha-carrusel .material-icons {
+  font-size: 2.4rem;
+}
+.flecha-izq { left: 4.8rem; }
+.flecha-der { right: 4.7rem; }
+
+/* FOOTER */
+footer {
+  margin-top: 12rem;
+  padding: 0 3.9rem 0 8.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.logo-footer img {
+  height: 22.2rem;
+  width: auto;
+  margin-top: 1rem;
+}
+.banner-footer {
+  background-color: #35b08c;
+  color: #ffffff;
+  flex: 1;
+  padding: 4.2rem 3.3rem 3.5rem 3.5rem;
+  display: flex;
+}
+.banner-footer .columna-footer:first-child {
+  flex: 0 0 33.4rem;
+}
+.banner-footer .columna-links {
+  flex: 1 1 0;
+}
+.banner-footer .columna-redes {
+  flex: 0 0 auto;
+}
+.columna-footer h3,
+.columna-links a {
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3.1rem;
+  line-height: 1;
+  color: #ffffff;
+}
+.columna-footer h3 {
+  display: flex;
+  align-items: center;
+  height: 3.7rem;
+  margin-bottom: 2.4rem;
+}
+.columna-footer p,
+.columna-footer a {
+  display: flex;
+  align-items: center;
+  height: 3.7rem;
+  margin-bottom: 2.4rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+.columna-footer p i {
+  color: #000000;
+  font-size: 3.4rem;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+
+.columna-redes h3 {
+  margin-bottom: 1.8rem;
+}
+.columna-redes a {
+  height: 4.5rem;
+  margin-bottom: 0;
+}
+.columna-redes a i {
+  color: #000000;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.columna-footer.columna-links a {
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3.1rem;
+}
+
+
+/* =====================================================================
+   RESPONSIVE  (solo flex + media queries)
+   Breakpoints:
+     - Escritorio : desde 993px (se mantiene el diseño original)
+     - Tablet     : hasta 992px
+     - Móvil      : hasta 768px
+     - Móvil chico: hasta 480px
+   ===================================================================== */
+
+/* ---------- TABLET (hasta 992px) ---------- */
+@media (max-width: 992px) {
+  html {
+    font-size: 10px; /* tamaño fijo: ya no escala con el ancho */
+    scroll-padding-top: 11rem;
+  }
+
+  /* header */
+  header {
+    padding: 1.2rem 3rem 1rem;
+  }
+  .logo img {
+    height: 9rem;
+  }
+  nav {
+    gap: 4rem;
+  }
+  nav a {
+    font-size: 2.2rem;
+  }
+  .boton-verde,
+  .boton-beige-grande {
+    height: 3.4rem;
+    padding: 0 2.6rem;
+    font-size: 2.6rem;
+  }
+
+  /* inicio: banner arriba, collage abajo */
+  .seccion-inicio {
+    flex-direction: column;
+    padding: 2rem 3rem 0;
+    gap: 2rem;
+  }
+  .banner-verde {
+    flex: none;
+    height: auto;
+    padding: 3rem 4rem;
+    gap: 2.5rem;
+    justify-content: flex-start;
+  }
+  .banner-verde h1 {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    max-width: none;
+  }
+  .banner-verde p {
+    font-size: 2.4rem;
+    text-align: left;
+  }
+  .collage {
+    flex: none;
+    width: 100%;
+    max-width: 56rem;
+    height: auto;
+    aspect-ratio: 419 / 475;
+    margin: 0 auto;
+  }
+
+  /* títulos y secciones */
+  .seccion {
+    padding: 4rem 3rem 3rem;
+  }
+  .titulo-seccion {
+    margin-bottom: 2.5rem;
+  }
+  .titulo-seccion h2,
+  .seccion-pasos h2,
+  .seccion-nosotros h2,
+  .seccion-historias h2 {
+    font-size: 4.4rem;
+  }
+  .titulo-seccion .subtitulo,
+  .titulo-seccion .bajada,
+  .subtitulo-pasos {
+    font-size: 2.2rem;
+  }
+
+  /* mascotas: 2 por fila */
+  .grid-mascotas {
+    gap: 2.4rem;
+  }
+  .tarjeta-mascota {
+    flex: 0 1 calc((100% - 2.4rem) / 2);
+  }
+  .tarjeta-mascota img {
+    width: 100%;
+    height: 28rem;
+  }
+
+  /* pasos: 2 x 2, sin flechas */
+  .seccion-pasos {
+    padding: 3rem 3rem 0;
+  }
+  .grid-pasos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 2rem;
+  }
+  .paso {
+    flex: 1 1 40%;
+  }
+  .flecha-paso {
+    display: none;
+  }
+
+  /* dudas */
+  .banner-dudas {
+    margin: 4rem 3rem 0;
+    padding: 2rem;
+    gap: 4rem;
+  }
+  .imagen-dudas {
+    flex: 0 0 auto;
+  }
+  .imagen-dudas img {
+    width: 32rem;
+    height: 20rem;
+  }
+  .texto-dudas h2 {
+    font-size: 2.8rem;
+  }
+  .texto-dudas p {
+    font-size: 2.2rem;
+  }
+
+  /* quienes somos */
+  .seccion-nosotros {
+    padding-top: 4rem;
+  }
+  .contenido-nosotros {
+    padding: 2rem 3rem;
+    gap: 3rem;
+  }
+  .texto-nosotros {
+    flex: 1 1 0;
+    width: auto;
+    font-size: 2rem;
+  }
+  .imagen-nosotros {
+    flex: 0 0 auto;
+  }
+  .imagen-nosotros img {
+    width: 34rem;
+    height: 21rem;
+  }
+
+  /* por qué es importante adoptar */
+  .seccion-importante {
+    padding: 5rem 3rem 0;
+    gap: 3rem;
+  }
+  .bloque-importante {
+    flex: 1 1 0;
+    width: auto;
+  }
+  .bloque-importante h2 {
+    font-size: 3.6rem;
+  }
+  .caja-texto {
+    font-size: 2rem;
+  }
+  .imagen-importante {
+    flex: 0 0 auto;
+  }
+  .imagen-importante img {
+    width: 32rem;
+    height: 20rem;
+  }
+
+  /* historias felices: texto arriba, fotos abajo */
+  .seccion-historias {
+    padding: 5rem 3rem 0;
+  }
+  .carrusel-historias {
+    height: 35rem;
+  }
+  .carrusel-historias::before {
+    top: 3.6rem;
+    height: 27rem;
+  }
+  .tarjeta-historia {
+    left: 7rem;
+    right: 7rem;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2.4rem;
+    gap: 1.6rem;
+  }
+  .texto-historia {
+    flex: 1 1 100%;
+    padding-right: 0;
+    font-size: 2.2rem;
+  }
+  .foto-antes-despues {
+    flex: 1 1 calc(50% - 0.8rem);
+  }
+  .foto-antes-despues img {
+    height: 19rem;
+  }
+  .flecha-izq { left: 1.5rem; }
+  .flecha-der { right: 1.5rem; }
+
+  /* footer */
+  footer {
+    margin-top: 8rem;
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+  .logo-footer img {
+    height: 16rem;
+  }
+  .banner-footer {
+    padding: 3rem 2.5rem;
+  }
+  .banner-footer .columna-footer:first-child {
+    flex: 0 0 26rem;
+  }
+  .columna-footer h3,
+  .columna-footer.columna-links a {
+    font-size: 2.6rem;
+  }
+  .columna-footer p,
+  .columna-footer a {
+    font-size: 2rem;
+  }
+}
+
+/* ---------- MÓVIL (hasta 768px) ---------- */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  /* header en 2 filas: logo + botón arriba, menú abajo */
+  header {
+    flex-wrap: wrap;
+    padding: 0.8rem 2rem 0.8rem;
+    row-gap: 0.4rem;
+  }
+  .logo,
+  .header-accion {
+    flex: 0 0 auto;
+  }
+  .logo img {
+    height: 8rem;
+  }
+  .header-accion {
+    order: 2;
+  }
+  nav {
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  /* inicio */
+  .seccion-inicio {
+    padding: 1.6rem 2rem 0;
+  }
+  .banner-verde {
+    padding: 2.4rem;
+  }
+  .banner-verde h1 {
+    font-size: 3.6rem;
+  }
+  .banner-verde p {
+    font-size: 2.2rem;
+  }
+  .collage {
+    max-width: 48rem;
+  }
+
+  /* secciones */
+  .seccion {
+    padding: 3.5rem 2rem 2.5rem;
+  }
+  .titulo-seccion h2,
+  .seccion-pasos h2,
+  .seccion-nosotros h2,
+  .seccion-historias h2 {
+    font-size: 3.8rem;
+  }
+  .datos-mascota {
+    flex-wrap: wrap;
+    gap: 0.8rem 2rem;
+  }
+  .seccion-pasos {
+    padding: 3rem 2rem 0;
+  }
+
+  /* dudas: imagen arriba, texto abajo */
+  .banner-dudas {
+    flex-direction: column;
+    margin: 3.5rem 2rem 0;
+    gap: 2rem;
+    text-align: center;
+  }
+  .imagen-dudas {
+    flex: none;
+    width: 100%;
+  }
+  .imagen-dudas img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 424 / 237;
+  }
+
+  /* quienes somos */
+  .contenido-nosotros {
+    flex-direction: column;
+    padding: 2.4rem 2rem;
+    gap: 2.4rem;
+  }
+  .texto-nosotros {
+    flex: none;
+    width: 100%;
+    font-size: 2.1rem;
+  }
+  .imagen-nosotros {
+    flex: none;
+    width: 100%;
+  }
+  .imagen-nosotros img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 424 / 226;
+  }
+
+  /* importante */
+  .seccion-importante {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4rem 2rem 0;
+    gap: 2.4rem;
+  }
+  .bloque-importante {
+    flex: none;
+    width: 100%;
+  }
+  .imagen-importante {
+    flex: none;
+    width: 100%;
+  }
+  .imagen-importante img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 39 / 20;
+  }
+
+  /* historias: tarjeta a todo el ancho y flechas abajo */
+  .seccion-historias {
+    padding: 4rem 2rem 0;
+  }
+  .carrusel-historias {
+    height: 42rem;
+  }
+  .carrusel-historias::before {
+    display: none;
+  }
+  .tarjeta-historia {
+    left: 0;
+    right: 0;
+    bottom: 5.5rem;
+  }
+  .flecha-carrusel {
+    top: auto;
+    bottom: 0;
+    margin-top: 0;
+  }
+  .flecha-izq { left: calc(50% - 4.5rem); }
+  .flecha-der { right: calc(50% - 4.5rem); }
+
+  /* footer en columna */
+  footer {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 6rem;
+    padding: 0 2rem;
+    gap: 0;
+  }
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-footer img {
+    height: 14rem;
+    margin-top: 0;
+  }
+  .banner-footer {
+    flex-wrap: wrap;
+    gap: 2.5rem 2rem;
+    padding: 3rem 2.4rem;
+  }
+  .banner-footer .columna-footer:first-child {
+    flex: 1 1 100%;
+  }
+  .banner-footer .columna-links,
+  .banner-footer .columna-redes {
+    flex: 1 1 40%;
+  }
+  .columna-redes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 2rem;
+  }
+  .columna-redes h3 {
+    flex: 1 0 100%;
+  }
+}
+
+/* ---------- MÓVIL CHICO (hasta 480px) ---------- */
+@media (max-width: 480px) {
+  .logo img {
+    height: 7rem;
+  }
+  nav {
+    gap: 3rem;
+  }
+  nav a {
+    font-size: 2rem;
+  }
+  .boton-verde,
+  .boton-beige-grande {
+    height: 3.2rem;
+    padding: 0 2rem;
+    font-size: 2.2rem;
+  }
+  .boton-beige {
+    font-size: 2rem;
+    padding: 0.9rem 2rem;
+  }
+
+  .seccion-inicio {
+    padding: 1.2rem 1.5rem 0;
+  }
+  .banner-verde {
+    padding: 2rem;
+  }
+  .banner-verde h1 {
+    font-size: 3rem;
+  }
+  .banner-verde p {
+    font-size: 2rem;
+  }
+  .collage {
+    max-width: 100%;
+  }
+
+  .seccion {
+    padding: 3rem 1.5rem 2rem;
+  }
+  .titulo-seccion h2,
+  .seccion-pasos h2,
+  .seccion-nosotros h2,
+  .seccion-historias h2 {
+    font-size: 3.2rem;
+  }
+  .titulo-seccion .subtitulo,
+  .titulo-seccion .bajada,
+  .subtitulo-pasos {
+    font-size: 2rem;
+  }
+
+  /* mascotas: 1 por fila */
+  .tarjeta-mascota {
+    flex: 1 1 100%;
+  }
+  .tarjeta-mascota img {
+    height: 26rem;
+  }
+  .tarjeta-mascota h3 {
+    font-size: 2.6rem;
+  }
+  .datos-mascota,
+  .descripcion-mascota {
+    font-size: 2rem;
+  }
+
+  /* pasos: uno bajo otro, con flecha hacia abajo */
+  .seccion-pasos {
+    padding: 2.5rem 1.5rem 0;
+  }
+  .grid-pasos {
+    gap: 1.2rem;
+  }
+  .paso {
+    flex: 1 1 100%;
+  }
+  .flecha-paso {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .flecha-paso .material-icons {
+    transform: rotate(90deg);
+  }
+
+  .banner-dudas {
+    margin: 3rem 1.5rem 0;
+    padding: 1.6rem;
+  }
+  .texto-dudas h2 {
+    font-size: 2.6rem;
+  }
+  .texto-dudas p {
+    font-size: 2rem;
+  }
+
+  .contenido-nosotros {
+    padding: 2rem 1.5rem;
+  }
+  .texto-nosotros {
+    font-size: 2rem;
+  }
+
+  .seccion-importante {
+    padding: 3.5rem 1.5rem 0;
+  }
+  .bloque-importante h2 {
+    font-size: 3rem;
+  }
+  .caja-texto {
+    font-size: 2rem;
+    padding: 2.4rem 2rem;
+  }
+
+  .seccion-historias {
+    padding: 3.5rem 1.5rem 0;
+  }
+  .carrusel-historias {
+    height: 38rem;
+  }
+  .tarjeta-historia {
+    padding: 1.6rem;
+    gap: 1.2rem;
+  }
+  .texto-historia {
+    font-size: 2rem;
+  }
+  .foto-antes-despues {
+    flex: 1 1 calc(50% - 0.6rem);
+  }
+  .foto-antes-despues img {
+    height: 15rem;
+  }
+
+  footer {
+    padding: 0 1.5rem;
+  }
+  .banner-footer {
+    padding: 2.4rem 2rem;
+  }
+  .banner-footer .columna-links,
+  .banner-footer .columna-redes {
+    flex: 1 1 100%;
+  }
+}

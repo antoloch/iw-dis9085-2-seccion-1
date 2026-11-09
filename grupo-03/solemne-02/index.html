@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Abierto 2026</title>
+   
+    <!-- Google Fonts para los títulos tipográficos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Holtwood+One+SC&family=Manrope:ital,wght@0,300;0,400;0,500;0,800;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
+
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabecera / Navegación principal estilo Figma -->
+
+
+
+    <!-- barra de navegación -->
     <header class="header">
         <div class="header-top-bar">
-            <!-- Botón interactivo para abrir los créditos (Uso de JS documentado) -->
+            <!-- Botón Hamburguesa  -->
+            <button id="btn-hamburger" class="hamburger-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Botón FaAADudp  -->
             <button id="btn-creditos" class="logo-facultad-btn" type="button">FaAADudp</button>
         </div>
+        <!-- Navegación de escritorio -->
         <nav class="nav-container">
             <ul class="nav-links">
                 <li><a href="#inicio" class="nav-tab active">Diseño Abierto</a></li>
@@ -25,7 +44,30 @@
         </nav>
     </header>
 
-    <!-- VENTANA FLOTANTE (MODAL) DE CRÉDITOS -->
+
+
+
+    <!-- MENÚ LATERAL MÓVIL (menu hamburguesa) -->
+    <div id="mobile-drawer" class="mobile-drawer-overlay">
+        <div class="mobile-drawer-content">
+            <div class="drawer-header">
+                <span class="drawer-title">Menú de Navegación</span>
+                <button id="cerrar-drawer" class="drawer-close">&times;</button>
+            </div>
+            <ul class="drawer-links">
+                <li><a href="#inicio" class="drawer-tab">Diseño Abierto</a></li>
+                <li><a href="#que-es" class="drawer-tab">¿Qué es?</a></li>
+                <li><a href="#menciones" class="drawer-tab">Menciones y ramos</a></li>
+                <li><a href="#ubicacion" class="drawer-tab">Ubicación</a></li>
+                <li><a href="#horarios" class="drawer-tab">Horarios</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- VENTANA DE CRÉDITOS -->
     <div id="modal-creditos" class="modal-overlay">
         <div class="modal-content">
             <button id="cerrar-modal" class="modal-close" type="button">&times;</button>
@@ -39,29 +81,49 @@
         </div>
     </div>
 
-    <!-- Cuerpo principal de la página (Single Page) -->
+
+
+
+    <!-- Cuerpo principal de la página -->
     <main>
         <!-- Sección 1: Inicio / Hero -->
         <section id="inicio" class="hero-section">
+            <!-- Carrusel de fondo -->
+    <div class="hero-carousel" aria-hidden="true">
+        <div class="hero-slide slide-1"></div>
+        <div class="hero-slide slide-2"></div>
+        <div class="hero-slide slide-3"></div>
+        <div class="hero-slide slide-4"></div>
+    </div>
             <div class="hero-content">
                 <img src="img/logo.png" alt="Diseño Abierto Logo" class="hero-logo-img">
                 <p class="subtitle">La instancia de fin de año más importante de la escuela de diseño</p>
-                
-                <!-- Botón con estructura centrada por Flexbox -->
+               
                 <div class="btn-container">
                     <a href="#ubicacion" class="btn-visitanos">
                         <span class="btn-circle">
                             <span class="arrow-icon">→</span>
                         </span>
-                        <span class="btn-text">Visítanos</span>
+                        <span class="btn-text">VISÍTANOS</span>
                     </a>
                 </div>
+
+
+
 
                 <div class="scroll-indicator">
                     <a href="#que-es">↓</a>
                 </div>
             </div>
+           
+            <!-- Franja azul,sección de inicio -->
+            <div class="hero-bottom-bar">
+                <span>| Diseño Abierto 2026</span>
+            </div>
         </section>
+
+
+
 
         <!-- Sección 2: ¿Qué es? -->
         <section id="que-es" class="about-section">
@@ -71,22 +133,56 @@
             </blockquote>
         </section>
 
+
+
+
+        <!-- Franja negra  -->
+        <div class="section-divider-bar">
+            <span class="divider-left">| Menciones y ramos</span>
+            <span class="divider-right">Diseño Abierto 2026</span>
+        </div>
+
+
+
+
         <!-- Sección 3: Menciones y ramos -->
         <section id="menciones" class="mentions-section">
             <h2>Menciones y ramos</h2>
-            
+           
             <!-- 1. MENCIÓN DISEÑO GRÁFICO -->
             <div class="mention-category">
-                <div class="mencion-title-img-wrapper">
-                    <img src="img/menciongrafico.png" alt="Mención de Diseño Gráfico" class="mencion-title-img">
+                <div class="mencion-title-tipografia">
+                    <section class="line line-one">
+                        <span class="quote">“</span>
+                        <span class="mencion">Mención</span>
+                        <span class="de">de</span>
+                        <span class="diseno">DISEÑO</span>
+                    </section>
+                    <section class="line line-two">
+                        <span class="grafico">GRÁFICO</span>
+                    </section>
+                    <section class="line line-three">
+                        <span class="ramos">Ramos:</span>
+                        <span class="taller-one">Taller</span>
+                        <span class="editorial">Editorial</span>
+                    </section>
+                    <section class="line line-four">
+                        <span class="y">y</span>
+                        <span class="publicaciones">Publicaciones,</span>
+                        <span class="taller-two">Taller</span>
+                    </section>
+                    <section class="line line-five">
+                        <span class="diseno-final">Diseño</span>
+                        <span class="grafico-final">Gráfico II</span>
+                    </section>
                 </div>
-                
+               
                 <div class="editorial-grid-intercalado">
                     <div class="editorial-item item-offset-1">
                         <img src="img/imagen-9.png" alt="Revista CAOS Sofia Campos" class="editorial-img">
                         <div class="editorial-text">
-                            <span class="taller-mini">Revista CAOS</span>
-                            <p class="student-mini">Estudiante: Sofía Campos</p>
+                            <span class="taller-mini">Etiquetado para alcoholes</span>
+                            <p class="student-mini">Estudiante: Joaquín Ahumada</p>
                         </div>
                     </div>
                     <div class="editorial-item item-offset-2">
@@ -94,7 +190,7 @@
                         <img src="img/imagen-11.png" alt="Revista CAOS Javiera y Sofia" class="editorial-img">
                         <div class="editorial-text">
                             <span class="taller-mini">Revista CAOS</span>
-                            <p class="student-mini">Estudiantes: Javiera Santa Ana y Sofía Terrel</p>
+                            <p class="student-mini">Estudiantes: Sofia Campos</p>
                         </div>
                     </div>
                     <div class="editorial-item item-offset-3">
@@ -104,6 +200,9 @@
                             <p class="student-mini">Estudiante: Daniela Prazeres</p>
                         </div>
                     </div>
+
+
+
 
                     <div class="editorial-item item-offset-4">
                         <p class="taller-header-label">Taller Diseño Gráfico II</p>
@@ -123,17 +222,42 @@
                     <div class="editorial-item item-offset-6">
                         <img src="img/imagen-13.png" alt="Etiquetado para alcoholes Joaquin" class="editorial-img">
                         <div class="editorial-text">
-                            <span class="taller-mini">Etiquetado para alcoholes</span>
-                            <p class="student-mini">Estudiante: Joaquín Ahumada</p>
+                            <span class="taller-mini">Revista CAOS</span>
+                            <p class="student-mini">Estudiantes: Javiera Santa Ana y Sofía Terrel</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
+
             <!-- 2. MENCIÓN DISEÑO INDUSTRIAL -->
             <div class="mention-category">
-                <div class="mencion-title-img-wrapper">
-                    <img src="img/mencionindustrial.png" alt="Mención de Diseño Industrial" class="mencion-title-img">
+                <div class="mencion-title-tipografia">
+                    <section class="line line-one">
+                        <span class="quote">“</span>
+                        <span class="mencion">Mención</span>
+                        <span class="de">de</span>
+                        <span class="diseno">DISEÑO</span>
+                    </section>
+                    <section class="line line-two">
+                        <span class="grafico">INDUSTRIAL</span>
+                    </section>
+                    <section class="line line-three">
+                        <span class="ramos">Ramos:</span>
+                        <span class="taller-one">Taller</span>
+                        <span class="editorial">Industrial</span>
+                    </section>
+                    <section class="line line-four">
+                        <span class="y">y</span>
+                        <span class="publicaciones">Procesos,</span>
+                        <span class="taller-two">Taller</span>
+                    </section>
+                    <section class="line line-five">
+                        <span class="diseno-final">Diseño</span>
+                        <span class="grafico-final">Industrial II</span>
+                    </section>
                 </div>
                 <div class="editorial-grid-intercalado">
                     <div class="editorial-item item-offset-1">
@@ -161,10 +285,35 @@
                 </div>
             </div>
 
-            <!-- 3. MENCIÓN DISEÑO DE MODAS -->
+
+
+
+            <!-- 3. MENCIÓN DISEÑO DE MODA -->
             <div class="mention-category">
-                <div class="mencion-title-img-wrapper">
-                    <img src="img/mencionmoda.png" alt="Mención de Diseño de Modas" class="mencion-title-img">
+                <div class="mencion-title-tipografia">
+                    <section class="line line-one">
+                        <span class="quote">“</span>
+                        <span class="mencion">Mención</span>
+                        <span class="de">de</span>
+                        <span class="diseno">DISEÑO</span>
+                    </section>
+                    <section class="line line-two">
+                        <span class="grafico">DE MODAS</span>
+                    </section>
+                    <section class="line line-three">
+                        <span class="ramos">Ramos:</span>
+                        <span class="taller-one">Taller</span>
+                        <span class="editorial">Textil</span>
+                    </section>
+                    <section class="line line-four">
+                        <span class="y">e</span>
+                        <span class="publicaciones">Indumentaria,</span>
+                        <span class="taller-two">Taller</span>
+                    </section>
+                    <section class="line line-five">
+                        <span class="diseno-final">Diseño</span>
+                        <span class="grafico-final">de Modas II</span>
+                    </section>
                 </div>
                 <div class="editorial-grid-intercalado">
                     <div class="editorial-item item-offset-1">
@@ -187,11 +336,16 @@
             </div>
         </section>
 
-        <!-- Bloque unificado de Ubicación y Horarios con fondo oscuro -->
+
+
+
+        <!--  Ubicación y Horarios -->
         <div id="ubicacion-horarios-wrapper" class="dark-section-container">
             <!-- Sección 4: Ubicación -->
             <section id="ubicacion" class="location-section-dark">
-                <h2>Ubicación</h2>
+                <h2>
+                    <img src="img/mapa.png" alt="Ícono Ubicación" class="section-icon"> Ubicación
+                </h2>
                 <div class="map-wrapper-centered">
                     <img src="img/ubicacion.png" alt="Mapa de ubicación" class="map-img">
                 </div>
@@ -206,61 +360,118 @@
                 </div>
             </section>
 
+
+
+
             <!-- Sección 5: Horarios -->
             <section id="horarios" class="schedule-section-dark">
-                <h2>Horarios</h2>
+                <h2>
+                    <img src="img/horario.png" alt="Ícono Horario" class="section-icon"> Horarios
+                </h2>
                 <p class="schedule-dates">8, 9 y 10 de diciembre de 2026</p>
                 <p class="schedule-hours">9:00 a 18:30 hrs</p>
             </section>
         </div>
     </main>
 
+
+
+
     <!-- Pie de página -->
     <footer class="footer">
         <p>Diseño Abierto 2026 - Universidad Diego Portales</p>
     </footer>
 
-    <!-- Script de JavaScript para interactividad -->
+
+
+
+    <!-- JavaScript -->
     <script>
         const botonVisitanos = document.querySelector('.btn-visitanos');
-        const textoBtn = document.querySelector('.btn-text');
-        const flechaBtn = document.querySelector('.arrow-icon');
 
-        botonVisitanos.addEventListener('mouseenter', () => {
-            botonVisitanos.style.width = '10.3rem';
-            botonVisitanos.style.padding = '0.375rem 1rem 0.375rem 0.375rem';
-            textoBtn.style.opacity = '1';
-            textoBtn.style.maxWidth = '7.5rem';
-            textoBtn.style.marginLeft = '0.625rem';
-            flechaBtn.style.transform = 'translateX(0.1875rem)';
+
+
+
+        botonVisitanos.addEventListener('click', (e) => {
+            if (!botonVisitanos.classList.contains('expanded')) {
+                e.preventDefault(); // Detiene el salto en el primer toque para mostrar la animación
+                botonVisitanos.classList.add('expanded');
+            }
         });
 
-        botonVisitanos.addEventListener('mouseleave', () => {
-            botonVisitanos.style.width = '3.25rem';
-            botonVisitanos.style.padding = '0.375rem';
-            textoBtn.style.opacity = '0';
-            textoBtn.style.maxWidth = '0rem';
-            textoBtn.style.marginLeft = '0rem';
-            flechaBtn.style.transform = 'translateX(0rem)';
-        });
+
+
 
         const btnCreditos = document.getElementById('btn-creditos');
         const modalCreditos = document.getElementById('modal-creditos');
         const cerrarModal = document.getElementById('cerrar-modal');
 
+
+
+
         btnCreditos.addEventListener('click', () => {
             modalCreditos.classList.add('active');
         });
 
+
+
+
         cerrarModal.addEventListener('click', () => {
             modalCreditos.classList.remove('active');
         });
+
+
+
 
         modalCreditos.addEventListener('click', (e) => {
             if (e.target === modalCreditos) {
                 modalCreditos.classList.remove('active');
             }
         });
+
+
+
+
+        // Menú Hamburguesa Móvil
+        const btnHamburger = document.getElementById('btn-hamburger');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const cerrarDrawer = document.getElementById('cerrar-drawer');
+        const drawerTabs = document.querySelectorAll('.drawer-tab');
+
+
+
+
+        btnHamburger.addEventListener('click', () => {
+            mobileDrawer.classList.add('active');
+        });
+
+
+
+
+        cerrarDrawer.addEventListener('click', () => {
+            mobileDrawer.classList.remove('active');
+        });
+
+
+
+
+        mobileDrawer.addEventListener('click', (e) => {
+            if (e.target === mobileDrawer) {
+                mobileDrawer.classList.remove('active');
+            }
+        });
+
+
+
+
+        drawerTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
+
+
+
