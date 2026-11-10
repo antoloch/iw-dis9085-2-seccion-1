@@ -8,6 +8,10 @@ Entonces, ¿con qué me quedo?
 
 Probaré haciendo un poco de ambas.
 
+## Figma
+
+[Figma.com](https://www.figma.com/design/IFHkWNJJfkxryQmSn1jA4c/examen?node-id=0-1&t=HUCxR2Z3rXw0G8GA-1)
+
 ## Pensamientos mientras organizo que poner
 
  **Secciones para la página**
@@ -48,7 +52,7 @@ Agregar playlist?? debería colocar alguna, la música es algo importante para m
 
 De esta página rescato la visualización e interacción con las imágenes 
 
-https://gunespeksen.com/
+[gunespeksen.com](https://gunespeksen.com/)
 
 2.Rene Coignard
 
@@ -71,9 +75,6 @@ Fotolog / ya no
 Aunque era muy chica para utilizar fotolog en su apogeo, siempre me encantó la idea de publicar solo fotos, de haber tenido edad suficiente para usarla, probablemente seria uno de los perfiles con más fotos de la comunidad. De esta página tomo la idea de publicar solo fotografías e imágenes y la forma simple de organización y visualización de estas.
 
 La web en la que me quiero basar ya no se encuentra disponible pero algo así se veía
-
-(agregar imagen de la web)
-
 
 -----------------------------------------------------
 
