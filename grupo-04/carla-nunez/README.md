@@ -1,91 +1,94 @@
-# between ends
+# Avance 1
 
-Sitio single page del festival ficticio **between ends** (07, 08 y 09 de noviembre, Santiago). Está hecho con HTML, CSS y un poco de JavaScript, a partir de un diseño en Figma para escritorio (1440 px).
+## Links
 
-> **Cómo abrirlo:** descarga el repositorio completo y abre `index.html` en el navegador. Todos los archivos (CSS, tipografía e imágenes) deben quedar en la misma carpeta.
+- **Figma:** <https://www.figma.com/design/AMrK5AeX5KmZy4gzNrCmEm/examen-avance-1?node-id=0-1&t=OT3o6Z9XUIJ4prtH-1>
 
-## Contenido del repositorio
+## 1. Descripción del proyecto
 
-| Archivo | Para qué sirve |
-|---|---|
-| `index.html` | Estructura del sitio: `header`, `main` con sus `section`, y `footer`. |
-| `style.css` | Todos los estilos. Usa flexbox, unidades `rem` y `%`, y cada regla está comentada en español. |
-| `ProggyClean.ttf` | Tipografía del diseño, cargada con `@font-face`. |
-| `logotipo.png` | Logo de between ends. |
-| `img1.png` a `img22.png` | Portadas de álbumes que se mueven en la parte superior. |
-| `redbull.png`, `santander.png`, `cocacola.png` | Logos de auspiciadores del footer. |
+Mi proyecto es mi **portafolio personal** como diseñadora de producto, con un espacio de blog propio. El portafolio reúne cuatro trabajos de la carrera por ahora:
 
----
+| # | Proyecto | Área | Año |
+|---|---|---|---|
+| 1 | El tincado: sintetizador de cuatro pasos | Electrónica aplicada al diseño | 2026 |
+| 2 | Vitrina Sónica: sintetizador modular | Electrónica aplicada al diseño | 2026 |
+| 3 | Torno Patero: fabricación de herramienta y torneado | Diseño de producto | 2024 |
+| 4 | Réplica Silla Élé: ebanistería | Diseño de producto | 2025 |
 
-## Proceso 
+**La idea.** Mi portafolio en PDF es sobrio y cerrado. Para la web quiero algo más personal: un sitio que sea mi portafolio y, a la vez, **un espacio propio tipo blog** que pueda ir editando y cambiando a medida que avanzo, con nuevos proyectos, procesos, ideas y notas. Quiero que se sienta mío y no como una vitrina terminada.
 
-> Como grupo muchos de nuestros tiempos no calzaban, ya sea por trabajo, universidad, entre otros. Cada una iba revisando el código y probándolo a medida que se le iba haciendo un cambio, trabajamos súper 
+Visualmente busco colores llamativos, una tipografía con carácter y **mucha animación**: que se pueda interactuar con el sitio, que las cosas respondan al mouse y que moverse por él sea parte de la experiencia, sin perder una interfaz clara y agradable de usar. Cada proyecto tiene su propio color, y al pasar el mouse por una tarjeta el sitio se tiñe de ese color. Se que esto puede cambiar pero por ahora esa es mi propuesta.
 
-### El sitio
+El contenido (textos, fotos y datos) es real y viene de mis proyectos de la carrera, sin lorem ipsum. 
 
-Entre todos pasamos el diseño de Figma a un sitio funcional. Lo que se hizo, en orden:
+**Páginas previstas:** Inicio, Trabajo (portafolio), plantilla de Proyecto (una por cada trabajo), Blog (entradas que voy agregando) y Sobre mí.
 
-1. **Diseño en Figma.** Hicimos el diseño en conjunto, en versión de escritorio de 1440 px, y lo usamos como guía para construir el sitio.
-2. **Estructura en HTML.** Armamos el `header` con el menú, el `main` con las secciones (banner, portadas, line up, boletería y playlist) y el `footer`. En este caso yo me encargué del footer.
-3. **Estilos en CSS.** Se escribió una hoja externa con selectores de clase. Todo el diseño usa flexbox, y los tamaños están en `rem` y `%`.
-4. **Tipografía y colores.** Usamos la fuente ProggyClean y la paleta del grupo: azul `#1576BB`, morado `#450B69`, blanco y negro.
-5. **Line up.** Cada día tiene una barra de fecha y tres columnas de escenarios (Main Stage, Stage 2 y Warehouse), con fondo en degradado.
-6. **Portadas con movimiento.** Las 22 portadas rebotan dentro de su cuadro, como el logo de un DVD, y no salen de él. Programamos el script para que respete la configuración de accesibilidad “Reducir movimiento” del dispositivo: si la persona la tiene activada, las portadas quedan quietas. 
-7. **Boletería.** Tres entradas con precio normal y con descuento, y botones de compra ubicados en zigzag como en el diseño.
-8. **Playlist.** Reproductor de Spotify incrustado.
-9. **Footer.** Botón de compra, menú, redes, contacto y logos de auspiciadores en blanco.
-10. **Revisión final.** Revisamos el sitio con la rúbrica y corregimos detalles (explicados abajo).
 
-### ¿Qué dificultades tuve y cómo las resolví?
+## 2. Referentes
 
-| Dificultad | Causa | Cómo se resolvió |
-|---|---|---|
-| La página se veía sin estilos (letra Times y enlaces azules). | El archivo CSS se llamaba `style-2.css`, pero el HTML lo buscaba como `style.css`. | Renombramos el archivo a `style.css`. Aprendimos que el nombre del archivo y el `href` deben coincidir exactamente. |
-| Las portadas se salían de su zona, pasaban sobre el Line Up y la página se movía hacia los lados. | Para que el movimiento tenga un borde donde rebotar, el cuadro necesita `position`, y mi primera versión usaba solo flexbox. | Usamos `position: relative` en `.covers`, `position: absolute` en cada portada y `overflow: hidden` para cortar lo que se sale. (Esto lo consultamos con la IA) |
-| Hice el cambio en una copia equivocada del código y "no pasaba nada". | Estaba editando un archivo distinto al que abría el navegador. | Comprobé qué archivo abría el navegador y recargué sin caché con Cmd + Shift + R. |
-| El texto se veía muy pequeño. | ProggyClean es una fuente de píxeles y se ve más chica que otras con el mismo tamaño. | Subimos los `font-size` de los textos pequeños (artistas, menú, precios y footer). |
-| Los colores no coincidían con los del grupo. | Los primeros colores se pusieron a ojo, mirando el PNG. | Reemplazamos todos por los cuatro colores de la paleta. |
-| Los logos de auspiciadores eran negros sobre el fondo negro del footer. | Las imágenes originales eran oscuras. | Aplicamos `filter: brightness(0) invert(1)` para verlos blancos sin editar las imágenes. |
-| La boletería no se parecía al diseño: los botones estaban separados de las entradas. | En el HTML original los botones estaban en otra sección. | Reorganizamos el HTML con filas (`.fila`) que contienen una entrada y un botón, para ubicarlos en zigzag con flexbox. Esta parte la hizo So jeje |
-| Detalles al revisar con la rúbrica. | Quedaban un estilo `px` escrito directo en el HTML, y enlaces de compra con el año equivocado. | Movimos el redondeo del reproductor al CSS en `rem` y cambiamos los enlaces de 2025 a 2026. |
-| Para la entrega, el sitio tenía que abrir desde `index.html`. | El archivo se llamaba `index-corregido.html`. | Lo renombramos a `index.html` y subimos todos los archivos al repositorio. |
+### Emele Collab — https://emelecollab.com
+Lo que me gustó fue el **desenfoque y el movimiento** de las imágenes, y que el sitio se sienta vivo al recorrerlo. También me llamó la atención que se pueda ver el trabajo en tres vistas (lista, grilla y galería) y que el botón de contacto abra directamente un correo.
+**Qué tomo:** el efecto de movimiento y desenfoque en las imágenes de los proyectos, y el botón de contacto que abre el correo (`mailto:`).
 
-**Recursos que usé:** Claude (inteligencia artificial), la rúbrica del curso y el material de clases.
+### Readymag — https://readymag.website/u2179522220/6089381/
+Me encantó por su **interacción** y por sus colores. Su paleta es muy distinta a la que yo quiero.
 
-### Uso de inteligencia artificial
+**Qué tomo:** la forma en que se interactúa con el contenido, no los colores.
 
-Usamos **Claude** (Anthropic) para dos cosas: escribir el CSS comentado a partir del diseño y el HTML, y agregar el movimiento a las portadas y corregir errores del código. El resultado no funcionó a la primera, así que hubo que probarlo, entender qué fallaba y pedir ajustes.
+### ilovecreatives — https://ilovecreatives.com
+Es un sitio con muchos referentes de **colores, interacción y mezcla de información** (cursos, perfiles, tienda, artículos y una sección de sitios favoritos, todo en una sola portada con un índice de secciones). Lo uso como fuente de inspiración.
 
-**Prompt 1 (CSS desde el diseño):**
+**Qué tomo:** ideas para combinar información de distinta naturaleza en una misma página sin que se vea desordenada, y referencias de color e interacción ya que mis proyectos no siguen una linea continua de apariencia.
 
-> Adjunto png de mi diseño en Figma (escritorio de 1440 px) y mi HTML. Escribe el CSS para que la página se vea como el png. Usa solo flexbox, unidades rem y %. No uses grid, position ni frameworks. Comenta cada regla en español explicando qué hace, en lenguaje simple.
+### Referentes iniciales (exploración)
+Antes de elegir estos tres, exploré también a Liam Young (tarjetas flotantes y filtros por categoría), HAWRAF y Mia Brooks (tipografía enorme y navegación mínima). De ahí vienen las ideas de tarjetas que se pueden mover y del titulo gigante en la portada.
 
-*Qué tuve que corregir:* el CSS venía con una fuente genérica (Courier) y colores aproximados, así que cambié la tipografía a ProggyClean y los colores a nuestra paleta. Además, subí los tamaños de letra porque se veían pequeños.
 
-**Prompt 2 (portadas dentro del encuadre):**
+## 3. Proceso de diseño
 
-> Le pedí que las portadas no se salieran del encuadre en la versión de escritorio, porque se movían por encima del Line Up.
+### Cómo llegué al concepto
+1. Partí de mi portafolio en PDF, que usé para identificar qué hay dentro de mi trabajo: electrónica, prototipos y materiales.
+2. Mi primera idea fue un sitio sobrio en blanco, negro y azul. Después decidí que no quería tomar tanto mi portafolio como referente: quería algo más cool, con colores llamativos y mucha interacción.
+3. Entre tres direcciones (divertido, eléctrico,artístico) elegí **electrico**.
+4. Más adelante cambié el enfoque del sitio: en vez de una vitrina de proyectos, quiero que sea más personal, con mi portafolio y un blog que pueda ir editando, y con mucha animación para poder interactuar con él.
 
-*Qué tuve que corregir:* la solución que funcionó necesitaba `position`, que la consigna original no permitía. Tuve que entender por qué era necesario y dejarlo registrado. Además, al principio edité un archivo equivocado y por eso creí que no funcionaba.
+### Colores
 
-**Prompt 3 (movimiento de las portadas):**
+Uso un fondo muy oscuro con texto claro, y cinco colores de alta saturación que funcionan como señal: cada proyecto tiene el suyo, y se "enciende" cuando el cursor pasa por encima. Regla de uso: aproximadamente 80% Noche y Hielo, y los colores de proyecto solo como bloques grandes o estados de interacción, de a uno por vez.
 
-> No quiero que se salgan del encuadre en el desktop.
+| Rol | Nombre | Hex | Dónde se usa | Texto encima |
+|---|---|---|---|---|
+| Fondo | Noche | `#0A0A1F` | Fondo de todas las páginas, texto sobre colores claros | Hielo |
+| Texto | Hielo | `#F2F3FF` | Texto principal, bordes de botones y chips | n/a |
+| Proyecto 1, El tincado | Azul eléctrico | `#2B3BFF` | Hover de su tarjeta, fondo de su página | Hielo |
+| Proyecto 2, Vitrina Sónica | Naranja neón | `#FF4A1C` | Hover de su tarjeta y del botón, fondo de su página | Noche |
+| Proyecto 3, Torno Patero | Violeta | `#7A3CFF` | Hover de su tarjeta, chip de filtro activo | Hielo |
+| Proyecto 4, Silla Élé | Lima ácido | `#C8FF2E` | Hover de su tarjeta, estado pressed del botón | Noche |
+| Línea y bordes | Hielo al 20% | `#F2F3FF` a 20% de opacidad | Bordes de tarjetas, chips y separadores | //// |
 
-*Qué tuve que corregir:* Qué tuve que corregir: el movimiento funcionaba, pero las portadas se salían de su cuadro, pasaban por encima del Line Up y hacían que toda la página se moviera hacia los lados. Lo resolví dándole al contenedor `.covers` un `position: relative` y un alto fijo, a cada portada un `position: absolute`, y agregando `overflow: hidden` para que todo lo que se salga del cuadro se corte. Así las portadas rebotan solo dentro de su zona
+Los contrastes de la última columna son entre el texto y el color de fondo, y están elegidos para que se lea bien: el texto claro va sobre azul y violeta, y el texto oscuro sobre naranja y lima, porque el claro no se lee sobre esos dos. El azul y el violeta tienen poco contraste sobre Noche, así que los uso solo como fondo de bloques y nunca como color de texto.
 
-### ¿Qué aprendí?
+### Tipografías
 
-- **Flexbox:** cómo usar `justify-content`, `align-items`, `flex-wrap` y `gap` para ordenar secciones completas, y por qué siempre hay que dejar el CSS comentado.
-- **Unidades `rem` y `%`:** escalan mejor que los píxeles y hacen que el diseño se adapte a distintos tamaños.
-- **Cuándo se necesita `position`:** para ubicar elementos dentro de un cuadro y animarlos sin que se salgan.
-- **Rutas y nombres de archivos:** una letra distinta en un nombre puede dejar el sitio sin estilos.
-- **Especificidad en CSS:** cuando dos reglas tocan la misma propiedad, gana la más específica, no la que está más abajo.
-- **Usar la IA con criterio:** Claude no ve mi carpeta ni mi navegador, así que hay que probar todo, revisar el resultado y explicar bien qué falla.
+Las tres familias son de Google Fonts, gratuitas y disponibles en Figma y en la web.
 
----
-## Créditos
+| Familia | Pesos | Uso | Por qué |
+|---|---|---|---|
+| [Unbounded](https://fonts.google.com/specimen/Unbounded) | Medium y Bold | Títulos, botones y títulos de tarjeta | Es ancha, redondeada y futurista: le da carácter al sitio. Es muy ancha, así que la uso solo en titulares y no en párrafos largos |
+| [DM Sans](https://fonts.google.com/specimen/DM+Sans) | Regular | Párrafos y texto corrido | Es neutra y clara, y equilibra a Unbounded en lecturas largas |
+| [DM Mono](https://fonts.google.com/specimen/DM+Mono) | Regular, en mayúsculas | Etiquetas pequeñas (`01 / ELECTRÓNICA / 2026`), años y categorías | Aporta un toque técnico, ligado a mi trabajo con electrónica |
 
-- Tipografía: ProggyClean.
-- Portadas de álbumes y logos de marcas: usados solo con fines académicos; pertenecen a sus respectivos autores y marcas.
-- Asistencia de IA: Claude (Anthropic), declarada en la bitácora.
+**Escala tipográfica**
+
+| Estilo | Fuente y peso | Desktop (1440) | Mobile (390) | Interlineado |
+|---|---|---|---|---|
+| Display | Unbounded Bold | 96 | 36 | 100% |
+| H1 | Unbounded Bold | 56 | 28 | 105% |
+| H2 | Unbounded Medium | 32 | 20 | 115% |
+| H3 (título de tarjeta) | Unbounded Medium | 22 | 18 | 120% |
+| Botón | Unbounded Medium | 16 | 14 | 100% |
+| Cuerpo | DM Sans Regular | 18 | 16 | 150% |
+| Cuerpo pequeño | DM Sans Regular | 15 | 14 | 150% |
+| Etiqueta | DM Mono Regular | 12 | 11 | 100% |
+
+
