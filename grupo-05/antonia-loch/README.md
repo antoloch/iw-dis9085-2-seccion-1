@@ -1,246 +1,132 @@
-# Bitácora Clases 06, 07 y 08
+## Avance 1 (9 de noviembre):
+Hay que traer:
 
-# Clase 06: De Figma al Navegador
+La bitácora iniciada, con la descripción del proyecto.
+Bitácora: 3 sitios web de referencia, con el link y qué toma de cada uno (estructura, tipografía, navegación, etc.).
+Bitácora: Link al Figma.
+Figma: Boceto y wireframes de baja de las páginas del sitio.
+UI kit del sitio en Figma: colores, tipografías, botones y otros componentes base.
 
-En esta clase comprendí cómo un diseño creado en Figma puede transformarse en una página web real mediante código.
 
-Aprendimos que una página web está formada principalmente por tres tecnologías:
+## Referentes visuales y de diseño
 
-- **CSS:** controla la apariencia visual.
-- **JavaScript:** agrega comportamiento e interactividad.
-- **HTML:** define la estructura y el contenido.
+Antes de comenzar a definir la estructura y la apariencia de mi portafolio, revisé distintos sitios web que me sirvieron como referencia para pensar cómo presentar mis proyectos, organizar la información y construir una experiencia de navegación. Cada uno tiene una propuesta diferente, por lo que fui identificando elementos que me interesaba incorporar o adaptar a mi propio diseño.
 
-También conocimos **Visual Studio Code**, un editor de código que facilita el desarrollo gracias al resaltado de sintaxis y herramientas para detectar errores. Además, aprendimos sobre **GitHub**, una plataforma utilizada para almacenar proyectos y trabajar colaborativamente.
+### 1. Janis Sepúlveda
 
-- Las etiquetas HTML tienen apertura, contenido y cierre.
-- Es importante utilizar etiquetas de forma semántica para organizar correctamente la información.
-- HTML entrega la estructura, mientras que CSS se encarga de la parte visual.
-- Se pueden crear títulos, párrafos, imágenes, enlaces y listas utilizando distintas etiquetas.
+**Sitio web:** https://janisepulveda.cl/contacto.html
 
+Uno de los referentes fue el sitio de Janis Sepúlveda. Me llamó la atención la manera sencilla en que organiza la navegación, separando las secciones de trabajos, sobre mí, contacto y CV. También tiene un formulario de contacto bastante directo, con campos básicos como nombre, correo y mensaje.
 
-# Clase 07: Estructura HTML y Fundamentos de CSS
+De este sitio rescate:
+- La claridad de la estructura y la navegación.
+- La separación entre trabajos e información personal.
+- La simplicidad del formulario de contacto.
 
-En esta sesión aprendimos la estructura básica de una página web.
+### 2. Catarina V. Nery
 
-## Estructura principal de HTML
+**Sitio web:** https://www.catarinavnery.com/
 
-```html
-<html>
-    <head>
-    </head>
+Otro referente es el portafolio de Catarina V. Nery, que presenta sus proyectos principalmente a través de imágenes acompañadas de pequeñas descripciones. Me interesó especialmente cómo explica el desarrollo de cada trabajo, mostrando no solamente el resultado final, sino también el concepto y las decisiones que hay detrás.
 
-    <body>
-    </body>
-</html>
-```
+Por ejemplo, en su proyecto de un libro de arte sobre Narcisse Tordoir explica cómo organizó las obras en categorías y capítulos. También presenta un proyecto de identidad visual para una tienda de vinos, donde experimenta con texturas, escaneos, fotografía y video.
 
-Dentro del body existen etiquetas que ayudan a organizar mejor el contenido:
+De esta referencia me interesa tomar:
+- La presentación visual de los proyectos.
+- La combinación de imágenes y textos descriptivos.
+- La importancia de mostrar el proceso y no solamente el resultado final.
 
-- `header`: encabezado.
-- `main`: contenido principal.
-- `footer`: información final del sitio.
+### 3. UNVEIL
 
-### CSS
+**Sitio web:** https://unveil.fr/
 
-Aprendimos que CSS permite modificar:
+También revisé UNVEIL, un estudio creativo que trabaja con tecnología e inteligencia artificial para explorar nuevas posibilidades visuales. Su sitio web se diferencia por proponer una experiencia más experimental, donde la navegación y el contenido tienen un carácter menos tradicional.
 
-- Colores.
-- Tipografías.
-- Bordes.
-- Espaciados.
-- Fondos.
-- Tamaños.
+Me llamó la atención la manera en que la página invita a recorrer y descubrir distintos contenidos, convirtiendo la navegación en parte de la experiencia.
 
-## Modelo de Caja (Box Model)
+De este referente rescate:
+- La exploración de nuevas formas de navegación.
+- La interacción como parte de la experiencia visual, como se muestran los proyectos.
+- La sensación de profundidad y movimiento.
+- La idea de que recorrer un portafolio sea descubrir su contenido de una manera diferente.
 
-Uno de los conceptos más importantes fue entender que prácticamente todos los elementos funcionan como cajas.
+### 4. Jacky Boehm
 
-Estas cajas están compuestas por:
+**Sitio web:** https://jackyboehm.com
 
-1. **Contenido**.
-2. **Padding** (espacio interior).
-3. **Border** (borde).
-4. **Margin** (espacio exterior).
+Por último, utilicé como referencia el portafolio de Jacky Boehm, artista, diseñadora y directora de arte. Su página presenta una selección de trabajos visuales y editoriales, donde las imágenes tienen un papel muy importante. 
+De este sitio rescate:
+- El protagonismo de las imágenes.
+- La organización visual de cada trabajo.
+- La forma de mostrar una identidad personal a través de los proyectos.
 
-Comprender esta estructura resultó fundamental para posicionar elementos correctamente dentro de una página.
+### Relación de los referentes con mi proyecto
 
+A partir de estas referencias fui definiendo una propuesta que combina una navegación clara y sencilla con una presentación más experimental de los proyectos. Me interesa que el portafolio tenga una identidad visual reconocible, pero que no se sienta como una página genérica.
 
-# Clase 08: Display y Flexbox
+Por eso decidí trabajar con una estética editorial, utilizando el blanco, negro y rojo como colores principales, y combinando Helvetica Neue con Courier Prime. También quiero incorporar elementos interactivos que hagan que recorrer la página sea parte de la experiencia.
 
-Esta fue una de las clases más importantes para el desarrollo de la single page, ya que permitió organizar elementos de manera más eficiente.
+## Estructura y funcionamiento del sitio web
 
-## Tipos de Display
+La página se organiza en cuatro secciones principales: **Home, Projects, Index y About**. Cada una cumple una función diferente dentro del portafolio, pero todas mantienen una misma identidad visual y una navegación común.
 
-### Block
+### 1. Home — Página principal
 
-Ocupa todo el ancho disponible y comienza en una nueva línea.
+La página principal funciona como la primera presentación de mi portafolio. En esta sección aparece mi nombre, ANTO LOCH, acompañado de un efecto visual que busca generar una primera impresión más dinámica e interactiva.
 
-```css
-display: block;
-```
+La idea es que el nombre y los elementos visuales tengan una sensación de profundidad, como si estuvieran distribuidos en distintos planos dentro de un espacio tridimensional. A medida que el usuario interactúa o se desplaza por la página, estos elementos generan un efecto de movimiento y perspectiva.
 
-### Inline
+En el lado derecho aparece un texto que acompaña esta composición y entrega una pequeña introducción sobre mí y mi trabajo.
 
-Ocupa únicamente el espacio de su contenido.
+- Nombre ANTO LOCH como elemento central video : https://youtu.be/OkZf_xcFrmo
 
-```css
-display: inline;
-```
+### 2. Projects — Presentación de proyectos
 
-### Inline-block
+La sección Projects está pensada para mostrar los trabajos principales del portafolio mediante una galería interactiva. Los proyectos se presentan como imágenes que se distribuyen en el espacio, manteniendo la idea de profundidad que aparece en la página principal.
 
-Permite mantener elementos en línea respetando tamaños y padding.
+La intención es que el usuario pueda recorrer los distintos proyectos y seleccionar uno para acceder a su contenido.
 
-```css
-display: inline-block;
-```
+**Elementos principales:**
+- Galería visual de proyectos.
+- Imágenes distribuidas en distintos planos.
+- Efecto de profundidad.
+- Selección de cada proyecto mediante un clic.
+- Acceso a una página individual con más información.
 
-### None
+Al entrar a un proyecto, se presenta su nombre, categoría y una breve descripción, junto con imágenes del proyecto.
 
-Oculta completamente un elemento.
+### 3. Index — Índice de proyectos
 
-```css
-display: none;
-```
+La sección Index funciona como una alternativa más directa para encontrar los trabajos del portafolio. En lugar de utilizar una galería visual, presenta los proyectos mediante una lista ordenada con sus respectivos nombres y numeración.
 
----
+Su objetivo es facilitar la búsqueda y permitir que el usuario pueda identificar rápidamente los proyectos disponibles.
 
-# Flexbox
+**Elementos principales:**
+- Lista ordenada de proyectos.
+- Nombres y numeración.
+- Diseño simple y fácil de recorrer.
+- Acceso directo a cada trabajo.
 
-Aprendimos a utilizar Flexbox para organizar elementos dentro de un contenedor.
+ofrecer una forma más simple y organizada de acceder a los proyectos.
 
-```css
-display: flex;
-```
+### 4. About — Sobre mí
 
-Con esta propiedad es posible controlar:
+La sección About está destinada a presentar quién soy, mis intereses y mi manera de acercarme al diseño. La propuesta visual se inspira en elementos editoriales y de papelería, utilizando una composición que recuerda a un collage de documentos, fotografías, papeles y anotaciones.
 
-- Dirección de los elementos.
-- Separación entre ellos.
-- Distribución del espacio.
-- Alineación vertical y horizontal.
+**Elementos principales:**
+- Presentación personal.
+- Fotografía.
+- Composición visual tipo collage.
+- Ficha con información y anotaciones.
+- Formulario de contacto integrado en la misma sección.
 
-## Propiedades más utilizadas
+### 5. Páginas individuales de proyectos
 
-### Dirección
+Además de las secciones principales, cada proyecto cuenta con su propia página. 
+- Imagen principal.
+- Nombre y categoría del proyecto.
+- Descripción general.
+- Imágenes del proyecto.
 
-```css
-flex-direction: row;
-```
 
-o
-
-```css
-flex-direction: column;
-```
-
-### Alineación
-
-```css
-justify-content: center;
-align-items: center;
-```
-
-### Espaciado
-
-```css
-gap: 1.5rem;
-```
-
-### Adaptación
-
-```css
-flex-wrap: wrap;
-```
-
-Esta propiedad permite que los elementos bajen a otra línea cuando no existe suficiente espacio.
-
-
-# Uso de IA Actividad 2 
-
-## Consulta 1: adaptar tipografía y colores a una imagen de referencia
-
-**Qué necesitaba:** que la ficha de la silla Wassily se viera inspirada en una foto de referencia (título "WASSILY" en negro y "CHAIR" en rojo, fondo gris cálido, silla roja y negra). No sabía qué colores eran exactamente ni qué tipo de letra usar.
-
-**Código inicial:**
-
-```css
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #111111;
-    background: #b5121b;
-}
-```
-
-**Prompt:**
-
-"¿Puedes cambiar los colores y la tipografía para que estén más inspirados en esta foto?" 
-
-**Sugerencias aceptadas:**
-- Cambiar el fondo rojo (`#b5121b`) por un gris cálido, porque coincide con el fondo de la foto, y usar el rojo solo como acento.
-- Cambiar Arial por una tipografía geométrica tipo Futura (con Century Gothic y Trebuchet MS como alternativas), porque se parece más a la letra del título de la foto y tiene estética Bauhaus.
-- Definir la paleta como variables CSS (`--fondo`, `--rojo`, `--negro`, `--blanco`) para reutilizar los colores en toda la página.
-
-**Resultado:**
-
-```css
-body {
-  margin: 0;
-  font-family: 'Futura', 'Century Gothic', 'Trebuchet MS', sans-serif;
-  color: var(--negro);
-  background: var(--fondo);
-}
-```
-## Consulta 2: centrar el texto destacado
-
-**Qué necesitaba:** que el párrafo con la clase `.destacado` (el recuadro rojo de la sección Descripción) quedara con el texto centrado.
-
-**Código inicial:**
-
-```css
-.destacado {
-  background: var(--rojo);
-  color: var(--blanco);
-  padding: 1rem;
-  font-weight: bold;
-}
-```
-
-**Prompt:**
-
-"¿Cómo centro el texto .destacado?"
-
-**Sugerencias aceptadas:**
-- Agregar `text-align: center;` a `.destacado`, porque centra el texto dentro del recuadro rojo sin cambiar el resto del diseño.
-
-**Resultado:**
-
-```css
-.destacado {
-  background: var(--rojo);
-  color: var(--blanco);
-  padding: 1rem;
-  font-weight: bold;
-  text-align: center;
-}
-```
-
-# Proceso Proyecto 2, solemne 2 
-
-Lo primero que realizamos fue decidir en qué queríamos enfocarnos para desarrollar la single page. Como grupo, elegimos la feria de arte e ilustración chilena **Click Feria**.
-
-Luego, elaboramos un boceto inicial de la página para posteriormente diseñarlo en Figma. Desarrollamos versiones mobile y desktop, considerando wireframes de baja y alta fidelidad.
-
-Después de presentar la propuesta, recibimos comentarios de la profesora relacionadas principalmente con detalles pequeños del diseño. Con esas correcciones realizadas, actualizamos el Figma y comenzamos a utilizar **HTML y CSS**.
-
-La principal dificultad estuvo relacionada con **CSS**. En las clases entendía los contenidos, pero a veces me costaba retener toda la información y recordar cómo aplicarla al momento de programar.
-
-Además, al comienzo fue complicado lograr que la página web se viera lo más parecida posible al diseño realizado en Figma. Muchas veces los elementos no quedaban en la misma posición, con los mismos tamaños o distribuciones que en el prototipo. Cuando avanzaba en el proyecto, fui comprendiendo mejor cómo funcionaban HTML y CSS, especialmente en aspectos relacionados con el posicionamiento, la organización de elementos y el uso de estilos.
-
-Para resolver mis dudas, utilicé el material complementario entregado en clases y también herramientas de inteligencia artificial, como Claude, que me ayudó con explicaciones paso a paso. Lo utilicé principalmente como una guía de aprendizaje. 
-
-# Aprendizajes
-
-Gracias a este proyecto, pude profundizar mis conocimientos en **HTML y CSS**, comprendiendo mejor cómo ambos lenguajes trabajan en conjunto para construir sitios web. También aprendí a interpretar y trasladar diseños desde Figma a código.
-
+## Figma: https://www.figma.com/design/YHWCjI7XMQea2wS5oOlocJ/portafolio?node-id=0-1&p=f&t=WSIIGgeEmjSj6JS0-0
