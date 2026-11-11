@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Refinamiento CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Portafolio 2026</a>
+    <nav class="menu">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="proyectos" class="proyectos">
+        <!-- Cards con imagen en blanco y negro que pasa a color al hacer hover -->
+        <article class="card card-gris">
+            <span class="etiqueta">2019</span>
+            <h3>Needle</h3>
+            <img src="assets/cassette.jpg">
+            <p>Diseño de identidad para sesiones de música electrónica</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-gris">
+            <span class="etiqueta">2023</span>
+            <h3>EDTM</h3>
+            <img src="assets/fanzin.jpg">
+            <p>Diseño editorial para poemario de la artista María Pérez</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-gris">
+            <span class="etiqueta">2020</span>
+            <h3>Herida</h3>
+             <img src="assets/cd.jpg">
+            <p>Diseño gráfico para el album físico "Herida" de Francisco Victoria</p>
+            <button>Ver más</button>
+        </article>
+
+        <!-- Cards con hover que "levanta" la card -->
+        <article class="card card-elevar">
+            <span class="etiqueta">2024</span>
+            <h3>Proyecto 4</h3>
+            <img src="assets/cassette.jpg">
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-elevar">
+            <span class="etiqueta">2025</span>
+            <h3>Proyecto 5</h3>
+            <img src="assets/fanzin.jpg">
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-elevar">
+            <span class="etiqueta">2026</span>
+            <h3>Proyecto 6</h3>
+            <img src="assets/cd.jpg">
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+
+        <!-- Cards con hover de zoom en la imagen (dentro de su marco) -->
+        <article class="card card-zoom">
+            <span class="etiqueta">2026</span>
+            <h3>Proyecto 7</h3>
+            <div class="marco">
+                <img src="assets/cassette.jpg">
+            </div>
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-zoom">
+            <span class="etiqueta">2026</span>
+            <h3>Proyecto 8</h3>
+            <div class="marco">
+                <img src="assets/fanzin.jpg">
+            </div>
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+        <article class="card card-zoom">
+            <span class="etiqueta">2026</span>
+            <h3>Proyecto 9</h3>
+            <div class="marco">
+                <img src="assets/cd.jpg">
+            </div>
+            <p>Descripción breve del proyecto</p>
+            <button>Ver más</button>
+        </article>
+    </section>
+
+    <!-- Carrusel infinito -->
+    <section id="carrusel" class="carrusel">
+        <h2>Carrusel</h2>
+        <div class="carrusel-ventana">
+            <div class="carrusel-pista">
+                <!-- Grupo 1 -->
+                <img src="assets/cassette.jpg" alt="Needle">
+                <img src="assets/fanzin.jpg" alt="EDTM">
+                <img src="assets/cd.jpg" alt="Herida">
+                <img src="assets/cassette.jpg" alt="Needle">
+                <img src="assets/fanzin.jpg" alt="EDTM">
+                <img src="assets/cd.jpg" alt="Herida">
+                <!-- Grupo 2: copia exacta del grupo 1 para que el loop no tenga salto -->
+                <img src="assets/cassette.jpg" alt="" aria-hidden="true">
+                <img src="assets/fanzin.jpg" alt="" aria-hidden="true">
+                <img src="assets/cd.jpg" alt="" aria-hidden="true">
+                <img src="assets/cassette.jpg" alt="" aria-hidden="true">
+                <img src="assets/fanzin.jpg" alt="" aria-hidden="true">
+                <img src="assets/cd.jpg" alt="" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="about"> 
+            <p>
+                "Soy UX/UI Designer junior. Vengo de más de 10 años en gestión comercial, y hoy aplico esa base a la investigación y al diseño de experiencias digitales.
+            </p>    
+            <p>
+                Mi trabajo combina dos partes que van juntas: entender el problema y construir la solución visual e interactiva. Hago investigación UX (entrevistas, encuestas, mapas de empatía, user journeys) para saber qué está fallando y por qué, y después diseño la respuesta concreta: arquitectura de información, wireframes, prototipos interactivos en Figma y componentes dentro de un sistema de diseño". 
+            </p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+         <div class="contacto"> 
+            <p>
+                Para colaboraciones, encargos y más hablemos :-)
+            </p>    
+            <div>
+                <button>Instagram</button>
+                <button>Mail</button>
+                <button>Linkedin</button>
+            </div>
+        </div>
+    </section>
+    </main>
+
+</body>
+</html>
