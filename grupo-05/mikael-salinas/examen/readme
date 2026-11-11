@@ -1,0 +1,14 @@
+Mateoarce.cl -> pantalla de carga con ilustraciones al entrar a la página (ver como hacer)
+Pauleperron.com -> extremo minimalismo, pero con interacción, b/w, tipo con mucho kerning
+Cultpictures.com -> distribución en lista con descripcion abajo, usar para la página de proyectos (**Ver como hacer -> en home al hacer click lleva a la página de proyectos y posicionado en el proyecto seleccionado)
+Lucabailey.com -> al hacer click en nombre despliega menu navegador (navbar), ultra minimalismo b/w
+fernando-garrido.com -> aparecen elementos al hacer scroll, usar para version en mobile
+hugoalcantara.com -> aunque es una imagen me gustaría hacer una tipografia con mi letra para usar como display
+
+Una página portafolio de apariencia en extremo minimalista, en inicio solo nombre y link a cv, sin embargo al pasar el cursos (hover) sobre página se revelan imagenes de proyectos al rededor, todo en blanco y negro, pero al hacer click los elementos tienen color. El sitio tendrá 3 páginas: Home, Proyectos (universitarios), ilustraciones (personales y trabajo independiente). Páginas de proyecto e ilustración imágenes se revelan al hacer scroll en vez de hover a diferencia del Home. para versión mobile del home en vez de hover la interacción funcionara con scroll.
+
+Me gustaría integrar elementos hechos a mano por mi en el sitio, ya que creo que esto es algo que está presente en mi trabajo con frecuencia. Quiero integrarlo con una tipografía display de mi letra y un fondo animado .gif de rayones, además de una animación del rayón en el loading screen.
+
+
+FIGMA
+https://www.figma.com/design/bLwXQDKqGWUXe3eBZ594LU/Sin-t%C3%ADtulo?node-id=0-1&t=O3Q7tTnAl6yoGpcj-1 
