@@ -17,6 +17,15 @@
 - Revisé cada versión en el navegador comparandola con el diseño en figma y fui haciendo las correciones de medidas, proporciones, animaciones, velocidades.
 - Después de la clase del día 19 de Octubre corregí los html según un punto en la rúbrica acerca de no usar tanto etiquetas div sino más semánticas.
 
+<img width="774" height="596" alt="Captura de pantalla 2026-10-26 101656" src="https://github.com/user-attachments/assets/e725f707-74fa-430c-aa29-b190dc58706a" />
+
+<img width="772" height="686" alt="Captura de pantalla 2026-10-26 101704" src="https://github.com/user-attachments/assets/600752e2-4639-4094-af5d-083c29927a4a" />
+
+<img width="750" height="660" alt="Captura de pantalla 2026-10-26 102859" src="https://github.com/user-attachments/assets/71bf68d5-4ab8-4e03-90c2-d635a7183d53" />
+
+<img width="792" height="690" alt="Captura de pantalla 2026-10-26 101730" src="https://github.com/user-attachments/assets/177c6aa8-5926-499b-996f-33432d98f402" />
+
+
 
 ### ¿Qué dificultades tuve y cómo las resolví?
 
