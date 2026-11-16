@@ -154,7 +154,6 @@ Esta interacción la pude realizar utilizando el agente de IA de Figma. Por otro
 
 ## Dificultades y pendientes
 
-- Comprender mejor el funcionamiento de Auto Layout.
 - Aprender a organizar correctamente los frames y sus elementos.
 - de figma a codigo html
 
