@@ -26,5 +26,26 @@ He elegido 5 referentes para empezar con el diseño de mi página web
 ## Link de Figma
 https://www.figma.com/design/o40EBU5M3OdI6YZ84nSSYk/Examen?node-id=0-1&t=6J2QyQ3Zd9v9rmg3-1
 
+## Clase 16-11-2026
+
+El orden de mi menú de galería debería ser más o menos así
+
+Todos los proyectos > Diseño > Ilustración
+
+DISEÑO: Diseño industrial > Maquetas > Modelado 3D > Carpintería de taller
+
+ILUSTRACIÓN: Digital > Análoga
+
+De esta manera cambió mi idea original para el menú interactivo de proyectos.
+
+Originalmente el menú iba a estar en la misma página 1, generando una animación en la que se desplegarían todas las opciones a elegir.
+Se volvía un poco complicado generar un overlay en ella, así que las correcciones que me dió el profe Aaron igual me ayudaron a pensar en una forma más sencilla y simplemente llevar mis proyectos a una nueva página enlazada con la original.
+
+Habrá un botón que al presionarlo te redirigirá a mis mejores proyectos (según yo y/ o considerando la nota que recibí en ese tiempo). Ya en esa página habrá un dropdown menu para “Todos los proyectos” donde aparecerá “Diseño” e “Ilustración” y de esas opciones nacerán otros dropdown menus con categorías más amplias de cada opción.
+
+Algo más que cambió fue la pestaña "Sobre mí", originalmente estaba muy aburrida y mientras lo hacía me di cuenta de que tenía demasiado texto y estaba pareciendo un curriculum capaz de pasar esas tecnologías que ocupan las empresas par filtrarlos.
+
+
+
 
 
