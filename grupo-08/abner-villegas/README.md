@@ -113,4 +113,42 @@ Uso de herramientas :
 # GEMINI 
 # TUTORIALES YOUTUBE: https://www.google.com/search?q=como+cambiar+un+codigo+de+desktop+a+mobile+con+vscode&sca_esv=a729b046d7660124&udm=vids&biw=1422&bih=621&sxsrf=APpeQnsIB3tT-3G1rGDXkNKx8rivleLjeA%3A1793024391140&ei=h2HfavSDCNPa1sQP69ih-QM&oq=como+cambiar+un+codigo+de+desktop+a+mobile+CON+VSC&gs_lp=EhZnd3Mtd2l6LW1vZGVsZXNzLXZpZGVvIjJjb21vIGNhbWJpYXIgdW4gY29kaWdvIGRlIGRlc2t0b3AgYSBtb2JpbGUgQ09OIFZTQyoFCAAYoAEyBRAhGKABMgUQIRigAUjDHVDpA1isE3ABeACQAQCYAWygAYAFqgEDNy4xuAEDyAEA-AEBmAIJoAK8BcICBRAAGO8FwgIIEAAYgAQYogTCAgUQIRifBcICBBAhGBWYAwCIBgGSBwM2LjOgB8YgsgcDNS4zuAe0BcIHBTAuNS40yAchgAgB&sclient=gws-wiz-modeless-video#fpstate=ive&vld=cid:6e7433db,vid:SUkdHhIefnY,st:0
 
+# Exámen 
+# Bitácora de Proceso Individual — Portafolio Personal 
+
+https://www.figma.com/design/ZJYsKjWZMWz0gF1hA8Y8Vw/Ex%C3%A1men-Portafolio?node-id=1-3&t=aaQq2KJx1HjkrCsv-1
+---
+
+## 1. ¿Qué hice en el sitio?
+
+Para este nuevo proyecto me he enfocado en la definición, planificación e identidad visual de mi portafolio web personal, una plataforma pensada para exhibir mis proyectos y áreas de interés dentro del diseño.
+
+Mi trabajo en esta etapa ha consistido en:
+
+* **Definición de enfoque y contenidos:** Seleccioné los trabajos que formarán parte de mi portafolio, centrando el foco principal en el área audiovisual (animación digital, animación manual, stop motion y edición de video), junto con proyectos de identidad visual desarrollados en mi formación.
+* **Referente de diagramación visual (Joia Magazine):** Tomé como referente gráfico principal la revista [Joia Magazine](https://joiamagazine.com/). Me basé en su forma de organizar la información y las imágenes mediante bloques muy marcados y estructurados, lo que me permite ordenar proyectos de distinta naturaleza (videos, animaciones y marcas) de forma limpia y legible.
+* **Proyección e intención de animación:** Aunque aún no he programado ni implementado animaciones en el código web, seleccioné este referente y estilo porque mi intención a futuro es integrar movimiento e interactividad a la interfaz, alineando la experiencia del sitio con mi gusto por la animación.
+* **Recopilación de referentes de estructura y diseño web:** Analicé el apartado visual y compositivo de distintos sitios web para rescatar ideas de diagramación y disposición de bloques:
+  * **Joia Magazine:** [https://joiamagazine.com](https://joiamagazine.com) (Referente principal de grilla modular y bloques marcados).
+  * **Bruno Simon:** [https://bruno-simon.com](https://bruno-simon.com) (Referente de interfaz lúdica e interactiva).
+  * **Lusion:** [https://lusion.co](https://lusion.co) (Referente de composición espacial y propuesta visual contemporánea).
+  * **Ochi Design:** [https://ochidesign.net](https://ochidesign.net) (Referente de bloques visuales potentes y tipografía de gran formato).
+  * **Koto Studio:** [https://koto.studio](https://koto.studio) (Referente de orden y presentación de galerías de proyectos).
+  * **Aristide Benoist:** [https://aristidebenoist.com](https://aristidebenoist.com) (Referente de equilibrio entre contenido audiovisual y texto).
+  * **Dennis Snellenberg:** [https://dennissnellenberg.com](https://dennissnellenberg.com) (Referente de distribución de elementos en pantalla).
+  * **Plataformas de inspiración visual:** [Awwwards](https://www.awwwards.com), [Godly Website](https://godly.website) y [Hover Stat.es](https://hoverstat.es).
+
+---
+
+## 2. ¿Qué dificultades tuve y cómo las resolví?
+
+* **El desafío:** El principal reto en esta fase inicial ha sido definir cómo estructurar y jerarquizar un conjunto de trabajos tan variado (animación digital, stop motion, edición de video e identidad visual) sin que la página se vea desordenada o saturada.
+* **Cómo lo solucioné:** Utilicé la grilla modular de bloques marcados inspirada en [Joia Magazine](https://joiamagazine.com/) como el esqueleto ordenador. Esto permite darle un peso visual claro a los contenidos audiovisuales más potentes, manteniendo los proyectos de identidad visual organizados dentro del mismo sistema sin perder coherencia.
+
+---
+
+## 3. ¿Qué aprendí?
+
+1. **Criterio de selección y curaduría:** Aprendí a definir la identidad de mi portafolio a partir de mis verdaderos gustos e intereses, priorizando lo audiovisual y la animación como eje central.
+2. **Organización por bloques:** Comprobé cómo la estructura gráfica de una revista como [Joia Magazine](https://joiamagazine.com/) ayuda a resolver la exhibición de piezas diversas (video, marcas y animación) bajo una misma grilla limpia y bien delimitada.
 
