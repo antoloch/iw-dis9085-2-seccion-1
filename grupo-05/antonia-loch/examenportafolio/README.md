@@ -130,3 +130,45 @@ Además de las secciones principales, cada proyecto cuenta con su propia página
 
 
 ## Figma: https://www.figma.com/design/YHWCjI7XMQea2wS5oOlocJ/portafolio?node-id=0-1&p=f&t=WSIIGgeEmjSj6JS0-0
+
+
+# Bitácora de avance – 16/11
+-UI kit del sitio en Figma: colores, tipografías, iconos y al menos 2 componentes base con sus estados.
+-Figma (trabajar en el mismo archivo ya entregado): Prototipo de alta interactivo sólo del Home en mobile y desktop, construido con auto layout. Para el avance sólo solicitamos animaciones e interacciones de cambios de estados (por ejemplo, hover de botones, enlaces, etc.)
+-GitHub: index.html con código HTML del Home.
+-Bitácora: actualizada con el feedback del Avance 1. Documentación del uso de IA hasta esa fecha.
+
+## Feedback Avance 1
+
+Durante la revisión del Avance 1, Aarón me comentó que el trabajo estaba bien encaminado, pero que no debía adelantarme tanto con el proceso y que era mejor ir avanzando paso a paso. También me dio algunas ideas para experimentar con la presentación de los proyectos, como incorporar elementos similares a perros de ropa dentro de los efectos visuales de los proyectos.
+
+Otro punto que conversamos fue la sección de contacto, donde surgió la duda de qué información personal sería necesario incluir y cómo presentarla. En general, fue un buen feedback, ya que me ayudó a tener más claridad sobre algunas decisiones y a no apresurarme con aspectos que todavía no son necesarios.
+
+## Proceso de avance actual
+
+En este avance me he enfocado principalmente en trabajar sobre la interacción del Home de ANTO LOCH. Logré crear los botones correspondientes a esta sección en Figma, considerando sus tres estados: normal, hover y presionado.
+
+También conseguí desarrollar la animación principal del Home, que es una de las interacciones más importantes de mi propuesta. La idea es que el texto principal «ANTO LOCH» tenga un movimiento sutil, donde cada letra flote suavemente de manera independiente.
+
+Esta interacción la pude realizar utilizando el agente de IA de Figma. Por otro lado, he tenido algunas dificultades al momento de trabajar con Auto Layout. Todavía me confundo con la organización de los frames y no he logrado implementarlo correctamente, por lo que decidí dejar esa parte pendiente y pedir ayuda durante la próxima clase.
+
+## Dificultades y pendientes
+
+- Comprender mejor el funcionamiento de Auto Layout.
+- Aprender a organizar correctamente los frames y sus elementos.
+- de figma a codigo html
+
+## Uso de IA
+
+Durante este avance utilicé el agente de IA de Figma para desarrollar la animación principal del Home. El prompt que utilicé fue el siguiente:
+
+**Prompt utilizado:**
+
+```text
+Quiero agregar animaciones e interacciones a mi Home de ANTO LOCH, manteniendo completamente el diseño, la composición, los colores y las tipografías actuales.
+
+Quiero que:
+
+El texto principal ANTO LOCH tenga un movimiento sutil de letras, como si flotaran ligeramente. Cada letra flota suavemente todo el tiempo, subiendo y bajando con un leve giro, cada una a su propio ritmo. Al pasar el cursor, las letras se deshacen en puntos y rayitas que se dispersan y después se recomponen solas.
+```
+
