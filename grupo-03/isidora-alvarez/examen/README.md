@@ -2,6 +2,10 @@
 
 Isidora Álvarez
 
+# **Link de figma**
+
+https://www.figma.com/design/ADbrbFWVOeJkBakvKcFPj6/Portafolio?node-id=99-21&p=f&t=QLJJ9BPGfWb4dOC8-0
+
 # **Descripción del Proyecto**
 
 Portafolio web interactivo que refleja mi identidad como diseñadora industrial, integrando la materialidad de la madera y el mobiliario (como el banquito zapatero y la silla de madera), la fabricación textil  de contenedores, electrónica de taller, prototipado 3D y la programación de experiencias interactivas en la web.
@@ -84,12 +88,16 @@ Figma: https://www.figma.com/design/ADbrbFWVOeJkBakvKcFPj6/Portafolio?node-id=13
 > Banca zapatero
 > Banca de madera
 > Lampara
-> Intervención Artística
+> sinte modular
 > Silla de madera
 > Bolso
-> Sinte
+> Sinte 
 > Comedero para mascotas
-> Interacción Digital: Multirealidades.sys y experimentos web en GitHub Pages (Three.js, MediaPipe, MQTT).
+> Interacción Digital:
+> Multirealidades
+> contrapresion
+> traductor de bits
+> ave
 
 # **Tipografias**
 
