@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isidora Álvarez — portafolio 2026</title>
+  <meta name="description" content="Portafolio de Isidora Álvarez, diseñadora de objetos y mobiliario.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script>document.documentElement.classList.add("js");</script>
+  <script defer src="js/datos.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ===== Header fijo: barra journal + barra de menú ===== -->
+  <header class="barra">
+    <div class="jbar">
+      <img src="imagenes/ui/elipse.svg" alt="" width="5" height="5">
+      <span>Isidora Álvarez — portafolio 2026</span>
+      <img src="imagenes/ui/elipse.svg" alt="" width="5" height="5">
+    </div>
+    <nav class="mbar" aria-label="Principal">
+      <a class="mbar__logo" href="#inicio">✦ Isidora</a>
+      <a class="mbar__link" href="#trabajos" data-seccion="trabajos">Trabajos</a>
+      <a class="mbar__link" href="#sobre-mi" data-seccion="sobre-mi">Sobre mí</a>
+      <a class="mbar__link" href="#contacto" data-seccion="contacto">Contacto</a>
+      <span class="mbar__espacio"></span>
+      <time class="mbar__reloj" data-reloj></time>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== 01 Portada ===== -->
+    <section class="portada" id="inicio">
+      <div class="portada__texto">
+        <p class="etiqueta">Nº00 — portafolio 2026</p>
+
+        <h1 class="titular" aria-label="hola, diseño para lo que se toca, se usa, se habita y se sostiene">
+          <span class="titular__hola" aria-hidden="true">hola,</span>
+          <span class="titular__linea" aria-hidden="true">diseño para lo que</span>
+          <span class="titular__linea titular__linea--2" aria-hidden="true">
+            se
+            <span class="titular__rota">
+              <span class="palabra-caja" data-palabras="toca,usa,habita,sostiene" title="clic para cambiar">
+                <span class="palabra">toca</span>
+              </span>.
+            </span>
+          </span>
+        </h1>
+
+        <p class="cuerpo portada__bajada">Soy diseñadora de objetos y mobiliario. Trabajo con madera y cartón, prototipo y grabo.</p>
+
+        <div class="botones">
+          <a class="btn btn--primario" href="#trabajos">ver trabajos →</a>
+          <a class="btn btn--secundario" href="#sobre-mi">sobre mí</a>
+        </div>
+      </div>
+
+      <!-- Escritorio con ventanas flotantes (se pueden arrastrar desde la barra .tb) -->
+      <div class="escritorio">
+        <article class="ventana ventana--notas" data-arrastrable>
+          <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo">notas.txt</span></div>
+          <div class="ventana__cuerpo">
+            <span class="pill"><img src="imagenes/ui/punto.svg" alt="" width="7" height="7">abierta a oportunidades</span>
+            <p class="mono">diseñadora industrial · UDP</p>
+          </div>
+        </article>
+
+        <article class="ventana ventana--pieza" data-arrastrable>
+          <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo" data-pieza-titulo>pieza-interactiva</span></div>
+          <div class="pieza">
+            <a class="pieza__enlace" data-pieza-enlace href="#trabajos" aria-label="ver proyecto">
+              <img class="pieza__img" data-pieza-img alt="" draggable="false">
+            </a>
+            <div class="pieza__controles">
+              <span class="pieza__etiqueta mono" data-pieza-etiqueta>[imagen de portada · por definir]</span>
+              <button class="btn btn--secundario btn--claro" type="button" data-pieza-otra>ver otra ↻</button>
+            </div>
+          </div>
+        </article>
+
+        <img class="destello destello--1" src="imagenes/ui/destello-relleno.svg" alt="" width="24" height="24">
+        <img class="destello destello--2" src="imagenes/ui/destello-linea.svg" alt="" width="24" height="24">
+      </div>
+    </section>
+
+    <!-- ===== 02 Trabajos ===== -->
+    <section class="seccion trabajos" id="trabajos">
+      <p class="etiqueta revelar">Nº01 — trabajos</p>
+      <h2 class="titulo-xl revelar">trabajos</h2>
+
+      <div class="filtros revelar" role="group" aria-label="Filtrar trabajos">
+        <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">todos <span data-total></span></button>
+        <button class="filtro" type="button" data-filtro="mobiliario" aria-pressed="false">mobiliario</button>
+        <button class="filtro" type="button" data-filtro="prototipos" aria-pressed="false">prototipos</button>
+        <button class="filtro" type="button" data-filtro="electronica" aria-pressed="false">electrónica</button>
+        <button class="filtro" type="button" data-filtro="web" aria-pressed="false">web</button>
+      </div>
+
+      <!-- Fila única de estampillas: se llena desde js/datos.js -->
+      <div class="srow" id="srow" tabindex="0" aria-label="Trabajos (desliza horizontalmente)"></div>
+      <noscript><p class="mono">Activa JavaScript para ver los trabajos.</p></noscript>
+
+      <div class="progreso" aria-hidden="true"><span class="progreso__avance" data-progreso></span></div>
+    </section>
+
+    <!-- ===== 03 Sobre mí y contacto ===== -->
+    <section class="seccion sobre" id="sobre-mi">
+      <p class="etiqueta revelar">Nº02 — sobre mí y contacto</p>
+      <h2 class="titulo-l revelar">sobre mí y contacto</h2>
+
+      <div class="about">
+        <div class="about__col">
+          <article class="ventana revelar" data-arrastrable>
+            <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo">sobre-mi.txt</span></div>
+            <div class="ventana__cuerpo">
+              <span class="pill"><img src="imagenes/ui/punto.svg" alt="" width="7" height="7">abierta a oportunidades</span>
+              <p class="bio">Soy diseñadora Industrial, Exploro el cruce entre el diseño de objetos, la electrónica y la web.</p>
+              <ul class="fichas">
+                <li class="ficha">madera.txt</li>
+                <li class="ficha">prototipado.txt</li>
+                <li class="ficha">web.txt</li>
+                <li class="ficha">electronica.txt</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="ventana revelar" id="contacto" data-arrastrable>
+            <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo">contacto — ficha Nº01</span></div>
+            <div class="ventana__cuerpo ventana__cuerpo--filas">
+              <div class="contacto">
+                <span class="contacto__etq">correo</span>
+                <a class="contacto__valor" href="mailto:sintaxis.obj@gmail.com">sintaxis.obj@gmail.com</a>
+                <button class="contacto__copiar" type="button" data-copiar="sintaxis.obj@gmail.com">copiar</button>
+              </div>
+              <div class="contacto">
+                <span class="contacto__etq">instagram</span>
+                <a class="contacto__valor" href="https://www.instagram.com/desing.studi0/" target="_blank" rel="noopener">@desing.studi0</a>
+                <button class="contacto__copiar" type="button" data-copiar="@desing.studi0">copiar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="about__col">
+          <!-- Para poner tu foto: reemplaza el <span> por <img src="imagenes/tu-foto.jpeg" alt="Isidora Álvarez"> -->
+          <figure class="perfil revelar">
+            <span class="mono">[foto de perfil]</span>
+          </figure>
+
+          <div class="notas">
+            <article class="ventana revelar" data-arrastrable>
+              <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo">explorando.txt</span></div>
+              <div class="ventana__cuerpo"><p class="cuerpo-s">[qué estoy explorando ahora]</p></div>
+            </article>
+            <article class="ventana revelar" data-arrastrable>
+              <div class="tb"><span class="tb__puntos"><i></i><i></i><i></i></span><span class="tb__titulo">fuera-del-taller.txt</span></div>
+              <div class="ventana__cuerpo"><p class="cuerpo-s">[qué hago fuera de la universidad]</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p class="mono">Isidora Álvarez — portafolio 2026</p>
+    <a class="mono pie__arriba" href="#inicio">volver arriba ↑</a>
+  </footer>
+
+  <!-- ===== Dock flotante ===== -->
+  <nav class="dock" aria-label="Accesos rápidos">
+    <a class="dock__item" href="#trabajos" data-seccion="trabajos">
+      <span class="dock__icono dock__icono--trabajos"></span><span class="dock__tip">trabajos</span>
+    </a>
+    <a class="dock__item" href="#sobre-mi" data-seccion="sobre-mi">
+      <span class="dock__icono dock__icono--persona"></span><span class="dock__tip">sobre mí</span>
+    </a>
+    <a class="dock__item" href="#contacto" data-seccion="contacto">
+      <span class="dock__icono dock__icono--correo"></span><span class="dock__tip">contacto</span>
+    </a>
+  </nav>
+
+</body>
+</html>
