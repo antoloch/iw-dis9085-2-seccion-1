@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Abierto 2026</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Holtwood+One+SC&family=Manrope:wght@300;400;500;600;700;800&family=Manrope:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="header">
+        <div class="header-top-bar">
+            <button id="btn-creditos" class="logo-facultad-btn" type="button">
+                FaAADudp
+            </button>
+        </div>
+
+        <nav class="nav-container" aria-label="Navegación principal">
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-tab active">Diseño Abierto</a></li>
+                <li><a href="#que-es" class="nav-tab">¿Qué es?</a></li>
+                <li><a href="#menciones" class="nav-tab">Menciones y ramos</a></li>
+                <li><a href="#ubicacion" class="nav-tab">Ubicación</a></li>
+                <li><a href="#horarios" class="nav-tab">Horarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MODAL DE CRÉDITOS -->
+    <div id="modal-creditos" class="modal-overlay">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="titulo-creditos">
+            <button id="cerrar-modal" class="modal-close" type="button" aria-label="Cerrar">
+                &times;
+            </button>
+
+            <h3 id="titulo-creditos">Créditos de la página</h3>
+            <p class="modal-subtitle">Sitio desarrollado por:</p>
+
+            <ul class="creators-list">
+                <li><a href="https://instagram.com/Jorgito_2" target="_blank" rel="noopener noreferrer">@Jorgito_2</a></li>
+                <li><a href="https://instagram.com/bommbobby" target="_blank" rel="noopener noreferrer">@bommbobby</a></li>
+                <li><a href="https://instagram.com/tarozzk" target="_blank" rel="noopener noreferrer">@tarozzk</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- 1. INICIO -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <img src="img/logo.png" alt="Diseño Abierto 2026" class="hero-logo-img">
+
+                <p class="subtitle">
+                    La instancia de fin de año más importante de la escuela de diseño
+                </p>
+
+                <div class="btn-container">
+                    <a href="#ubicacion" class="btn-visitanos">
+                        <span class="btn-circle">
+                            <span class="arrow-icon">→</span>
+                        </span>
+                        <span class="btn-text">Visítanos</span>
+                    </a>
+                </div>
+
+                <div class="scroll-indicator">
+                    <a href="#que-es" aria-label="Desplazarse a la siguiente sección">↓</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ¿QUÉ ES? -->
+        <section id="que-es" class="about-section">
+            <h2>¿Qué es Diseño Abierto?</h2>
+
+            <blockquote class="quote-box">
+                <p>
+                    “Diseño Abierto es un espacio de encuentro, exposición y diálogo
+                    en torno al diseño. Desde la Escuela de Diseño de la Universidad
+                    Diego Portales, reúne proyectos y procesos que muestran distintas
+                    formas de crear, investigar y pensar desde el diseño.”
+                </p>
+            </blockquote>
+        </section>
+
+        <!-- 3. MENCIONES Y RAMOS -->
+        <section id="menciones" class="mentions-section">
+            <h2>Menciones y ramos</h2>
+
+            <!-- MENCIÓN DISEÑO GRÁFICO -->
+            <div class="mention-category">
+
+                <!-- Título construido con HTML y CSS -->
+                <div class="mencion-title mencion-grafico" aria-label="Mención de Diseño Gráfico">
+
+                    <div class="titulo-linea titulo-linea-uno">
+                        <span class="comilla">“</span>
+                        <span class="palabra-mencion">Mención</span>
+                        <span class="palabra-de">de</span>
+                        <span class="palabra-diseno">DISEÑO</span>
+                    </div>
+
+                    <div class="titulo-linea titulo-linea-dos">
+                        <span class="palabra-grafico">GRÁFICO</span>
+                    </div>
+
+                    <div class="titulo-linea titulo-linea-tres">
+                        <span class="palabra-ramos">Ramos:</span>
+                        <span class="palabra-taller">Taller</span>
+                        <span class="palabra-editorial">Editorial</span>
+                    </div>
+
+                    <div class="titulo-linea titulo-linea-cuatro">
+                        <span class="palabra-y">y</span>
+                        <span class="palabra-publicaciones">Publicaciones,</span>
+                        <span class="palabra-taller-fuerte">Taller</span>
+                    </div>
+
+                    <div class="titulo-linea titulo-linea-cinco">
+                        <span class="palabra-diseno-final">Diseño</span>
+                        <span class="palabra-grafico-final">Gráfico II</span>
+                    </div>
+
+                </div>
+
+                <div class="editorial-grid-intercalado">
+
+                    <article class="editorial-item item-offset-1">
+                        <img src="img/imagen-9.png" alt="Revista CAOS, proyecto de Sofía Campos" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Revista CAOS</span>
+                            <p class="student-mini">Estudiante: Sofía Campos</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-2">
+                        <p class="taller-header-label">Taller editorial y publicaciones</p>
+                        <img src="img/imagen-11.png" alt="Revista CAOS, proyecto de Javiera y Sofía" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Revista CAOS</span>
+                            <p class="student-mini">Estudiantes: Javiera Santa Ana y Sofía Terrel</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-3">
+                        <img src="img/imagen-12.png" alt="Revista CAOS, proyecto de Daniela" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Revista CAOS</span>
+                            <p class="student-mini">Estudiante: Daniela Prazeres</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-4">
+                        <p class="taller-header-label">Taller Diseño Gráfico II</p>
+                        <img src="img/imagen-14.jpeg" alt="Etiquetado para alcoholes, proyecto de Ignacia" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Etiquetado para alcoholes</span>
+                            <p class="student-mini">Estudiante: Ignacia León</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-5">
+                        <img src="img/imagen-8.png" alt="Etiquetado para alcoholes, proyecto de Lucas" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Etiquetado para alcoholes</span>
+                            <p class="student-mini">Estudiante: Lucas Zavala</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-6">
+                        <img src="img/imagen-13.png" alt="Etiquetado para alcoholes, proyecto de Joaquín" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Etiquetado para alcoholes</span>
+                            <p class="student-mini">Estudiante: Joaquín Ahumada</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- MENCIÓN DISEÑO INDUSTRIAL -->
+            <div class="mention-category">
+
+                <div class="mencion-title mencion-industrial">
+                    <div class="titulo-industrial">
+                        <span class="industrial-linea-uno">Mención de</span>
+                        <span class="industrial-linea-dos">DISEÑO</span>
+                        <span class="industrial-linea-tres">INDUSTRIAL</span>
+                    </div>
+                </div>
+
+                <div class="editorial-grid-intercalado">
+
+                    <article class="editorial-item item-offset-1">
+                        <p class="taller-header-label">Taller Diseño Industrial II</p>
+                        <img src="img/imagen-2.jpeg" alt="Confinamiento Sensorial, proyecto de Sofía Anwandter" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Confinamiento Sensorial</span>
+                            <p class="student-mini">Estudiante: Sofía Anwandter</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-2">
+                        <img src="img/imagen-3.jpeg" alt="Confinamiento Sensorial, proyecto de Catalina" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Confinamiento Sensorial</span>
+                            <p class="student-mini">Estudiante: Catalina Martínez</p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-3">
+                        <img src="img/imagen-4.jpeg" alt="Confinamiento Sensorial, proyecto de Sofía Terrel" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Confinamiento Sensorial</span>
+                            <p class="student-mini">Estudiante: Sofía Terrel</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- MENCIÓN DISEÑO DE MODAS -->
+            <div class="mention-category">
+
+                <div class="mencion-title mencion-moda">
+                    <div class="titulo-moda">
+                        <span class="moda-linea-uno">Mención de</span>
+                        <span class="moda-linea-dos">DISEÑO</span>
+                        <span class="moda-linea-tres">DE MODAS</span>
+                    </div>
+                </div>
+
+                <div class="editorial-grid-intercalado">
+
+                    <article class="editorial-item item-offset-1">
+                        <p class="taller-header-label">Taller Textil e Indumentaria II</p>
+                        <img src="img/imagen-7.jpeg" alt="Futuros Predictivos, proyecto de diseño textil" class="editorial-img">
+                        <div class="editorial-text">
+                            <span class="taller-mini">Futuros Predictivos</span>
+                        </div>
+                    </article>
+
+                    <article class="editorial-item item-offset-2">
+                        <img src="img/imagen-6.jpeg" alt="Futuros Predictivos, segundo proyecto" class="editorial-img">
+                    </article>
+
+                    <article class="editorial-item item-offset-3">
+                        <img src="img/imagen-5.jpeg" alt="Futuros Predictivos, tercer proyecto" class="editorial-img">
+                    </article>
+
+                    <article class="editorial-item item-offset-4">
+                        <img src="img/imagen-1.jpeg" alt="Futuros Predictivos, cuarto proyecto" class="editorial-img">
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. UBICACIÓN Y HORARIOS -->
+        <div id="ubicacion-horarios-wrapper" class="dark-section-container">
+
+            <section id="ubicacion" class="location-section-dark">
+                <h2>Ubicación</h2>
+
+                <div class="map-wrapper-centered">
+                    <img src="img/ubicacion.png" alt="Mapa de ubicación de Diseño Abierto" class="map-img">
+                </div>
+
+                <div class="location-text-page-left">
+                    <p>
+                        <strong>Edificio Pañol</strong> de la Facultad de Arte,
+                        Arquitectura y Diseño de la Universidad Diego Portales.
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://www.google.com/maps/place/Pa%C3%B1ol+Facultad+de+Arte,+Arquitectura+y+Dise%C3%B1o+-+UDP/@-33.4495903,-70.6668508,17.17z/data=!4m6!3m5!1s0x9662c500668b459f:0x74732a3b05ab231c!8m2!3d-33.4495893!4d-70.6668296!16s%2Fg%2F11c30whhtx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="map-link-uniform-dark">
+                            Salvador Sanfuentes 2221, Santiago, Región Metropolitana.
+                        </a>
+                    </p>
+
+                    <p>A pasos de metro República</p>
+                </div>
+            </section>
+
+            <section id="horarios" class="schedule-section-dark">
+                <h2>Horarios</h2>
+                <p class="schedule-dates">8, 9 y 10 de diciembre de 2026</p>
+                <p class="schedule-hours">9:00 a 18:30 hrs</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>Diseño Abierto 2026 - Universidad Diego Portales</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Botón Visítanos
+        const botonVisitanos = document.querySelector('.btn-visitanos');
+
+        // Modal de créditos
+        const btnCreditos = document.getElementById('btn-creditos');
+        const modalCreditos = document.getElementById('modal-creditos');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        btnCreditos.addEventListener('click', () => {
+            modalCreditos.classList.add('active');
+        });
+
+        cerrarModal.addEventListener('click', () => {
+            modalCreditos.classList.remove('active');
+        });
+
+        modalCreditos.addEventListener('click', (event) => {
+            if (event.target === modalCreditos) {
+                modalCreditos.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                modalCreditos.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
