@@ -92,3 +92,10 @@ Las tres familias son de Google Fonts, gratuitas y disponibles en Figma y en la 
 | Etiqueta | DM Mono Regular | 12 | 11 | 100% |
 
 
+# Avance 2 
+
+## Links 
+
+- **Figma:** <https://www.figma.com/design/AMrK5AeX5KmZy4gzNrCmEm/examen-avance-1?node-id=7-4&t=0SXXTUf8lr179VRl-1>
+
+El avance de esta clase estuvo complicado por distintos motivos, decidí en último momento cambiar la estética del proyecto casi por completo, me costó demasiado seguir el proyecto porque no sentía que fuera algo mio, no me representaba al 100%, de todas maneras seguiré cambiándole cosas hasta quedar conforme. 
