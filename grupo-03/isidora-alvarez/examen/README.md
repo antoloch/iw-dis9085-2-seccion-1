@@ -12,7 +12,7 @@ Portafolio web interactivo que refleja mi identidad como diseñadora industrial,
 
 # **Referencias Web de Inspiración**
 
-Bill Guo ([billguo.me](https://billguo.me)): estructura de portafolios multidisciplinarios
+### Bill Guo ([billguo.me](https://billguo.me)): estructura de portafolios multidisciplinarios
 
 **Qué tomo:** los trabajos como colección de estampillas, la jerarquía tipográfica y los filtros por categoría.
 
