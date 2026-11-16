@@ -1,0 +1,184 @@
+/* Deslizamiento de suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body { 
+    margin: 0; font-family: "Futura", sans-serif;
+}
+
+section { 
+    min-height: 100vh; padding: 40px;
+    box-sizing: border-box;
+    scroll-margin-top: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #f67fff; 
+    /* nav fijo */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu { 
+    display: flex; gap: 16px; 
+}
+
+.menu a {
+  padding: 8px 12px;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+/* hover menu */
+.menu a:hover { 
+    background-color: rgb(255, 221, 0);
+}
+
+.proyectos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 1rem; 
+    row-gap: 2.5rem;  
+    flex-wrap: wrap; 
+}
+
+.card {
+    min-width: 12rem;
+    padding: 24px;
+    background-color: rgb(255, 221, 0);
+    /* 3 cards por fila: (100% - 2 gaps) / 3 */
+    flex: 1 1 calc((100% - 2rem) / 3);
+    box-sizing: border-box;
+}
+
+/* Estilo base de las imágenes (compartido por todas las cards) */
+.card img {
+    width: 100%;
+    display: block;
+}
+
+/* Cards con imagen en blanco y negro que pasa a color */
+.card-gris img {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.card-gris img:hover {
+    filter: grayscale(0%);
+}
+
+/* Cards que "se levantan" al pasar el mouse */
+.card-elevar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-elevar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Cards con zoom de la imagen dentro de su marco */
+.card-zoom .marco {
+    overflow: hidden; /* recorta la imagen para que no se salga del marco */
+}
+
+.card-zoom img {
+    transition: transform 0.4s ease;
+}
+
+.card-zoom:hover img {
+    transform: scale(1.15);
+}
+
+button {
+    border-style: none;
+    border: solid 1.5px;
+    background-color: rgb(255, 221, 0);
+    border-color: black;
+    padding: 0.5rem 1rem;
+    font-family: "Futura", sans-serif;
+    
+}
+
+/* hover boton */
+button:hover {
+    background-color: black;
+    color: rgb(255, 221, 0);
+}
+
+.about {
+    padding: 150px 200px; 
+    background-color: rgb(202, 248, 128);
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.contacto {
+    padding: 150px 200px; 
+    background-color: #f67fff; 
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.contacto button{
+    border-style: none;
+    border: solid 1.5px;
+    background-color: #f67fff; 
+    font-size: x-large;
+}
+
+/* hover boton contacto */
+.contacto button:hover{
+    color: #f67fff; 
+    background-color: #000000;
+}
+    
+/* ===== Carrusel ===== */
+.carrusel {
+    min-height: auto; /* no ocupa toda la pantalla como las otras secciones */
+}
+
+.carrusel-ventana {
+    overflow: hidden; /* esconde las fotos que quedan fuera */
+}
+
+.carrusel-pista {
+    display: flex;
+    width: max-content;
+    animation: deslizar 30s linear infinite; /* velocidad */
+}
+
+/* Se detiene al pasar el mouse */
+.carrusel-ventana:hover .carrusel-pista {
+    animation-play-state: paused;
+}
+
+.carrusel-pista img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;   /* recorta la foto sin deformarla */
+    margin-right: 1rem;  /* margin y no gap, para que el -50% calce exacto */
+    display: block;
+}
+
+/* Mueve la pista la mitad de su ancho (un grupo completo) y vuelve a empezar */
+@keyframes deslizar {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
