@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyecto — Isidora Álvarez</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script>document.documentElement.classList.add("js");</script>
+  <!-- el orden importa: datos → detalle → interacciones -->
+  <script defer src="js/datos.js"></script>
+  <script defer src="js/proyecto.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="barra">
+    <div class="jbar">
+      <img src="imagenes/ui/elipse.svg" alt="" width="5" height="5">
+      <span>Isidora Álvarez — portafolio 2026</span>
+      <img src="imagenes/ui/elipse.svg" alt="" width="5" height="5">
+    </div>
+    <nav class="mbar" aria-label="Principal">
+      <a class="mbar__logo" href="index.html">✦ Isidora</a>
+      <a class="mbar__link" href="index.html#trabajos">Trabajos</a>
+      <a class="mbar__link" href="index.html#sobre-mi">Sobre mí</a>
+      <a class="mbar__link" href="index.html#contacto">Contacto</a>
+      <span class="mbar__espacio"></span>
+      <time class="mbar__reloj" data-reloj></time>
+    </nav>
+  </header>
+
+  <!-- El contenido se arma desde js/proyecto.js según ?p=<id> -->
+  <main class="detalle" id="detalle">
+    <a class="volver" href="index.html#trabajos">← trabajos</a>
+  </main>
+
+  <footer class="pie">
+    <p class="mono">Isidora Álvarez — portafolio 2026</p>
+    <a class="mono pie__arriba" href="#detalle">volver arriba ↑</a>
+  </footer>
+
+  <nav class="dock" aria-label="Accesos rápidos">
+    <a class="dock__item activo" href="index.html#trabajos">
+      <span class="dock__icono dock__icono--trabajos"></span><span class="dock__tip">trabajos</span>
+    </a>
+    <a class="dock__item" href="index.html#sobre-mi">
+      <span class="dock__icono dock__icono--persona"></span><span class="dock__tip">sobre mí</span>
+    </a>
+    <a class="dock__item" href="index.html#contacto">
+      <span class="dock__icono dock__icono--correo"></span><span class="dock__tip">contacto</span>
+    </a>
+  </nav>
+
+  <!-- Visor ampliado -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <div class="ventana">
+      <div class="tb">
+        <span class="tb__puntos"><i></i><i></i><i></i></span>
+        <span class="tb__titulo" data-lb-titulo>foto.jpeg</span>
+        <button class="tb__cerrar" type="button" data-lb-cerrar>cerrar ✕</button>
+      </div>
+      <img data-lb-img alt="">
+    </div>
+  </div>
+
+</body>
+</html>
