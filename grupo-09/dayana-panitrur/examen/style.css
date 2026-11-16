@@ -1,0 +1,161 @@
+/* ==========================================
+  Colores
+   ========================================== */
+:root {
+  --blanco-roto: #FFFEFC;   /* color de fondo general y del texto sobre azul */
+  --gris-claro: #E5E5E5;    /* superficies y placeholders */
+  --gris-topo: #73716B;     /* texto secundario */
+  --verde-salvia: #AAC49E;  /* acento secundario */
+  --negro: #1A1A1A;         /* texto principal */
+  --azul-electrico: #142BFF;/* acento principal y fondo de la portada */
+}
+
+/* ==========================================
+   BASE
+   ========================================== */
+
+/* Hace que el ancho y alto de cada elemento incluyan su borde y relleno,
+   así las medidas no se descuadran */
+* {
+  box-sizing: border-box;
+}
+
+/* Quita el margen que el navegador pone por defecto alrededor de la página,
+   define la tipografía y los colores base */
+body {
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  background-color: var(--blanco-roto);
+  color: var(--negro);
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+
+/* Pinta el header del mismo azul que la portada para que se vean como un solo bloque
+   y deja espacio arriba (70 px = 4.375rem) como en Figma */
+.header {
+  background-color: var(--azul-electrico);
+  padding-top: 4.375rem;
+}
+
+/* Centra el menú horizontalmente dentro del header */
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Pone los 3 enlaces en una fila, separados de forma pareja.
+   El ancho es el del menú en Figma (552 px = 34.5rem), sin pasarse del 100% de la pantalla.
+   También quita los puntos y márgenes que traen las listas por defecto */
+.nav__lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 34.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Estilo de los enlaces del menú: blanco roto, Lexend Medium a 24 px (1.5rem)
+   y sin el subrayado que traen los enlaces por defecto */
+.nav__lista a {
+  color: var(--blanco-roto);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* ==========================================
+   PORTADA
+   ========================================== */
+
+/* Bloque azul que ocupa todo el ancho.
+   Su alto completa los 831 px del diseño (831 − 110 del header = 721 px = 45.0625rem).
+   Flexbox centra el logo en ambas direcciones.
+   El relleno de abajo (110 px = 6.875rem) compensa el header,
+   así el logo queda al centro del bloque azul completo */
+.portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45.0625rem;
+  padding-bottom: 6.875rem;
+  background-color: var(--azul-electrico);
+}
+
+/* El logo: apila las dos líneas una bajo la otra, en blanco roto,
+   con la tipografía pixelada a 128 px (8rem) y sin el margen por defecto del título */
+.portada__titulo {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: var(--blanco-roto);
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+/* Cada línea del logo ("dayana" y "pañitrur") se comporta como una fila */
+.logo__linea {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Corre la segunda línea un poco a la derecha, como en el diseño */
+.logo__linea--segunda {
+  padding-left: 2rem;
+}
+
+/* La "d" y la "p": tipografía Baskervville cursiva, un poco más grande (132 px = 8.25rem) */
+.logo__serif {
+  font-family: "Baskervville", serif;
+  font-style: italic;
+  font-size: 8.25rem;
+}
+
+/* ==========================================
+   MOBILE (pantallas de 768 px = 48rem o menos)
+   ========================================== */
+@media (max-width: 48rem) {
+
+  /* Menos espacio arriba del menú en pantallas pequeñas */
+  .header {
+    padding-top: 2rem;
+  }
+
+  /* El menú usa el 90% del ancho para que no toque los bordes */
+  .nav__lista {
+    width: 90%;
+  }
+
+  /* Enlaces más pequeños (16 px = 1rem) para que quepan en una fila */
+  .nav__lista a {
+    font-size: 1rem;
+  }
+
+  /* Portada más baja y con menos relleno */
+  .portada {
+    min-height: 30rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Logo más pequeño para que quepa en pantallas angostas */
+  .portada__titulo {
+    font-size: 3.5rem;
+  }
+
+  /* La "d" y la "p" se achican en la misma proporción */
+  .logo__serif {
+    font-size: 3.6rem;
+  }
+
+  /* Menos sangría en la segunda línea */
+  .logo__linea--segunda {
+    padding-left: 0.875rem;
+  }
+}
