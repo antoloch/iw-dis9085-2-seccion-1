@@ -9,6 +9,10 @@ Una página portafolio de apariencia en extremo minimalista, en inicio solo nomb
 
 Me gustaría integrar elementos hechos a mano por mi en el sitio, ya que creo que esto es algo que está presente en mi trabajo con frecuencia. Quiero integrarlo con una tipografía display de mi letra y un fondo animado .gif de rayones, además de una animación del rayón en el loading screen.
 
+Corrección al footer, se le agrega muy breve “descripción” de persona (estudiante, habilidades, herramientas).
+
+Se agrega a figma animaciones .gif de fondo y loading page, además de tipografía propia. También se empieza hacer wireframes de alta con interacciones, desktop casi listo, se corrigen tamaños de tipografía e imagen (ver si crear más componentes con interacciones), falta agregar imágenes y textos reales. Todavía en proceso wireframe de alta de mobile.
+
 
 FIGMA
 https://www.figma.com/design/bLwXQDKqGWUXe3eBZ594LU/Sin-t%C3%ADtulo?node-id=0-1&t=O3Q7tTnAl6yoGpcj-1 
